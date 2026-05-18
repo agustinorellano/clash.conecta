@@ -1,5 +1,18 @@
-﻿tmp_*.html
+# Archivos temporales de extracción
+tmp_*.html
 tmp_*.txt
+
+# Imágenes de sesión / extracción temporal
 assets/scan-img-*
 assets/old-img-*
 assets/chk-img-*
+assets/new-*.png
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+*.swp
+*.swo

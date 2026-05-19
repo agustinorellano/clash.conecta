@@ -1,4 +1,4 @@
-﻿
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --red:#DC2626;--red-h:#B91C1C;--red-pale:#FFF5F5;
@@ -462,4 +462,75 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
   .sol-phone-side{display:none}
   .circ2-row{grid-template-columns:1fr;gap:8px}
   .circ2-arr{transform:rotate(90deg);margin:4px auto}
+}
+/* ── CONCEPTO PHONE ANIMATION ── */
+.clash-phone-wrap{position:relative;display:flex;justify-content:center;align-items:center;animation:phoneFloat 4s ease-in-out infinite}
+.clash-phone-frame{width:220px;height:440px;background:#1c1c1e;border-radius:40px;padding:10px;box-shadow:0 40px 80px rgba(0,0,0,.3),0 0 0 1.5px rgba(255,255,255,.08);position:relative;overflow:hidden}
+.clash-splash{position:absolute;inset:10px;border-radius:30px;overflow:hidden;z-index:2;animation:splashFadeOut .7s ease-in-out 1.8s forwards}
+.clash-appscr{position:absolute;inset:10px;border-radius:30px;overflow:hidden;z-index:1;opacity:0;animation:appFadeIn .7s ease-out 1.8s forwards}
+.clash-screen-img{width:100%;height:100%;object-fit:cover;display:block}
+.clash-phone-glow{position:absolute;width:280px;height:200px;background:radial-gradient(ellipse,rgba(220,38,38,.3) 0%,transparent 65%);bottom:-50px;left:50%;transform:translateX(-50%);pointer-events:none;animation:glowPulse 4s ease-in-out infinite}
+@keyframes splashFadeOut{0%{opacity:1;transform:scale(1);filter:blur(0)}100%{opacity:0;transform:scale(1.04);filter:blur(5px)}}
+@keyframes appFadeIn{0%{opacity:0;transform:scale(.97);filter:blur(5px)}100%{opacity:1;transform:scale(1);filter:blur(0)}}
+@keyframes phoneFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes glowPulse{0%,100%{opacity:.6;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.08)}}
+
+/* ── BK QR HERO + MICROSITIO ── */
+.bk-qr-hero{display:grid;grid-template-columns:260px 1fr;gap:36px;align-items:center;margin:36px 0 28px}
+.bk-qr-hero-left{display:flex;flex-direction:column;align-items:center;gap:14px}
+.bk-qr-big{width:240px;height:240px;object-fit:contain;border-radius:20px;box-shadow:0 8px 40px rgba(220,38,38,.25),0 0 0 1px rgba(220,38,38,.1);animation:qrGlow 3s ease-in-out infinite;background:#fff;padding:4px}
+.bk-qr-caption{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--g500);text-align:center}
+.bk-qr-right-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@keyframes qrGlow{0%,100%{box-shadow:0 8px 40px rgba(220,38,38,.2),0 0 0 1px rgba(220,38,38,.08)}50%{box-shadow:0 12px 50px rgba(220,38,38,.38),0 0 0 1.5px rgba(220,38,38,.2)}}
+.bk-micrositio-block{background:linear-gradient(135deg,#1c1c1e 0%,#2a2a2d 100%);border-radius:20px;padding:32px;display:grid;grid-template-columns:1fr 320px;gap:32px;align-items:center;margin-top:32px;position:relative;overflow:hidden}
+.bk-micrositio-block::before{content:'';position:absolute;right:-60px;top:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(220,38,38,.15) 0%,transparent 65%);pointer-events:none}
+.bk-micrositio-copy{color:#fff;position:relative;z-index:1}
+.bk-micrositio-copy h4{font-size:22px;font-weight:900;margin-bottom:10px;letter-spacing:-.5px}
+.bk-micrositio-copy p{font-size:15px;color:rgba(255,255,255,.65);line-height:1.65;max-width:360px}
+.bk-micrositio-copy .bk-ms-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(220,38,38,.18);color:#f87171;border-radius:999px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.bk-micrositio-img-wrap{position:relative;z-index:1}
+.bk-micrositio-img{width:100%;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.4);display:block}
+
+/* ── CIRCUITO MICROANIMATIONS ── */
+.circ2-anim{height:44px;display:flex;align-items:center;justify-content:center;margin:8px 0}
+/* Carga: upload bounce */
+.anim-upload{display:flex;flex-direction:column;align-items:center;gap:3px;animation:uploadBounce 1.6s ease-in-out infinite}
+.anim-upload-arrow{width:14px;height:14px;border-left:2.5px solid var(--red);border-top:2.5px solid var(--red);transform:rotate(45deg);margin-bottom:-4px}
+.anim-upload-line{width:2.5px;height:14px;background:var(--red);border-radius:2px}
+.anim-upload-base{width:22px;height:2.5px;background:rgba(220,38,38,.35);border-radius:2px}
+@keyframes uploadBounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}60%{transform:translateY(-3px)}}
+/* Distribucion: nodes radiating */
+.anim-nodes{position:relative;width:44px;height:44px}
+.anim-node-center{position:absolute;top:50%;left:50%;width:9px;height:9px;background:var(--red);border-radius:50%;transform:translate(-50%,-50%)}
+.anim-node-sat{position:absolute;width:6px;height:6px;border-radius:50%;background:rgba(220,38,38,.55)}
+.anim-node-sat:nth-child(2){top:4px;left:50%;transform:translateX(-50%);animation:satPulse 1.6s .0s ease-in-out infinite}
+.anim-node-sat:nth-child(3){top:50%;right:4px;transform:translateY(-50%);animation:satPulse 1.6s .3s ease-in-out infinite}
+.anim-node-sat:nth-child(4){bottom:4px;left:50%;transform:translateX(-50%);animation:satPulse 1.6s .6s ease-in-out infinite}
+.anim-node-sat:nth-child(5){top:50%;left:4px;transform:translateY(-50%);animation:satPulse 1.6s .9s ease-in-out infinite}
+.anim-ring{position:absolute;top:50%;left:50%;width:36px;height:36px;border:1.5px solid rgba(220,38,38,.2);border-radius:50%;transform:translate(-50%,-50%);animation:ringExpand 2s ease-out infinite}
+@keyframes satPulse{0%,100%{opacity:.4;transform:translateX(-50%) scale(.8)}50%{opacity:1;transform:translateX(-50%) scale(1.2)}}
+@keyframes ringExpand{0%{width:12px;height:12px;opacity:.7}100%{width:42px;height:42px;opacity:0}}
+/* Interaccion: QR scan line */
+.anim-qr{position:relative;width:34px;height:34px;border:2px solid rgba(220,38,38,.35);border-radius:4px;overflow:hidden}
+.anim-qr-corner{position:absolute;width:8px;height:8px;border-color:var(--red);border-style:solid}
+.anim-qr-corner.tl{top:-1px;left:-1px;border-width:2.5px 0 0 2.5px}
+.anim-qr-corner.tr{top:-1px;right:-1px;border-width:2.5px 2.5px 0 0}
+.anim-qr-corner.bl{bottom:-1px;left:-1px;border-width:0 0 2.5px 2.5px}
+.anim-qr-corner.br{bottom:-1px;right:-1px;border-width:0 2.5px 2.5px 0}
+.anim-qr-scan{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--red),transparent);animation:qrScan 1.8s ease-in-out infinite;top:0}
+@keyframes qrScan{0%{top:0;opacity:1}100%{top:100%;opacity:.3}}
+/* Optimizacion: bars growing */
+.anim-bars{display:flex;align-items:flex-end;gap:4px;height:36px}
+.anim-bar{width:8px;border-radius:3px 3px 0 0;background:var(--red)}
+.anim-bar:nth-child(1){animation:barGrow 1.8s .0s ease-in-out infinite}
+.anim-bar:nth-child(2){animation:barGrow 1.8s .2s ease-in-out infinite}
+.anim-bar:nth-child(3){animation:barGrow 1.8s .4s ease-in-out infinite}
+.anim-bar:nth-child(4){animation:barGrow 1.8s .6s ease-in-out infinite}
+@keyframes barGrow{0%{height:8px;opacity:.5}50%{height:32px;opacity:1}100%{height:8px;opacity:.5}}
+
+@media(max-width:900px){
+  .bk-qr-hero{grid-template-columns:1fr;gap:24px}
+  .bk-qr-big{width:180px;height:180px}
+  .bk-qr-right-cards{grid-template-columns:1fr}
+  .bk-micrositio-block{grid-template-columns:1fr}
 }

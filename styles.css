@@ -12,6 +12,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#fff;color:var(--da
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:18px 52px;display:flex;align-items:center;justify-content:space-between;transition:background .3s,box-shadow .3s}
 nav.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(18px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nav-logo-img{height:32px;width:auto;display:block;filter:drop-shadow(0 1px 6px rgba(0,0,0,.35))}
 .nav-logo{font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px;display:flex;align-items:center;gap:8px;text-decoration:none}
 .nav-logo-badge{background:var(--red);color:#fff;padding:3px 12px;border-radius:20px;font-size:13px;font-weight:700}
 .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
@@ -42,6 +43,8 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);color:#fff;padding:7px 16px;border-radius:20px;font-size:13px;text-decoration:none;transition:background .2s}
 .hero-pill:hover{background:rgba(255,255,255,.2)}
 .hero-logo{font-size:clamp(72px,11vw,148px);font-weight:900;color:#fff;letter-spacing:-4px;line-height:1;margin-bottom:16px}
+.hero-logo-wrap{margin-bottom:24px}
+.hero-logo-img{height:clamp(60px,9vw,120px);width:auto;filter:drop-shadow(0 4px 24px rgba(0,0,0,.4));display:block}
 .hero-badge{display:inline-block;background:var(--red);color:#fff;padding:10px 32px;border-radius:30px;font-size:clamp(22px,3vw,36px);font-weight:700;margin-bottom:28px}
 .hero-line{width:36px;height:3px;background:var(--red);margin:0 auto 24px}
 .hero-tag{color:rgba(255,255,255,.85);font-size:clamp(16px,1.8vw,20px);line-height:1.65;max-width:540px;margin-bottom:52px}
@@ -378,6 +381,8 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 #cta-final::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.65)}
 .cta-in{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
 .cta-logo{font-size:clamp(68px,10vw,130px);font-weight:900;color:#fff;letter-spacing:-4px;line-height:1;margin-bottom:14px}
+.cta-logo-wrap{margin-bottom:20px}
+.cta-logo-img{height:clamp(55px,8vw,110px);width:auto;filter:drop-shadow(0 4px 24px rgba(0,0,0,.4));display:block}
 .cta-badge{display:inline-block;background:var(--red);color:#fff;padding:10px 30px;border-radius:28px;font-size:clamp(20px,2.5vw,32px);font-weight:700;margin-bottom:36px}
 .cta-words{display:flex;flex-direction:column;align-items:center;gap:3px;margin-bottom:44px}
 .cta-word{font-size:20px;font-weight:400;color:rgba(255,255,255,.65)}

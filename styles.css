@@ -495,6 +495,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .circ-text-h4{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.4px;line-height:1.25}
 .circ-text-p{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.65}
 .circ-share-row{display:flex;gap:10px;margin-top:4px}
+.circ-share-below{display:flex;gap:10px;justify-content:center;margin-top:16px}
 .circ-share-btn{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .15s}
 .circ-share-btn:hover{transform:scale(1.1)}
 .circ-share-btn.wsp{background:#25D366;color:#fff}

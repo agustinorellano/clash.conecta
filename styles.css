@@ -445,28 +445,76 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .sol-ph-promo-row{display:flex;align-items:center;gap:6px;padding:5px 0;border-top:1px solid #f3f3f3}
 .sol-ph-dot{width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0}
 
-/* ── EL CIRCUITO COMPLETO (v2 — exact Base44 ref) ── */
+/* ── EL CIRCUITO COMPLETO ── */
 #circuito{background:#f0f0f0;min-height:auto}
 .circ2-hdr{text-align:center;margin-bottom:44px}
 .circ2-sup{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--red);text-transform:uppercase;margin-bottom:10px}
 .circ2-h2{font-size:clamp(26px,3.2vw,44px);font-weight:900;letter-spacing:-1.5px;color:var(--dark)}
 .circ2-row{display:grid;grid-template-columns:1fr 36px 1fr 36px 1fr 36px 1fr;align-items:start;gap:0}
-.circ2-card{background:#fff;border-radius:16px;padding:16px 14px 44px;box-shadow:0 2px 10px rgba(0,0,0,.05);position:relative;cursor:pointer;transition:box-shadow .2s}
+.circ2-card{background:#fff;border-radius:16px;padding:16px 14px 20px;box-shadow:0 2px 10px rgba(0,0,0,.05);position:relative;cursor:pointer;transition:box-shadow .2s}
 .circ2-card:hover{box-shadow:0 4px 24px rgba(0,0,0,.1)}
 .circ2-top{display:flex;align-items:center;gap:9px;margin-bottom:8px}
-.circ2-num{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;flex-shrink:0;line-height:1}
+.circ2-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;flex-shrink:0;line-height:1;letter-spacing:-.5px}
 .circ2-num.nr{background:var(--red);color:#fff}
 .circ2-num.ny{background:var(--yellow);color:var(--dark)}
 .circ2-ico{width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .circ2-title{font-size:14px;font-weight:700;color:var(--dark)}
 .circ2-desc{font-size:12.5px;color:#6b7280;line-height:1.6;overflow:visible}
-.circ2-chev{position:absolute;bottom:10px;right:12px}
 .circ2-arr{display:flex;align-items:flex-start;justify-content:center;padding-top:20px}
+
+/* ── CIRCUITO BOTTOM PANEL ── */
+.circ-bottom-panel{background:var(--dark);margin-top:40px}
+.circ-bottom-hdr{margin-bottom:40px}
+.circ-bottom-h3{font-size:clamp(20px,2.4vw,32px);font-weight:900;letter-spacing:-1px;color:#fff;margin-bottom:10px}
+.circ-bottom-sub{font-size:15px;color:rgba(255,255,255,.5);line-height:1.6;max-width:560px}
+.circ-bottom-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px;align-items:start}
+/* Phone mockup */
+.circ-phone-mockup{display:flex;justify-content:center}
+.circ-ph-frame{width:200px;background:#1c1c1e;border-radius:36px;padding:8px;box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08)}
+.circ-ph-screen{background:#fff;border-radius:28px;overflow:hidden;min-height:340px}
+.circ-ph-topbar{display:flex;align-items:center;justify-content:space-between;padding:8px 10px 6px;background:#fff;font-size:9px;font-weight:600;color:var(--dark);border-bottom:1px solid #f3f3f3}
+.circ-ph-content{padding:10px 10px;display:flex;flex-direction:column;gap:8px}
+.circ-ph-brand-row{display:flex;align-items:center;gap:6px;margin-bottom:2px}
+.circ-ph-bk-badge{background:#D62300;color:#fff;font-size:9px;font-weight:900;padding:2px 6px;border-radius:4px}
+.circ-ph-brand-name{font-size:10px;font-weight:700;color:var(--dark)}
+.circ-ph-item{border:1px solid #f0f0f0;border-radius:8px;padding:7px 8px}
+.circ-ph-bank-tag{display:inline-block;font-size:8px;font-weight:700;padding:2px 6px;border-radius:4px;margin-bottom:4px}
+.circ-ph-item-row{display:flex;justify-content:space-between;align-items:baseline;font-size:9px;color:var(--dark)}
+.circ-ph-pct{font-size:14px;font-weight:900;color:var(--red)}
+.circ-ph-item-sub{font-size:8px;color:var(--g500);margin-top:2px}
+.circ-ph-badge-red{display:inline-block;background:rgba(220,38,38,.1);color:var(--red);font-size:7.5px;font-weight:700;padding:2px 6px;border-radius:4px;margin-top:3px;letter-spacing:.5px}
+/* Phone 2: detail view */
+.circ-ph-detail-view{text-align:center}
+.circ-ph-detail-logo{width:44px;height:44px;background:#1a1a1a;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:16px;margin:4px auto 6px}
+.circ-ph-detail-brand{font-size:11px;font-weight:700;color:var(--dark);margin-bottom:2px}
+.circ-ph-detail-all{font-size:9px;color:var(--g500);margin-bottom:6px}
+.circ-ph-detail-pct{font-size:26px;font-weight:900;color:var(--dark);line-height:1}
+.circ-ph-detail-label{font-size:11px;font-weight:500;color:var(--g500)}
+.circ-ph-detail-extra{font-size:9px;color:var(--g500);margin:4px 0 8px}
+.circ-ph-divider{height:1px;background:#f0f0f0;margin:0 0 8px}
+.circ-ph-conds{display:flex;flex-direction:column;gap:4px;text-align:left}
+.circ-ph-cond-row{display:flex;justify-content:space-between;font-size:8.5px;color:var(--g700);padding:3px 0;border-bottom:1px solid #f5f5f5}
+/* Text cols */
+.circ-text-col{padding-top:24px;display:flex;flex-direction:column;gap:10px}
+.circ-text-icon-wrap{width:44px;height:44px;background:rgba(220,38,38,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--red)}
+.circ-text-h4{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.4px;line-height:1.25}
+.circ-text-p{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.65}
+.circ-share-row{display:flex;gap:10px;margin-top:4px}
+.circ-share-btn{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .15s}
+.circ-share-btn:hover{transform:scale(1.1)}
+.circ-share-btn.wsp{background:#25D366;color:#fff}
+.circ-share-btn.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+.circ-share-btn.lnk{background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.12)}
+.circ-share-btn.qr{background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.12)}
+.circ-bottom-footer{text-align:center;margin-top:48px;font-size:13px;color:rgba(255,255,255,.3);letter-spacing:.5px}
 @media(max-width:900px){
   .sol-wrap{grid-template-columns:1fr}
   .sol-phone-side{display:none}
   .circ2-row{grid-template-columns:1fr;gap:8px}
   .circ2-arr{transform:rotate(90deg);margin:4px auto}
+  .circ-bottom-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .circ-phone-col:nth-child(3){order:4}
+  .circ-text-col:nth-child(4){order:3}
 }
 /* ── CONCEPTO PHONE ANIMATION ── */
 .clash-phone-wrap{position:relative;display:flex;justify-content:center;align-items:center;animation:phoneFloat 4s ease-in-out infinite}

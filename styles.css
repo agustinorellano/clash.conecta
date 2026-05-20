@@ -774,17 +774,17 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
   width:auto;
   aspect-ratio:485/800;
   filter:drop-shadow(0 24px 40px rgba(0,0,0,.15)) drop-shadow(0 8px 16px rgba(0,0,0,.10));
+  isolation:isolate;
 }
-/* Video screen area — calibrated for this specific 485x800 mockup:
-   notch top ~8%, side bezels ~5.5%, bottom bar ~4.5% */
+/* Video screen area — calibrated for this specific 485x800 mockup */
 .cpm-screen-area{
   position:absolute;
-  top:8%;
-  left:5.5%;
-  right:5.5%;
-  bottom:4.5%;
+  top:9.2%;
+  left:9%;
+  right:9%;
+  bottom:5%;
   z-index:1;
-  border-radius:4.5%;
+  border-radius:5%;
   overflow:hidden;
   background:#000;
 }

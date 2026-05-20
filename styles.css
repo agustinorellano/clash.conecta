@@ -547,6 +547,13 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .sol-mockup-clean{display:flex;justify-content:center;align-items:center;animation:phoneFloat 5s ease-in-out infinite;background:transparent}
 .sol-composite-clean{width:100%;max-width:540px;height:auto;display:block;background:transparent;filter:drop-shadow(0 24px 48px rgba(0,0,0,.12)) drop-shadow(0 4px 12px rgba(220,38,38,.08))}
 
+/* ── SOL HAND + NOTIFICATION MOCKUP ── */
+.sol-hand-mockup{position:relative;display:inline-flex;justify-content:center;animation:phoneFloat 5s ease-in-out infinite}
+.sol-hand-img{width:100%;max-width:500px;height:auto;display:block;filter:drop-shadow(0 24px 48px rgba(0,0,0,.15))}
+.sol-notif-overlay{position:absolute;top:-18%;left:-4%;width:72%;z-index:10;animation:notifFloat 4s ease-in-out infinite}
+.sol-notif-img{width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.16),0 4px 16px rgba(0,0,0,.10)}
+@keyframes notifFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(-1deg)}}
+
 /* ── CONCEPTO VIDEO PHONE ── */
 .clash-phone-screen{width:100%;height:100%;background:#000;border-radius:34px;overflow:hidden;position:relative}
 .clash-phone-video{width:100%;height:100%;object-fit:cover;display:block;border-radius:34px}

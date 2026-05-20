@@ -450,8 +450,8 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 /* ══════════════════════════════════════════════════
    EL CIRCUITO COMPLETO — PREMIUM OVERHAUL
    ══════════════════════════════════════════════════ */
-#circuito{background:linear-gradient(180deg,#f7f7f8 0%,#ffffff 60%);min-height:auto;display:block}
-#circuito>.container{padding-top:100px!important;padding-bottom:0!important}
+#circuito{background:linear-gradient(180deg,#f7f7f8 0%,#ffffff 60%);min-height:100vh;display:flex;align-items:center}
+#circuito>.container{padding-top:80px!important;padding-bottom:80px!important}
 .circ2-hdr{text-align:center;margin-bottom:60px}
 .circ2-sup{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--red);text-transform:uppercase;margin-bottom:14px}
 .circ2-h2{font-size:clamp(28px,3.4vw,48px);font-weight:900;letter-spacing:-1.8px;color:var(--dark);line-height:1.1}
@@ -731,7 +731,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 @media(max-width:640px){
   /* circ cards → single column */
   .circ2-row{grid-template-columns:1fr;gap:12px}
-  #circuito>.container{padding-top:56px!important;padding-bottom:0!important}
+  #circuito>.container{padding-top:48px!important;padding-bottom:48px!important}
   .circ2-anim{height:110px}
   /* circ bottom → single column, natural DOM order */
   .circ-bottom-grid{grid-template-columns:1fr;gap:28px}

@@ -416,7 +416,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 /* ── LA SOLUCIÓN (v2 — exact Base44 ref) ── */
 #solucion{background:#fff;overflow:visible}
 #solucion>.container{padding-top:72px;padding-bottom:0}
-.sol-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:end;position:relative}
+.sol-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;position:relative}
 .sol-left{position:relative;z-index:1}
 .sol-label-row{display:flex;align-items:center;gap:10px;margin-bottom:20px}
 .sol-lbl-circle{width:38px;height:38px;background:#fef9c3;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -435,7 +435,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .sol-acc-body-in{padding:4px 16px 16px 65px;font-size:14px;color:var(--g500);line-height:1.7}
 .sol-note{border-left:3px solid var(--red);padding-left:14px;margin-top:8px}
 .sol-note-txt{font-size:15px;font-weight:600;color:var(--dark)}
-.sol-phone-side{display:flex;justify-content:center;align-items:flex-end;position:relative;z-index:1;overflow:visible}
+.sol-phone-side{display:flex;justify-content:center;align-items:flex-start;position:relative;z-index:1;overflow:visible}
 .sol-phone-frame{width:180px;height:360px;background:#1c1c1e;border-radius:36px;padding:9px;box-shadow:0 40px 80px rgba(0,0,0,.25),0 0 0 1px rgba(255,255,255,.07)}
 .sol-phone-screen{width:100%;height:100%;background:#fff;border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
 .sol-ph-header{background:var(--red);padding:14px 12px 12px;text-align:center}
@@ -666,9 +666,9 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .sol-composite-clean{width:100%;max-width:540px;height:auto;display:block;background:transparent;filter:drop-shadow(0 24px 48px rgba(0,0,0,.12)) drop-shadow(0 4px 12px rgba(220,38,38,.08))}
 
 /* ── SOL HAND + NOTIFICATION MOCKUP ── */
-.sol-hand-mockup{position:relative;display:inline-flex;justify-content:center;width:100%;animation:phoneFloat 6s ease-in-out infinite;margin-bottom:-110px;margin-right:-28px}
+.sol-hand-mockup{position:relative;display:inline-flex;justify-content:center;width:100%;animation:phoneFloat 6s ease-in-out infinite;margin-top:-48px;margin-bottom:-80px;margin-right:-28px}
 .sol-hand-img{width:130%;max-width:none;height:auto;display:block;filter:drop-shadow(0 48px 96px rgba(0,0,0,.22)) drop-shadow(0 8px 24px rgba(0,0,0,.1))}
-.sol-notif-overlay{position:absolute;top:-30%;left:-18%;width:92%;z-index:10;animation:notifPop .7s cubic-bezier(.34,1.56,.64,1) .4s both, notifFloat 5s ease-in-out 1.4s infinite}
+.sol-notif-overlay{position:absolute;top:-22%;left:8%;width:78%;z-index:10;animation:notifPop .7s cubic-bezier(.34,1.56,.64,1) .4s both, notifFloat 5s ease-in-out 1.4s infinite}
 .sol-notif-img{width:100%;height:auto;display:block;filter:drop-shadow(0 12px 36px rgba(0,0,0,.13))}
 @keyframes notifPop{0%{opacity:0;transform:scale(.72) translateY(-28px)}70%{opacity:1;transform:scale(1.03) translateY(3px)}100%{opacity:1;transform:scale(1) translateY(0)}}
 @keyframes notifFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}

@@ -55,10 +55,11 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 /* ── CONCEPTO ── */
 #concepto{background:linear-gradient(140deg,#fff5f5 0%,#fafafa 65%)}
 .concepto-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.concepto-grid>div{min-width:0}
 .concepto-h{font-size:clamp(34px,4vw,54px);font-weight:900;letter-spacing:-1.5px;line-height:1.1;margin-bottom:24px}
 .concepto-h em{color:var(--red);font-style:normal}
 .concepto-body p{color:var(--g700);font-size:17px;line-height:1.72;margin-bottom:12px}
-.phone-wrap{display:flex;justify-content:center;align-items:center}
+.phone-wrap{display:flex;justify-content:center;align-items:center;min-width:0;overflow:clip}
 .phone{width:256px;height:520px;background:#1a1a1a;border-radius:44px;padding:14px;box-shadow:0 48px 80px rgba(0,0,0,.28),inset 0 0 0 1px rgba(255,255,255,.08)}
 .phone-screen{width:100%;height:100%;background:#fff;border-radius:32px;overflow:hidden;position:relative}
 .phone-img{width:100%;height:100%;object-fit:cover;border-radius:30px;display:block}
@@ -242,7 +243,8 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .bar-fill.gray{background:var(--g400)}
 .dar-pct{font-size:11px;font-weight:600;color:var(--dark);width:28px;text-align:right;flex-shrink:0}
 .dash-gender{margin-top:16px}
-.dash-partner{display:flex;align-items:center;gap:8px;margin-bottom:11px}
+.dash-partner{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.dp-logo{width:26px;height:26px;object-fit:contain;flex-shrink:0;border-radius:5px}
 .dp-name{font-size:13px;color:var(--dark);font-weight:500;flex:1}
 .dp-bar-bg{width:72px;height:4px;background:var(--g300);border-radius:2px;overflow:hidden}
 .dp-bar-fill{height:100%;background:var(--red);border-radius:2px}
@@ -445,22 +447,202 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .sol-ph-promo-row{display:flex;align-items:center;gap:6px;padding:5px 0;border-top:1px solid #f3f3f3}
 .sol-ph-dot{width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0}
 
-/* ── EL CIRCUITO COMPLETO ── */
-#circuito{background:#f0f0f0;min-height:auto;display:block}
-.circ2-hdr{text-align:center;margin-bottom:44px}
-.circ2-sup{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--red);text-transform:uppercase;margin-bottom:10px}
-.circ2-h2{font-size:clamp(26px,3.2vw,44px);font-weight:900;letter-spacing:-1.5px;color:var(--dark)}
-.circ2-row{display:grid;grid-template-columns:1fr 32px 1fr 32px 1fr 32px 1fr;align-items:start;gap:0}
-.circ2-card{background:#fff;border-radius:16px;padding:16px 14px 20px;box-shadow:0 2px 10px rgba(0,0,0,.05);position:relative;cursor:pointer;transition:box-shadow .2s}
-.circ2-card:hover{box-shadow:0 4px 24px rgba(0,0,0,.1)}
-.circ2-top{display:flex;align-items:center;gap:9px;margin-bottom:8px}
-.circ2-num{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;flex-shrink:0;line-height:1;letter-spacing:-.5px}
-.circ2-num.nr{background:var(--red);color:#fff}
-.circ2-num.ny{background:var(--yellow);color:var(--dark)}
-.circ2-ico{width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.circ2-title{font-size:14px;font-weight:700;color:var(--dark)}
-.circ2-desc{font-size:12.5px;color:#6b7280;line-height:1.6;overflow:visible}
-.circ2-arr{display:flex;align-items:flex-start;justify-content:center;padding-top:20px}
+/* ══════════════════════════════════════════════════
+   EL CIRCUITO COMPLETO — PREMIUM OVERHAUL
+   ══════════════════════════════════════════════════ */
+#circuito{background:linear-gradient(180deg,#f7f7f8 0%,#ffffff 60%);min-height:auto;display:block}
+#circuito>.container{padding-top:100px!important;padding-bottom:0!important}
+.circ2-hdr{text-align:center;margin-bottom:60px}
+.circ2-sup{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--red);text-transform:uppercase;margin-bottom:14px}
+.circ2-h2{font-size:clamp(28px,3.4vw,48px);font-weight:900;letter-spacing:-1.8px;color:var(--dark);line-height:1.1}
+
+/* ── Grid: 4 cards + 3 arrows ── */
+.circ2-row{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr 28px 1fr;align-items:start;gap:0 8px}
+.circ2-arr{display:flex;align-items:center;justify-content:center;padding-top:72px;opacity:.5}
+
+/* ── Card base ── */
+.circ2-card{background:#fff;border-radius:20px;padding:24px 20px 22px;box-shadow:0 4px 20px rgba(0,0,0,.06),0 1px 4px rgba(0,0,0,.04);position:relative;cursor:default;transition:box-shadow .25s,transform .25s;display:flex;flex-direction:column;gap:0}
+.circ2-card:hover{box-shadow:0 8px 40px rgba(220,38,38,.10),0 2px 8px rgba(0,0,0,.06);transform:translateY(-2px)}
+
+/* ── Number badge ── */
+.circ2-badge{width:32px;height:32px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;letter-spacing:-.3px;margin-bottom:12px;flex-shrink:0;line-height:1}
+.circ2-badge--red{background:var(--red);color:#fff}
+.circ2-badge--yellow{background:var(--yellow);color:var(--dark)}
+
+/* ── Label row (icon + title) ── */
+.circ2-label{display:flex;align-items:center;gap:7px;font-size:15px;font-weight:800;color:var(--dark);letter-spacing:-.3px;margin-bottom:16px;line-height:1.2}
+
+/* ── Animation zone ── */
+.circ2-anim{height:136px;position:relative;display:flex;align-items:center;justify-content:center;margin-bottom:16px;overflow:hidden;border-radius:12px;background:linear-gradient(135deg,#fafafa 0%,#f4f4f5 100%)}
+
+/* ── Description ── */
+.circ2-desc{font-size:12.5px;color:#6b7280;line-height:1.65;margin-top:auto}
+
+/* ══════════════════
+   01 — CARGA ANIM
+   ══════════════════ */
+.anim-carga2{width:100%;padding:0 14px;display:flex;flex-direction:column;gap:6px}
+.ac2-list{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.ac2-row{display:flex;align-items:center;gap:8px;padding:5px 8px;border-radius:7px;background:#fff;border:1px solid #f0f0f1;transition:all .3s}
+.ac2-dot{width:7px;height:7px;border-radius:50%;background:#d1d5db;flex-shrink:0;transition:background .3s}
+.ac2-lines{flex:1;display:flex;flex-direction:column;gap:3px}
+.ac2-l{height:3px;background:#e5e7eb;border-radius:2px}
+.ac2-ls{width:60%}
+.ac2-check{width:14px;height:14px;flex-shrink:0;color:#d1d5db;display:flex;align-items:center;justify-content:center;transition:color .3s}
+.ac2-ghost{opacity:.3}
+
+/* Row highlight cycle — each row lights up in sequence */
+@keyframes acRowActive{
+  0%,5%{background:#fff;border-color:#f0f0f1}
+  10%,30%{background:rgba(220,38,38,.04);border-color:rgba(220,38,38,.2)}
+  35%,100%{background:#fff;border-color:#f0f0f1}
+}
+@keyframes acDotActive{0%,5%{background:#d1d5db}10%,30%{background:var(--red)}35%,100%{background:#d1d5db}}
+@keyframes acCheckActive{0%,5%{color:#d1d5db;transform:scale(.8)}10%,30%{color:var(--red);transform:scale(1)}35%,100%{color:#d1d5db;transform:scale(.8)}}
+
+.ac2-row1{animation:acRowActive 3.6s ease-in-out infinite}
+.ac2-row1 .ac2-dot{animation:acDotActive 3.6s ease-in-out infinite}
+.ac2-row1 .ac2-check{animation:acCheckActive 3.6s ease-in-out infinite}
+
+.ac2-row2{animation:acRowActive 3.6s 1.2s ease-in-out infinite}
+.ac2-row2 .ac2-dot{animation:acDotActive 3.6s 1.2s ease-in-out infinite}
+.ac2-row2 .ac2-check{animation:acCheckActive 3.6s 1.2s ease-in-out infinite}
+
+.ac2-row3{animation:acRowActive 3.6s 2.4s ease-in-out infinite}
+.ac2-row3 .ac2-dot{animation:acDotActive 3.6s 2.4s ease-in-out infinite}
+.ac2-row3 .ac2-check{animation:acCheckActive 3.6s 2.4s ease-in-out infinite}
+
+/* Progress bar */
+.ac2-progress-wrap{display:flex;align-items:center;gap:8px}
+.ac2-progress-bar{flex:1;height:3px;background:#f0f0f1;border-radius:2px;overflow:hidden}
+@keyframes acProgressFill{0%{width:0%}60%{width:85%}80%{width:95%}100%{width:0%}}
+.ac2-progress-fill{height:100%;background:linear-gradient(90deg,var(--red),#ff6b6b);border-radius:2px;animation:acProgressFill 3.6s ease-in-out infinite}
+.ac2-progress-lbl{font-size:9px;font-weight:600;color:#9ca3af;white-space:nowrap;letter-spacing:.3px}
+
+/* ════════════════════════
+   02 — DISTRIBUCIÓN ANIM
+   ════════════════════════ */
+.anim-distrib2{width:100%;height:100%;position:relative}
+.ad2-svg{position:absolute;inset:0;width:100%;height:100%}
+.ad2-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--red);color:#fff;font-size:7.5px;font-weight:900;letter-spacing:.8px;padding:5px 8px;border-radius:8px;white-space:nowrap;z-index:2;box-shadow:0 4px 12px rgba(220,38,38,.35)}
+
+/* 6 satellite nodes — positioned around center */
+.ad2-node{position:absolute;width:26px;height:26px;background:#fff;border-radius:8px;border:1.5px solid #e5e7eb;display:flex;align-items:center;justify-content:center;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.ad2-node svg{width:13px;height:13px;stroke:#6b7280}
+
+/* Positions (% of container) matching SVG line endpoints */
+.ad2-n1{top:0%;left:50%;transform:translate(-50%,-2px)}
+.ad2-n2{top:13%;right:2%;transform:translateY(-50%)}
+.ad2-n3{bottom:13%;right:2%;transform:translateY(50%)}
+.ad2-n4{bottom:0%;left:50%;transform:translate(-50%,2px)}
+.ad2-n5{bottom:13%;left:2%;transform:translateY(50%)}
+.ad2-n6{top:13%;left:2%;transform:translateY(-50%)}
+
+/* Staggered pop-in animation */
+@keyframes adNodePop{
+  0%,8%{transform:scale(0) translate(var(--tx,0),var(--ty,0));opacity:0}
+  18%{transform:scale(1.15) translate(var(--tx,0),var(--ty,0));opacity:1}
+  26%,82%{transform:scale(1) translate(var(--tx,0),var(--ty,0));opacity:1}
+  90%,100%{transform:scale(0) translate(var(--tx,0),var(--ty,0));opacity:0}
+}
+.ad2-n1{--tx:-50%;--ty:-2px;animation:adNodePop 4.8s 0s ease-in-out infinite}
+.ad2-n2{--ty:-50%;animation:adNodePop 4.8s .4s ease-in-out infinite}
+.ad2-n3{--ty:50%;animation:adNodePop 4.8s .8s ease-in-out infinite}
+.ad2-n4{--tx:-50%;--ty:2px;animation:adNodePop 4.8s 1.2s ease-in-out infinite}
+.ad2-n5{--ty:50%;animation:adNodePop 4.8s 1.6s ease-in-out infinite}
+.ad2-n6{--ty:-50%;animation:adNodePop 4.8s 2.0s ease-in-out infinite}
+
+@keyframes adLinePulse{0%,100%{opacity:.3}50%{opacity:.9}}
+.ad2-ln{animation:adLinePulse 2.4s ease-in-out infinite}
+.ad2-ln1{animation-delay:0s}.ad2-ln2{animation-delay:.4s}.ad2-ln3{animation-delay:.8s}
+.ad2-ln4{animation-delay:1.2s}.ad2-ln5{animation-delay:1.6s}.ad2-ln6{animation-delay:2.0s}
+
+/* ═════════════════════════
+   03 — INTERACCIÓN ANIM
+   ═════════════════════════ */
+.anim-inter2{width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center}
+
+/* Phone silhouette */
+.ai2-phone{position:relative;width:46px;height:78px;background:#1a1a1a;border-radius:10px;z-index:2;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.ai2-screen{width:40px;height:68px;background:#fff;border-radius:7px;margin:3px;overflow:hidden;position:relative}
+
+/* Promo pills inside screen */
+.ai2-promo-pill{height:8px;background:#f3f4f6;border-radius:4px;margin:6px 4px 0;animation:aiPillSlide 2.4s ease-in-out infinite}
+.ai2-pp2{background:#fee2e2;animation-delay:.6s;margin-top:4px}
+@keyframes aiPillSlide{0%{transform:translateY(12px);opacity:0}20%,80%{transform:translateY(0);opacity:1}100%{transform:translateY(-12px);opacity:0}}
+
+/* Pulse rings */
+.ai2-pulse{position:absolute;top:50%;left:50%;border:1.5px solid rgba(220,38,38,.3);border-radius:50%;transform:translate(-50%,-50%);animation:aiPulseRing 2.4s ease-out infinite}
+.ai2-p1{width:60px;height:60px;animation-delay:0s}
+.ai2-p2{width:88px;height:88px;animation-delay:.6s}
+.ai2-p3{width:116px;height:116px;animation-delay:1.2s}
+@keyframes aiPulseRing{0%{transform:translate(-50%,-50%) scale(.5);opacity:.9}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
+
+/* Notification toasts */
+.ai2-notif{position:absolute;display:flex;align-items:center;gap:5px;background:#fff;border-radius:8px;padding:5px 8px;box-shadow:0 3px 12px rgba(0,0,0,.1);min-width:90px;z-index:3}
+.ai2-notif1{top:8px;right:4px;animation:aiNotifPop 4.8s ease-in-out infinite}
+.ai2-notif2{bottom:12px;right:6px;animation:aiNotifPop 4.8s 2.4s ease-in-out infinite}
+@keyframes aiNotifPop{0%,10%{transform:translateX(120%);opacity:0}20%,60%{transform:translateX(0);opacity:1}70%,100%{transform:translateX(120%);opacity:0}}
+.ai2-notif-dot{width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0;animation:aiDotBounce 1.2s ease-in-out infinite}
+.ai2-nd2{background:#22c55e}
+@keyframes aiDotBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+.ai2-notif-body{display:flex;flex-direction:column;gap:2px}
+.ai2-nb-l1{height:3px;width:52px;background:#e5e7eb;border-radius:2px}
+.ai2-nb-l2{height:3px;width:36px;background:#f3f4f6;border-radius:2px}
+
+/* User avatars */
+.ai2-users{position:absolute;bottom:8px;left:6px;display:flex;gap:-4px}
+.ai2-user{width:14px;height:14px;border-radius:50%;border:1.5px solid #fff}
+.ai2-u1{background:#fca5a5;animation:aiUserPop 3.6s ease-in-out infinite}
+.ai2-u2{background:#86efac;animation:aiUserPop 3.6s .6s ease-in-out infinite;margin-left:-4px}
+.ai2-u3{background:#93c5fd;animation:aiUserPop 3.6s 1.2s ease-in-out infinite;margin-left:-4px}
+@keyframes aiUserPop{0%,5%{transform:scale(0)}10%,90%{transform:scale(1)}95%,100%{transform:scale(0)}}
+
+/* ═══════════════════════════
+   04 — OPTIMIZACIÓN ANIM
+   ═══════════════════════════ */
+.anim-opti2{width:100%;padding:10px 14px;display:flex;flex-direction:column;gap:8px}
+.ao2-top{display:flex;align-items:flex-end;gap:10px}
+.ao2-bars{display:flex;align-items:flex-end;gap:5px;height:60px;flex:1}
+.ao2-col{flex:1;background:#f3f4f6;border-radius:4px 4px 0 0;display:flex;align-items:flex-end;overflow:hidden}
+.ao2-fill{width:100%;background:linear-gradient(180deg,var(--red) 0%,rgba(220,38,38,.5) 100%);border-radius:4px 4px 0 0;animation:aoBarGrow 2.4s ease-in-out infinite}
+.ao2-c1 .ao2-fill{animation-delay:0s}
+.ao2-c2 .ao2-fill{animation-delay:.3s}
+.ao2-c3 .ao2-fill{animation-delay:.6s}
+.ao2-c4 .ao2-fill{animation-delay:.9s}
+.ao2-c5 .ao2-fill{animation-delay:1.2s}
+@keyframes aoBarGrow{
+  0%{height:20%}
+  25%{height:85%}
+  50%{height:45%}
+  75%{height:75%}
+  100%{height:20%}
+}
+.ao2-c1 .ao2-fill{--h1:55%;--h2:90%;--h3:40%}
+.ao2-c2 .ao2-fill{animation-name:aoBarGrow2}
+.ao2-c3 .ao2-fill{animation-name:aoBarGrow3}
+.ao2-c4 .ao2-fill{animation-name:aoBarGrow4}
+.ao2-c5 .ao2-fill{animation-name:aoBarGrow5}
+@keyframes aoBarGrow2{0%{height:45%}25%{height:60%}50%{height:90%}75%{height:50%}100%{height:45%}}
+@keyframes aoBarGrow3{0%{height:70%}25%{height:30%}50%{height:65%}75%{height:90%}100%{height:70%}}
+@keyframes aoBarGrow4{0%{height:35%}25%{height:80%}50%{height:55%}75%{height:40%}100%{height:35%}}
+@keyframes aoBarGrow5{0%{height:60%}25%{height:45%}50%{height:80%}75%{height:60%}100%{height:60%}}
+
+.ao2-stat{display:flex;flex-direction:column;align-items:flex-end;gap:3px;padding-bottom:2px}
+.ao2-live-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:aoLivePulse 1s ease-in-out infinite}
+@keyframes aoLivePulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,.4)}50%{opacity:.7;box-shadow:0 0 0 4px rgba(34,197,94,0)}}
+.ao2-num{font-size:16px;font-weight:900;color:var(--dark);letter-spacing:-.5px;line-height:1}
+.ao2-delta{font-size:9px;font-weight:700;color:#22c55e;letter-spacing:.3px}
+
+/* Brand chips */
+.ao2-brands{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.ao2-chip{font-size:9px;font-weight:800;letter-spacing:.5px;padding:3px 6px;border-radius:5px;border:1.5px solid #e5e7eb;color:#6b7280;background:#fafafa;animation:aoChipFadeIn .4s ease-out both}
+.ao2-ch1{animation-delay:.1s;border-color:#1a1f71;color:#1a1f71}
+.ao2-ch2{animation-delay:.2s;border-color:#e5002b;color:#e5002b}
+.ao2-ch3{animation-delay:.3s;border-color:#009ee3;color:#009ee3}
+.ao2-ch4{animation-delay:.4s;border-color:#004a97;color:#004a97}
+.ao2-ch5{animation-delay:.5s;border-color:#ff5200;color:#ff5200}
+@keyframes aoChipFadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── CIRCUITO BOTTOM PANEL ── */
 .circ-bottom-panel{background:var(--dark);margin-top:0}
@@ -528,8 +710,9 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
   .sol-hand-img{width:90%;margin:0 auto}
   .sol-notif-overlay{width:76%;left:-4%;top:-22%}
   /* circ cards → 2×2 */
-  .circ2-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .circ2-row{grid-template-columns:1fr 1fr;gap:14px}
   .circ2-arr{display:none}
+  .circ2-anim{height:120px}
   /* circ bottom → phones top row, texts bottom row */
   .circ-bottom-grid{grid-template-columns:1fr 1fr;gap:20px}
   .circ-phone-col:nth-child(1){order:1}
@@ -547,8 +730,9 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 }
 @media(max-width:640px){
   /* circ cards → single column */
-  .circ2-row{grid-template-columns:1fr;gap:10px}
-  #circuito>.container{padding-top:56px;padding-bottom:0}
+  .circ2-row{grid-template-columns:1fr;gap:12px}
+  #circuito>.container{padding-top:56px!important;padding-bottom:0!important}
+  .circ2-anim{height:110px}
   /* circ bottom → single column, natural DOM order */
   .circ-bottom-grid{grid-template-columns:1fr;gap:28px}
   .circ-phone-col:nth-child(1){order:1}
@@ -574,7 +758,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .clash-phone-wrap{position:relative;display:flex;justify-content:center;align-items:center;animation:phoneFloat 4s ease-in-out infinite}
 .clash-phone-frame{width:290px;height:590px;background:#111;border-radius:48px;padding:10px;box-shadow:0 60px 120px rgba(0,0,0,.35),0 0 0 1.5px rgba(255,255,255,.12),inset 0 0 0 1px rgba(0,0,0,.8);position:relative;overflow:hidden}
 /* ── iPhone 14 override for Concepto section ── */
-.concepto-iphone{width:290px;height:616px;display:flex;flex-direction:column;border-radius:56px;padding:12px;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 0 0 2.5px #111,0 64px 100px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.05)}
+.concepto-iphone{width:290px;max-width:100%;height:616px;display:flex;flex-direction:column;border-radius:56px;padding:12px;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 0 0 2.5px #111,0 64px 100px rgba(0,0,0,.55),inset 0 0 0 1px rgba(255,255,255,.05)}
 /* Screen is relative so video can fill it absolutely */
 .concepto-iphone .circ-iphone-screen{flex:1;border-radius:44px;min-height:0;position:relative;overflow:hidden;background:#000}
 .concepto-iphone .circ-iphone-vol-up{top:108px;height:38px}
@@ -615,8 +799,8 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .bk-micrositio-img{width:100%;border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.04);display:block;transition:transform .4s ease}
 .bk-micrositio-img:hover{transform:scale(1.02)}
 
-/* ── CIRCUITO MICROANIMATIONS ── */
-.circ2-anim{height:44px;display:flex;align-items:center;justify-content:center;margin:8px 0}
+/* ── CIRCUITO MICROANIMATIONS (legacy — overridden by new rules above) ── */
+/* .circ2-anim height is now set in the premium overhaul block */
 /* Carga: upload bounce */
 .anim-upload{display:flex;flex-direction:column;align-items:center;gap:3px;animation:uploadBounce 1.6s ease-in-out infinite}
 .anim-upload-arrow{width:14px;height:14px;border-left:2.5px solid var(--red);border-top:2.5px solid var(--red);transform:rotate(45deg);margin-bottom:-4px}
@@ -684,7 +868,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .hand-phone-png{position:relative;width:100%;height:auto;display:block;z-index:2;pointer-events:none;mix-blend-mode:multiply}
 .hand-phone-glow{position:absolute;bottom:-8%;left:5%;width:55%;height:120px;background:radial-gradient(ellipse,rgba(220,38,38,.20) 0%,transparent 65%);pointer-events:none;z-index:0}
 #concepto .concepto-grid{background:transparent}
-.phone-wrap{display:flex;justify-content:center;align-items:center;background:transparent}
+.phone-wrap{display:flex;justify-content:center;align-items:center;background:transparent;min-width:0;overflow:clip}
 
 /* ═══════════════════════════════════════════════════════════
    RESPONSIVE GLOBAL OVERHAUL 2.0

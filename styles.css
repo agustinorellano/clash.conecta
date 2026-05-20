@@ -468,32 +468,27 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .circ-bottom-h3{font-size:clamp(20px,2.4vw,32px);font-weight:900;letter-spacing:-1px;color:#fff;margin-bottom:10px}
 .circ-bottom-sub{font-size:15px;color:rgba(255,255,255,.5);line-height:1.6;max-width:560px}
 .circ-bottom-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px;align-items:start}
-/* Phone mockup */
-.circ-phone-mockup{display:flex;justify-content:center}
-.circ-ph-frame{width:200px;background:#1c1c1e;border-radius:36px;padding:8px;box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08)}
-.circ-ph-screen{background:#fff;border-radius:28px;overflow:hidden;min-height:340px}
-.circ-ph-topbar{display:flex;align-items:center;justify-content:space-between;padding:8px 10px 6px;background:#fff;font-size:9px;font-weight:600;color:var(--dark);border-bottom:1px solid #f3f3f3}
-.circ-ph-content{padding:10px 10px;display:flex;flex-direction:column;gap:8px}
-.circ-ph-brand-row{display:flex;align-items:center;gap:6px;margin-bottom:2px}
-.circ-ph-bk-badge{background:#D62300;color:#fff;font-size:9px;font-weight:900;padding:2px 6px;border-radius:4px}
-.circ-ph-brand-name{font-size:10px;font-weight:700;color:var(--dark)}
-.circ-ph-item{border:1px solid #f0f0f0;border-radius:8px;padding:7px 8px}
-.circ-ph-bank-tag{display:inline-block;font-size:8px;font-weight:700;padding:2px 6px;border-radius:4px;margin-bottom:4px}
-.circ-ph-item-row{display:flex;justify-content:space-between;align-items:baseline;font-size:9px;color:var(--dark)}
-.circ-ph-pct{font-size:14px;font-weight:900;color:var(--red)}
-.circ-ph-item-sub{font-size:8px;color:var(--g500);margin-top:2px}
-.circ-ph-badge-red{display:inline-block;background:rgba(220,38,38,.1);color:var(--red);font-size:7.5px;font-weight:700;padding:2px 6px;border-radius:4px;margin-top:3px;letter-spacing:.5px}
-/* Phone 2: detail view */
-.circ-ph-detail-view{text-align:center}
-.circ-ph-detail-logo{width:44px;height:44px;background:#1a1a1a;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:16px;margin:4px auto 6px}
-.circ-ph-detail-brand{font-size:11px;font-weight:700;color:var(--dark);margin-bottom:2px}
-.circ-ph-detail-all{font-size:9px;color:var(--g500);margin-bottom:6px}
-.circ-ph-detail-pct{font-size:26px;font-weight:900;color:var(--dark);line-height:1}
-.circ-ph-detail-label{font-size:11px;font-weight:500;color:var(--g500)}
-.circ-ph-detail-extra{font-size:9px;color:var(--g500);margin:4px 0 8px}
-.circ-ph-divider{height:1px;background:#f0f0f0;margin:0 0 8px}
-.circ-ph-conds{display:flex;flex-direction:column;gap:4px;text-align:left}
-.circ-ph-cond-row{display:flex;justify-content:space-between;font-size:8.5px;color:var(--g700);padding:3px 0;border-bottom:1px solid #f5f5f5}
+/* ── iPhone 14 Mockup ── */
+.circ-phone-col{display:flex;justify-content:center}
+.circ-iphone-wrap{display:flex;justify-content:center}
+.circ-iphone-outer{position:relative;width:230px;background:#1a1a1a;border-radius:48px;padding:10px;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 0 0 2px #111,0 48px 80px rgba(0,0,0,.6),inset 0 0 0 1px rgba(255,255,255,.04)}
+/* Side buttons */
+.circ-iphone-vol-up,.circ-iphone-vol-dn{position:absolute;left:-3px;width:3px;background:#2a2a2a;border-radius:2px 0 0 2px}
+.circ-iphone-vol-up{top:88px;height:32px}
+.circ-iphone-vol-dn{top:132px;height:32px}
+.circ-iphone-power{position:absolute;right:-3px;top:108px;width:3px;height:56px;background:#2a2a2a;border-radius:0 2px 2px 0}
+.circ-iphone-screen{background:#fff;border-radius:38px;overflow:hidden;display:flex;flex-direction:column}
+/* Status bar */
+.circ-iphone-statusbar{display:flex;align-items:center;justify-content:space-between;padding:10px 16px 4px;background:#000;position:relative;flex-shrink:0}
+.circ-iph-time{font-size:11px;font-weight:700;color:#fff;font-family:'Inter',sans-serif;letter-spacing:-.3px}
+.circ-iph-notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:88px;height:26px;background:#000;border-radius:0 0 20px 20px}
+.circ-iph-status-right{display:flex;align-items:center;gap:5px}
+/* Screenshot */
+.circ-iphone-content{flex:1;overflow:hidden}
+.circ-iphone-shot{width:100%;height:auto;display:block}
+/* Home indicator */
+.circ-iphone-home{height:20px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.circ-iphone-home::after{content:'';width:90px;height:4px;background:#000;border-radius:2px;opacity:.18}
 /* Text cols */
 .circ-text-col{padding-top:24px;display:flex;flex-direction:column;gap:10px}
 .circ-text-icon-wrap{width:44px;height:44px;background:rgba(220,38,38,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--red)}

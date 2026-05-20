@@ -685,3 +685,206 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .hand-phone-glow{position:absolute;bottom:-8%;left:5%;width:55%;height:120px;background:radial-gradient(ellipse,rgba(220,38,38,.20) 0%,transparent 65%);pointer-events:none;z-index:0}
 #concepto .concepto-grid{background:transparent}
 .phone-wrap{display:flex;justify-content:center;align-items:center;background:transparent}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE GLOBAL OVERHAUL 2.0
+   1280 → 1100 → 1024 → 900 → 768 → 640 → 480
+═══════════════════════════════════════════════════════════ */
+
+/* ── Hamburger button (hidden on desktop) ── */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:401;flex-shrink:0}
+.nav-hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:transform .28s ease,opacity .22s ease}
+body.nav-open .nav-hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.nav-open .nav-hamburger span:nth-child(2){opacity:0;transform:scaleX(0)}
+body.nav-open .nav-hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+body.nav-open{overflow:hidden}
+
+/* ── Mobile overlay menu ── */
+.nav-mobile-menu{display:none;position:fixed;inset:0;background:rgba(8,8,8,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:399;flex-direction:column;align-items:center;justify-content:center}
+body.nav-open .nav-mobile-menu{display:flex}
+.nav-mobile-links{list-style:none;display:flex;flex-direction:column;align-items:center;gap:4px;width:100%;max-width:340px;padding:0 24px}
+.nav-mobile-links a{display:block;color:rgba(255,255,255,.72);text-decoration:none;font-size:19px;font-weight:700;padding:12px 24px;border-radius:12px;transition:color .18s,background .18s;width:100%;text-align:center;letter-spacing:-.4px}
+.nav-mobile-links a:hover{color:#fff;background:rgba(255,255,255,.07)}
+.nav-mobile-links .nav-mobile-cta{margin-top:16px;background:var(--red)!important;color:#fff!important;padding:14px 24px!important;border-radius:28px!important}
+.nav-mobile-links .nav-mobile-cta:hover{background:var(--red-h)!important;color:#fff!important}
+
+/* ── ≤1280px ── */
+@media(max-width:1280px){
+  .container{padding-left:40px;padding-right:40px}
+  .concepto-grid{gap:52px}
+}
+
+/* ── ≤1100px — extend existing ── */
+@media(max-width:1100px){
+  nav{padding-left:28px;padding-right:28px}
+  .nav-links{gap:16px}
+  .nav-links a{font-size:13px}
+  .container{padding-left:36px;padding-right:36px}
+  /* concepto phone scale → 248px */
+  .concepto-iphone{width:248px;height:527px;border-radius:48px;padding:10px}
+  .concepto-iphone .circ-iphone-screen{border-radius:38px}
+  .concepto-iphone .circ-iphone-vol-up{top:92px;height:32px}
+  .concepto-iphone .circ-iphone-vol-dn{top:134px;height:32px}
+  .concepto-iphone .circ-iphone-power{top:112px;height:54px}
+  .concepto-iphone .circ-iph-notch{width:92px;height:25px;border-radius:0 0 18px 18px}
+  /* sol */
+  .sol-hand-img{width:116%}
+  .sol-hand-mockup{margin-top:-32px;margin-bottom:-56px;margin-right:-16px}
+  .sol-notif-overlay{width:80%;left:6%}
+  /* plans */
+  .plan{padding:24px 18px}
+  .plan-price-main{font-size:32px}
+}
+
+/* ── ≤1024px ── */
+@media(max-width:1024px){
+  nav{padding-left:22px;padding-right:22px}
+  .nav-links{gap:12px}
+  .nav-links a{font-size:12.5px}
+  .container{padding-top:72px;padding-bottom:72px;padding-left:32px;padding-right:32px}
+  /* concepto */
+  .concepto-grid{gap:24px}
+  .concepto-iphone{width:218px;height:463px;border-radius:42px;padding:9px}
+  .concepto-iphone .circ-iphone-screen{border-radius:33px}
+  .concepto-iphone .circ-iphone-vol-up{top:81px;height:28px}
+  .concepto-iphone .circ-iphone-vol-dn{top:119px;height:28px}
+  .concepto-iphone .circ-iphone-power{top:99px;height:47px}
+  .concepto-iphone .circ-iph-notch{width:81px;height:22px;border-radius:0 0 16px 16px}
+  /* gestion diagrams — stack */
+  .gestion-diagrams{grid-template-columns:1fr}
+  /* distribución — stack */
+  .distrib-grid{grid-template-columns:1fr;gap:32px}
+  /* analytics — 2 col tablet landscape */
+  .dash-grid{grid-template-columns:1fr 1fr}
+  /* BK — collapse wide cols */
+  .bk-header-row{grid-template-columns:1fr}
+  .bk-impl-grid{grid-template-columns:1fr}
+  .bk-three-grid{grid-template-columns:1fr 1fr}
+  .bk-micrositio-block{grid-template-columns:1fr;gap:28px}
+  /* plans spacing */
+  .plans-grid{gap:14px}
+  .plan-price-main{font-size:30px}
+  /* stat */
+  .stat-banner{padding:28px 36px}
+  .stat-num{font-size:44px}
+}
+
+/* ── ≤900px — extend existing ── */
+@media(max-width:900px){
+  /* concepto phone → 200px */
+  .concepto-iphone{width:200px;height:425px;border-radius:38px;padding:8px}
+  .concepto-iphone .circ-iphone-screen{border-radius:30px}
+  .concepto-iphone .circ-iphone-vol-up{top:74px;height:26px}
+  .concepto-iphone .circ-iphone-vol-dn{top:108px;height:26px}
+  .concepto-iphone .circ-iphone-power{top:90px;height:43px}
+  .concepto-iphone .circ-iph-notch{width:74px;height:21px;border-radius:0 0 14px 14px}
+  /* sol notification */
+  .sol-notif-overlay{width:72%;left:6%;top:-18%}
+  /* intro 2×2 (overrides old 1-col rule) */
+  .intro-cards{grid-template-columns:1fr 1fr}
+  /* analytics collapse to 1 col */
+  .dash-grid{grid-template-columns:1fr}
+  /* BK */
+  .bk-three-grid{grid-template-columns:1fr}
+  .bk-app-grid{grid-template-columns:1fr 1fr}
+  /* plans 2-col (overrides old 1-col rule) */
+  .plans-grid{grid-template-columns:1fr 1fr}
+  .plan{padding:22px 16px}
+  .plan-price-main{font-size:28px}
+}
+
+/* ── ≤768px ── */
+@media(max-width:768px){
+  /* nav */
+  nav{padding:12px 20px}
+  .nav-links{display:none!important}
+  .nav-hamburger{display:flex}
+  /* container */
+  .container{padding:56px 20px 48px}
+  /* sections — no full-height lock */
+  section{min-height:auto}
+  #hero,#cta-final{min-height:100vh;min-height:100svh}
+  /* solucion: prevent horizontal bleed */
+  #solucion{overflow-x:clip}
+  /* hero */
+  .hero-pills{flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:36px}
+  .hero-tag{font-size:15px}
+  /* concepto */
+  .concepto-grid{grid-template-columns:1fr;gap:32px}
+  .concepto-iphone{width:200px;height:425px}
+  /* sol */
+  .sol-wrap{grid-template-columns:1fr}
+  .sol-h2{font-size:clamp(26px,6.5vw,40px)}
+  #solucion>.container{padding-top:44px;padding-bottom:32px}
+  .sol-phone-side{margin-top:24px;overflow:visible;justify-content:center}
+  .sol-hand-mockup{width:78%;max-width:320px;margin:0 auto;margin-top:0!important;margin-bottom:0!important;margin-right:0!important}
+  .sol-hand-img{width:100%;max-width:none}
+  .sol-notif-overlay{width:62%;left:6%;top:-16%}
+  /* desafío accordion indent */
+  .acc-body-in{padding:0 16px 16px 16px}
+  /* intro 2-col */
+  .intro-cards{grid-template-columns:1fr 1fr;gap:10px}
+  /* plans 2-col */
+  .plans-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .plan{padding:22px 14px}
+  .plan-price-main{font-size:26px}
+  .plan-badge{font-size:10px;padding:3px 12px}
+  /* BK */
+  .bk-cards-duo{grid-template-columns:1fr}
+  .bk-app-grid{grid-template-columns:1fr}
+  .bk-stats-strip{flex-wrap:wrap;gap:16px}
+  .bk-qr-right-cards{grid-template-columns:1fr 1fr}
+  /* distribución accordion indent */
+  .d-acc-body-in{padding:0 14px 16px 14px}
+  /* metricas */
+  #metricas .container{padding:56px 20px}
+  .stat-banner{padding:24px 20px;flex-direction:column;text-align:center;gap:12px}
+  .stat-num{font-size:40px}
+  .stat-label{font-size:16px;max-width:100%}
+  /* cta final */
+  .cta-socials{flex-wrap:wrap;justify-content:center}
+}
+
+/* ── ≤640px — extend existing ── */
+@media(max-width:640px){
+  nav{padding:12px 16px}
+  .container{padding:44px 16px 40px}
+  /* sol */
+  .sol-hand-mockup{width:82%;max-width:300px}
+  .sol-notif-overlay{width:68%;left:4%}
+}
+
+/* ── ≤480px ── */
+@media(max-width:480px){
+  .container{padding:40px 14px 36px}
+  #metricas .container{padding:40px 14px}
+  /* intro 1-col */
+  .intro-cards{grid-template-columns:1fr}
+  /* plans 1-col */
+  .plans-grid{grid-template-columns:1fr}
+  .plan.featured{margin-top:12px}
+  .plan{padding:24px 18px}
+  /* hero */
+  .hero-tag{font-size:14px}
+  .hero-badge{font-size:clamp(18px,5vw,26px);padding:8px 20px}
+  /* concepto phone → 180px */
+  .concepto-iphone{width:180px;height:382px;border-radius:35px;padding:7px}
+  .concepto-iphone .circ-iphone-screen{border-radius:27px}
+  .concepto-iphone .circ-iphone-vol-up{top:67px;height:23px}
+  .concepto-iphone .circ-iphone-vol-dn{top:98px;height:23px}
+  .concepto-iphone .circ-iphone-power{top:81px;height:39px}
+  .concepto-iphone .circ-iph-notch{width:67px;height:18px;border-radius:0 0 12px 12px}
+  /* sol */
+  .sol-hand-mockup{width:88%;max-width:280px}
+  /* BK */
+  .bk-three-grid{grid-template-columns:1fr}
+  .bk-app-grid{grid-template-columns:1fr}
+  .bk-qr-right-cards{grid-template-columns:1fr}
+  /* distribución */
+  .d-acc-body-in{padding:0 12px 14px 12px}
+  /* stat */
+  .stat-num{font-size:36px}
+  .stat-label{font-size:14px}
+  /* cta */
+  .cta-word{font-size:17px}
+}

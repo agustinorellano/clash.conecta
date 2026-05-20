@@ -22,7 +22,22 @@
     <li><a href="#planes">Planes</a></li>
     <li><a href="https://clash.com.ar/inicio/comercio" target="_blank" class="nav-cta">Empezá hoy →</a></li>
   </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 </nav>
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <ul class="nav-mobile-links">
+    <li><a href="#concepto">Concepto</a></li>
+    <li><a href="#desafio">Desafíos</a></li>
+    <li><a href="#solucion">Solución</a></li>
+    <li><a href="#circuito">Circuito</a></li>
+    <li><a href="#gestion">Gestión</a></li>
+    <li><a href="#distribucion">Distribución</a></li>
+    <li><a href="#analytics">Analytics</a></li>
+    <li><a href="#planes">Planes</a></li>
+    <li><a href="https://clash.com.ar/inicio/comercio" target="_blank" class="nav-mobile-cta">Empezá hoy →</a></li>
+  </ul>
+</div>
 
 <!-- ═══ 1. HERO ═══ -->
 <section id="hero">
@@ -800,5 +815,16 @@
 </section>
 
 <script src="script.js"></script>
+
+<script>
+(function(){
+  var btn=document.getElementById('nav-hamburger');
+  if(!btn)return;
+  btn.addEventListener('click',function(){document.body.classList.toggle('nav-open');});
+  document.querySelectorAll('#nav-mobile-menu a').forEach(function(a){
+    a.addEventListener('click',function(){document.body.classList.remove('nav-open');});
+  });
+}());
+</script>
 </body>
 </html>

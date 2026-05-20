@@ -396,7 +396,10 @@
     </div>
   </div>
 
-  <!-- ¿Cómo ven mis clientes las promociones? -->
+</section>
+
+<!-- ═══ 6B. COMO VEN LAS PROMOS ═══ -->
+<section id="como-ven">
   <div class="circ-bottom-panel">
     <div class="container" style="padding-top:56px;padding-bottom:72px">
       <div class="circ-bottom-hdr rv d1">
@@ -909,6 +912,66 @@
     a.addEventListener('click',function(){document.body.classList.remove('nav-open');});
   });
 }());
+</script>
+
+<script>
+/* ── CIRCUITO: Staggered reveal via IntersectionObserver ── */
+(function(){
+  var row = document.querySelector('.circ2-row');
+  if(!row) return;
+  // Remove rv class so the row itself is always visible; cards handle animation
+  row.classList.remove('rv','d1');
+  // Observe when row enters viewport
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        row.classList.add('in');
+        io.unobserve(row);
+        // Start count-up when optimizacion card is visible
+        startCountUp();
+      }
+    });
+  }, {threshold: 0.25});
+  io.observe(row);
+}());
+
+/* ── CIRCUITO: Count-up animation for Optimización ── */
+function startCountUp(){
+  var numEl = document.querySelector('.ao2-num');
+  var deltaEl = document.querySelector('.ao2-delta');
+  if(!numEl || !deltaEl || numEl._counted) return;
+  numEl._counted = true;
+
+  // Count 0 → 2400, display as X.XK
+  var duration = 1400;
+  var startTime = null;
+  var targetNum = 2400;
+  var targetDelta = 12;
+
+  function easeOut(t){ return 1 - Math.pow(1-t, 3); }
+
+  function step(ts){
+    if(!startTime) startTime = ts;
+    var progress = Math.min((ts - startTime) / duration, 1);
+    var ease = easeOut(progress);
+
+    var cur = Math.round(ease * targetNum);
+    var curK = (cur / 1000).toFixed(1);
+    numEl.textContent = curK + 'K';
+
+    var curD = Math.round(ease * targetDelta);
+    deltaEl.textContent = '+' + curD + '%';
+
+    if(progress < 1){
+      requestAnimationFrame(step);
+    } else {
+      numEl.textContent = '2.4K';
+      deltaEl.textContent = '+12%';
+    }
+  }
+  // Delay slightly so cards finish animating in first
+  setTimeout(function(){ requestAnimationFrame(step); }, 600);
+}
 </script>
 </body>
 </html>

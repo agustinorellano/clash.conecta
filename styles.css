@@ -451,7 +451,9 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
    EL CIRCUITO COMPLETO — PREMIUM OVERHAUL
    ══════════════════════════════════════════════════ */
 #circuito{background:linear-gradient(180deg,#f7f7f8 0%,#ffffff 60%);min-height:100vh;display:flex;align-items:center}
-#circuito>.container{padding-top:80px!important;padding-bottom:80px!important}
+#circuito>.container{padding-top:80px!important;padding-bottom:88px!important}
+/* Como ven sección separada */
+#como-ven{background:var(--dark);min-height:auto;display:block}
 .circ2-hdr{text-align:center;margin-bottom:60px}
 .circ2-sup{font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--red);text-transform:uppercase;margin-bottom:14px}
 .circ2-h2{font-size:clamp(28px,3.4vw,48px);font-weight:900;letter-spacing:-1.8px;color:var(--dark);line-height:1.1}
@@ -1173,4 +1175,120 @@ body.nav-open .nav-mobile-menu{display:flex}
   .stat-label{font-size:14px}
   /* cta */
   .cta-word{font-size:17px}
+}
+
+
+/* ══════════════════════════════════════════════════
+   CIRCUITO — PREMIUM ANIMATIONS (Stripe/Linear level)
+   ══════════════════════════════════════════════════ */
+
+/* ── 1. Staggered scroll reveal ─────────────────── */
+/* Cards start hidden, animate in left-to-right when .circ2-row gets .in */
+.circ2-card{
+  opacity:0;
+  transform:translateX(-18px);
+  transition:opacity .55s cubic-bezier(.25,.46,.45,.94),
+             transform .55s cubic-bezier(.34,1.06,.64,1),
+             box-shadow .25s ease,
+             transform .25s ease;
+}
+/* When row is visible, stagger each card */
+.circ2-row.in .circ2-card:nth-child(1){opacity:1;transform:translateX(0);transition-delay:.04s}
+.circ2-row.in .circ2-card:nth-child(3){opacity:1;transform:translateX(0);transition-delay:.18s}
+.circ2-row.in .circ2-card:nth-child(5){opacity:1;transform:translateX(0);transition-delay:.32s}
+.circ2-row.in .circ2-card:nth-child(7){opacity:1;transform:translateX(0);transition-delay:.46s}
+
+/* Remove the row's own rv transition since cards handle it */
+.circ2-row.rv{opacity:1!important;transform:none!important}
+
+/* ── 2. Hover — elevation + glow ────────────────── */
+.circ2-card{will-change:transform,box-shadow}
+.circ2-card:hover{
+  transform:translateY(-4px) scale(1.015)!important;
+  box-shadow:0 16px 48px rgba(220,38,38,.12),
+             0 4px 16px rgba(0,0,0,.07)!important;
+  transition:box-shadow .2s ease,transform .2s cubic-bezier(.34,1.06,.64,1)!important;
+}
+/* Badge brightens on hover */
+.circ2-card:hover .circ2-badge--red{
+  background:rgba(220,38,38,.85);
+  box-shadow:0 0 0 3px rgba(220,38,38,.18);
+  transition:all .2s ease;
+}
+.circ2-card:hover .circ2-badge--yellow{
+  filter:brightness(1.1);
+  box-shadow:0 0 0 3px rgba(234,179,8,.18);
+  transition:all .2s ease;
+}
+/* Anim zone brightens */
+.circ2-card:hover .circ2-anim{
+  background:linear-gradient(135deg,#f5f5f6 0%,#efefef 100%);
+  transition:background .2s ease;
+}
+
+/* ── 3A. Carga — enhanced row pulse ─────────────── */
+/* Already animated, add glow to active row */
+@keyframes acRowGlow{
+  0%,5%{box-shadow:none}
+  12%,28%{box-shadow:0 0 0 1.5px rgba(220,38,38,.25),inset 0 0 12px rgba(220,38,38,.04)}
+  35%,100%{box-shadow:none}
+}
+.ac2-row1{animation:acRowActive 3.6s ease-in-out infinite,acRowGlow 3.6s ease-in-out infinite}
+.ac2-row2{animation:acRowActive 3.6s 1.2s ease-in-out infinite,acRowGlow 3.6s 1.2s ease-in-out infinite}
+.ac2-row3{animation:acRowActive 3.6s 2.4s ease-in-out infinite,acRowGlow 3.6s 2.4s ease-in-out infinite}
+
+/* ── 3B. Distribución — PROMO pulse glow ────────── */
+@keyframes adCenterPulse{
+  0%,100%{box-shadow:0 4px 12px rgba(220,38,38,.35)}
+  50%{box-shadow:0 4px 24px rgba(220,38,38,.65),0 0 0 6px rgba(220,38,38,.1)}
+}
+.ad2-center{animation:adCenterPulse 2s ease-in-out infinite}
+
+/* Line draw on node appearance */
+@keyframes adLineDraw{
+  0%{stroke-dashoffset:80;opacity:0}
+  30%,80%{stroke-dashoffset:0;opacity:.85}
+  92%,100%{stroke-dashoffset:0;opacity:0}
+}
+.ad2-ln{stroke-dasharray:80;animation:adLineDraw 4.8s ease-in-out infinite}
+.ad2-ln1{animation-delay:0s}.ad2-ln2{animation-delay:.4s}.ad2-ln3{animation-delay:.8s}
+.ad2-ln4{animation-delay:1.2s}.ad2-ln5{animation-delay:1.6s}.ad2-ln6{animation-delay:2.0s}
+
+/* ── 3C. Interacción — tap ripple on screen ─────── */
+@keyframes aiTap{
+  0%,40%{transform:scale(0);opacity:0}
+  50%{transform:scale(.5);opacity:.7}
+  65%{transform:scale(1);opacity:.3}
+  75%,100%{transform:scale(1.2);opacity:0}
+}
+.ai2-screen::after{
+  content:'';
+  position:absolute;
+  width:16px;height:16px;
+  border-radius:50%;
+  background:rgba(220,38,38,.4);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  animation:aiTap 3.2s ease-out infinite;
+  pointer-events:none;
+}
+/* Phone subtle wiggle on interaction */
+@keyframes aiPhoneWiggle{
+  0%,85%,100%{transform:rotate(0)}
+  87%{transform:rotate(-1.5deg)}
+  90%{transform:rotate(1.5deg)}
+  93%{transform:rotate(-.8deg)}
+  96%{transform:rotate(.5deg)}
+}
+.ai2-phone{animation:aiPhoneWiggle 4s ease-in-out infinite}
+
+/* ── 3D. Count-up — trigger class ───────────────── */
+.ao2-num,.ao2-delta{display:inline-block}
+/* Flip-in when value updates */
+@keyframes aoFlipIn{
+  0%{transform:translateY(-6px);opacity:0}
+  100%{transform:translateY(0);opacity:1}
+}
+.ao2-num.updating,.ao2-delta.updating{
+  animation:aoFlipIn .3s cubic-bezier(.34,1.06,.64,1) both;
 }

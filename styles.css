@@ -698,89 +698,87 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 /* ═════════════════════════
    03 — INTERACCIÓN ANIM
    ═════════════════════════ */
-.anim-inter2{width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center}
+.anim-inter2{width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 8px}
 
-/* Phone silhouette */
-.ai2-phone{position:relative;width:46px;height:78px;background:#1a1a1a;border-radius:10px;z-index:2;box-shadow:0 4px 16px rgba(0,0,0,.2)}
-.ai2-screen{width:40px;height:68px;background:#fff;border-radius:7px;margin:3px;overflow:hidden;position:relative}
+/* Left: TOP PARTNERS ranking list */
+.ai2-rank{display:flex;flex-direction:column;gap:5px;flex-shrink:0;width:86px}
+.ai2-rank-ttl{font-size:7px;font-weight:800;letter-spacing:.5px;color:#aaa;text-transform:uppercase;margin-bottom:1px}
+.ai2-rr{display:flex;align-items:center;gap:4px}
+.ai2-rk-chip{font-size:6.5px;font-weight:900;padding:1px 4px;border-radius:3px;letter-spacing:.2px;flex-shrink:0;width:24px;text-align:center}
+.ai2-rk-icbc{background:#e00;color:#fff}
+.ai2-rk-mp{background:#009ee3;color:#fff}
+.ai2-rk-modo{background:#111;color:#fff}
+.ai2-rk-nx{background:#f60;color:#fff}
+.ai2-rk-pp{background:#5b4fcf;color:#fff}
+.ai2-rk-bar{flex:1;height:4px;background:#f0f0f2;border-radius:2px;overflow:hidden}
+.ai2-rk-fill{height:100%;background:var(--red);border-radius:2px;width:0;animation:aiBarGrow .9s cubic-bezier(.4,0,.2,1) both}
+.ai2-rf1{width:100%;animation-delay:.1s}
+.ai2-rf2{width:75%;animation-delay:.2s}
+.ai2-rf3{width:56%;animation-delay:.3s}
+.ai2-rf4{width:47%;animation-delay:.4s}
+.ai2-rf5{width:34%;animation-delay:.5s}
+@keyframes aiBarGrow{from{width:0}to{}}
+.ai2-rk-pct{font-size:7px;font-weight:800;color:var(--dark);flex-shrink:0}
+/* Row highlight synced with notification cycle (7.2s) */
+.ai2-rr1{animation:aiRowPulse 7.2s 0s ease-in-out infinite}
+.ai2-rr2{animation:aiRowPulse 7.2s 2.4s ease-in-out infinite}
+.ai2-rr3{animation:aiRowPulse 7.2s 4.8s ease-in-out infinite}
+@keyframes aiRowPulse{18%,38%{filter:brightness(1.3) drop-shadow(0 0 3px rgba(220,38,38,.4))}0%,50%,100%{filter:none}}
 
-/* Promo pills inside screen */
-.ai2-promo-pill{height:8px;background:#f3f4f6;border-radius:4px;margin:6px 4px 0;animation:aiPillSlide 2.4s ease-in-out infinite}
-.ai2-pp2{background:#fee2e2;animation-delay:.6s;margin-top:4px}
-@keyframes aiPillSlide{0%{transform:translateY(12px);opacity:0}20%,80%{transform:translateY(0);opacity:1}100%{transform:translateY(-12px);opacity:0}}
-
+/* Center: phone + pulses + branded toasts */
+.ai2-center{position:relative;flex-shrink:0;width:54px;height:110px;display:flex;align-items:center;justify-content:center}
+.ai2-phone{position:relative;width:34px;height:58px;background:#1a1a1a;border-radius:8px;z-index:2;box-shadow:0 4px 16px rgba(0,0,0,.25)}
+.ai2-screen{width:28px;height:50px;background:#fff;border-radius:5px;margin:4px 3px;overflow:hidden;position:relative;display:flex;flex-direction:column;padding:3px}
+/* Screen branded pills */
+.ai2-promo-pill{height:5px;border-radius:3px;margin-bottom:3px;flex-shrink:0}
+.ai2-pill-a{background:#fee2e2;animation:aiPillSlide 7.2s 0s ease-in-out infinite}
+.ai2-pill-b{background:#dbeafe;animation:aiPillSlide 7.2s 2.4s ease-in-out infinite}
+.ai2-pill-c{background:#d1fae5;animation:aiPillSlide 7.2s 4.8s ease-in-out infinite}
+@keyframes aiPillSlide{0%,5%{opacity:0;transform:translateY(6px)}15%,50%{opacity:1;transform:none}58%,100%{opacity:0;transform:translateY(-6px)}}
 /* Pulse rings */
-.ai2-pulse{position:absolute;top:50%;left:50%;border:1.5px solid rgba(220,38,38,.3);border-radius:50%;transform:translate(-50%,-50%);animation:aiPulseRing 2.4s ease-out infinite}
-.ai2-p1{width:60px;height:60px;animation-delay:0s}
-.ai2-p2{width:88px;height:88px;animation-delay:.6s}
-.ai2-p3{width:116px;height:116px;animation-delay:1.2s}
-@keyframes aiPulseRing{0%{transform:translate(-50%,-50%) scale(.5);opacity:.9}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
-
-/* Notification toasts */
-.ai2-notif{position:absolute;display:flex;align-items:center;gap:5px;background:#fff;border-radius:8px;padding:5px 8px;box-shadow:0 3px 12px rgba(0,0,0,.1);min-width:90px;z-index:3}
-.ai2-notif1{top:8px;right:4px;animation:aiNotifPop 4.8s ease-in-out infinite}
-.ai2-notif2{bottom:12px;right:6px;animation:aiNotifPop 4.8s 2.4s ease-in-out infinite}
-@keyframes aiNotifPop{0%,10%{transform:translateX(120%);opacity:0}20%,60%{transform:translateX(0);opacity:1}70%,100%{transform:translateX(120%);opacity:0}}
-.ai2-notif-dot{width:6px;height:6px;border-radius:50%;background:var(--red);flex-shrink:0;animation:aiDotBounce 1.2s ease-in-out infinite}
-.ai2-nd2{background:#22c55e}
-@keyframes aiDotBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+.ai2-pulse{position:absolute;top:50%;left:50%;border:1.5px solid rgba(220,38,38,.25);border-radius:50%;transform:translate(-50%,-50%);animation:aiPulseRing 2.4s ease-out infinite;pointer-events:none}
+.ai2-p1{width:46px;height:46px;animation-delay:0s}
+.ai2-p2{width:64px;height:64px;animation-delay:.8s}
+.ai2-p3{width:82px;height:82px;animation-delay:1.6s}
+@keyframes aiPulseRing{0%{transform:translate(-50%,-50%) scale(.5);opacity:.8}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
+/* Branded notification toasts — 3 brands cycling every 7.2s */
+.ai2-notif{position:absolute;display:flex;align-items:center;gap:4px;background:#fff;border-radius:7px;padding:4px 6px;box-shadow:0 2px 10px rgba(0,0,0,.13);z-index:3;right:-4px;white-space:nowrap}
+.ai2-notif1{top:2px;animation:aiNotifPop 7.2s 0s ease-in-out infinite}
+.ai2-notif2{top:38px;animation:aiNotifPop 7.2s 2.4s ease-in-out infinite}
+.ai2-notif3{top:74px;animation:aiNotifPop 7.2s 4.8s ease-in-out infinite}
+@keyframes aiNotifPop{0%,8%{transform:translateX(120%);opacity:0}18%,50%{transform:translateX(0);opacity:1}58%,100%{transform:translateX(120%);opacity:0}}
+.ai2-nb-chip{font-size:6.5px;font-weight:900;padding:1px 4px;border-radius:3px;letter-spacing:.2px;flex-shrink:0}
+.ai2-nc--icbc{background:#e00;color:#fff}
+.ai2-nc--modo{background:#111;color:#fff}
+.ai2-nc--mp{background:#009ee3;color:#fff}
 .ai2-notif-body{display:flex;flex-direction:column;gap:2px}
-.ai2-nb-l1{height:3px;width:52px;background:#e5e7eb;border-radius:2px}
-.ai2-nb-l2{height:3px;width:36px;background:#f3f4f6;border-radius:2px}
-
+.ai2-nb-l1{height:3px;width:34px;background:#e5e7eb;border-radius:2px}
+.ai2-nb-l2{height:3px;width:22px;background:#f3f4f6;border-radius:2px}
 /* User avatars */
-.ai2-users{position:absolute;bottom:8px;left:6px;display:flex;gap:-4px}
-.ai2-user{width:14px;height:14px;border-radius:50%;border:1.5px solid #fff}
+.ai2-users{position:absolute;bottom:-8px;left:-4px;display:flex}
+.ai2-user{width:11px;height:11px;border-radius:50%;border:1.5px solid #fff;flex-shrink:0}
 .ai2-u1{background:#fca5a5;animation:aiUserPop 3.6s ease-in-out infinite}
-.ai2-u2{background:#86efac;animation:aiUserPop 3.6s .6s ease-in-out infinite;margin-left:-4px}
-.ai2-u3{background:#93c5fd;animation:aiUserPop 3.6s 1.2s ease-in-out infinite;margin-left:-4px}
+.ai2-u2{background:#86efac;animation:aiUserPop 3.6s .6s ease-in-out infinite;margin-left:-3px}
+.ai2-u3{background:#93c5fd;animation:aiUserPop 3.6s 1.2s ease-in-out infinite;margin-left:-3px}
 @keyframes aiUserPop{0%,5%{transform:scale(0)}10%,90%{transform:scale(1)}95%,100%{transform:scale(0)}}
 
 /* ═══════════════════════════
    04 — OPTIMIZACIÓN ANIM
    ═══════════════════════════ */
-.anim-opti2{width:100%;padding:10px 14px;display:flex;flex-direction:column;gap:8px}
-.ao2-top{display:flex;align-items:flex-end;gap:10px}
-.ao2-bars{display:flex;align-items:flex-end;gap:5px;height:60px;flex:1}
-.ao2-col{flex:1;background:#f3f4f6;border-radius:4px 4px 0 0;display:flex;align-items:flex-end;overflow:hidden}
-.ao2-fill{width:100%;background:linear-gradient(180deg,var(--red) 0%,rgba(220,38,38,.5) 100%);border-radius:4px 4px 0 0;animation:aoBarGrow 2.4s ease-in-out infinite}
-.ao2-c1 .ao2-fill{animation-delay:0s}
-.ao2-c2 .ao2-fill{animation-delay:.3s}
-.ao2-c3 .ao2-fill{animation-delay:.6s}
-.ao2-c4 .ao2-fill{animation-delay:.9s}
-.ao2-c5 .ao2-fill{animation-delay:1.2s}
-@keyframes aoBarGrow{
-  0%{height:20%}
-  25%{height:85%}
-  50%{height:45%}
-  75%{height:75%}
-  100%{height:20%}
-}
-.ao2-c1 .ao2-fill{--h1:55%;--h2:90%;--h3:40%}
-.ao2-c2 .ao2-fill{animation-name:aoBarGrow2}
-.ao2-c3 .ao2-fill{animation-name:aoBarGrow3}
-.ao2-c4 .ao2-fill{animation-name:aoBarGrow4}
-.ao2-c5 .ao2-fill{animation-name:aoBarGrow5}
-@keyframes aoBarGrow2{0%{height:45%}25%{height:60%}50%{height:90%}75%{height:50%}100%{height:45%}}
-@keyframes aoBarGrow3{0%{height:70%}25%{height:30%}50%{height:65%}75%{height:90%}100%{height:70%}}
-@keyframes aoBarGrow4{0%{height:35%}25%{height:80%}50%{height:55%}75%{height:40%}100%{height:35%}}
-@keyframes aoBarGrow5{0%{height:60%}25%{height:45%}50%{height:80%}75%{height:60%}100%{height:60%}}
-
-.ao2-stat{display:flex;flex-direction:column;align-items:flex-end;gap:3px;padding-bottom:2px}
-.ao2-live-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:aoLivePulse 1s ease-in-out infinite}
-@keyframes aoLivePulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(34,197,94,.4)}50%{opacity:.7;box-shadow:0 0 0 4px rgba(34,197,94,0)}}
-.ao2-num{font-size:16px;font-weight:900;color:var(--dark);letter-spacing:-.5px;line-height:1}
-.ao2-delta{font-size:9px;font-weight:700;color:#22c55e;letter-spacing:.3px}
-
-/* Brand chips */
-.ao2-brands{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
-.ao2-chip{font-size:9px;font-weight:800;letter-spacing:.5px;padding:3px 6px;border-radius:5px;border:1.5px solid #e5e7eb;color:#6b7280;background:#fafafa;animation:aoChipFadeIn .4s ease-out both}
-.ao2-ch1{animation-delay:.1s;border-color:#1a1f71;color:#1a1f71}
-.ao2-ch2{animation-delay:.2s;border-color:#e5002b;color:#e5002b}
-.ao2-ch3{animation-delay:.3s;border-color:#009ee3;color:#009ee3}
-.ao2-ch4{animation-delay:.4s;border-color:#004a97;color:#004a97}
-.ao2-ch5{animation-delay:.5s;border-color:#ff5200;color:#ff5200}
-@keyframes aoChipFadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.anim-opti2{width:100%;height:100%;display:flex;flex-direction:column;overflow:hidden}
+/* Estado de Operación dashboard */
+.ao2-op-title{font-size:7px;font-weight:800;letter-spacing:.7px;color:#aaa;text-transform:uppercase;padding:8px 12px 4px}
+.ao2-op-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#f0f0f2;flex:1;overflow:hidden}
+.ao2-op-tile{background:#fff;padding:7px 9px;display:flex;flex-direction:column;gap:1px;animation:aoTileIn .4s ease both}
+.ao2-ot1{animation-delay:.04s}.ao2-ot2{animation-delay:.08s}.ao2-ot3{animation-delay:.12s}
+.ao2-ot4{animation-delay:.16s}.ao2-ot5{animation-delay:.2s}.ao2-ot6{animation-delay:.24s}
+@keyframes aoTileIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.ao2-op-num{font-size:20px;font-weight:900;color:var(--dark);line-height:1}
+.ao2-op-red{color:var(--red)}
+.ao2-op-lbl{font-size:8px;color:#999;line-height:1.25}
+.ao2-op-bar{display:flex;background:var(--dark);padding:6px 8px;gap:0;flex-shrink:0}
+.ao2-op-bi{flex:1;display:flex;align-items:center;justify-content:center;font-size:8px;color:rgba(255,255,255,.75);font-weight:700;border-right:1px solid rgba(255,255,255,.1)}
+.ao2-op-bi:last-child{border-right:none}
 
 /* ── CIRCUITO BOTTOM PANEL ── */
 .circ-bottom-panel{background:var(--dark);margin-top:0}
@@ -1369,18 +1367,7 @@ body.nav-open .nav-mobile-menu{display:flex}
   65%{transform:scale(1);opacity:.3}
   75%,100%{transform:scale(1.2);opacity:0}
 }
-.ai2-screen::after{
-  content:'';
-  position:absolute;
-  width:16px;height:16px;
-  border-radius:50%;
-  background:rgba(220,38,38,.4);
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  animation:aiTap 3.2s ease-out infinite;
-  pointer-events:none;
-}
-/* Phone subtle wiggle on interaction */
+/* Phone subtle wiggle on notification */
 @keyframes aiPhoneWiggle{
   0%,85%,100%{transform:rotate(0)}
   87%{transform:rotate(-1.5deg)}
@@ -1388,15 +1375,4 @@ body.nav-open .nav-mobile-menu{display:flex}
   93%{transform:rotate(-.8deg)}
   96%{transform:rotate(.5deg)}
 }
-.ai2-phone{animation:aiPhoneWiggle 4s ease-in-out infinite}
-
-/* ── 3D. Count-up — trigger class ───────────────── */
-.ao2-num,.ao2-delta{display:inline-block}
-/* Flip-in when value updates */
-@keyframes aoFlipIn{
-  0%{transform:translateY(-6px);opacity:0}
-  100%{transform:translateY(0);opacity:1}
-}
-.ao2-num.updating,.ao2-delta.updating{
-  animation:aoFlipIn .3s cubic-bezier(.34,1.06,.64,1) both;
-}
+.ai2-phone{animation:aiPhoneWiggle 7.2s ease-in-out infinite}

@@ -442,25 +442,48 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .sol-panel{position:absolute;top:0;left:0;width:100%;opacity:0;transform:translateY(12px) scale(.97);pointer-events:none;transition:opacity .35s ease,transform .35s ease}
 .sol-panel.active{opacity:1;transform:none;pointer-events:auto;position:relative}
 
-/* Panel 1 — Ordenar */
-.sp1-wrap{background:#fff;border:1px solid #ebebed;border-radius:20px;padding:20px 18px 16px;box-shadow:0 6px 32px rgba(0,0,0,.07);width:100%;max-width:380px}
-.sp1-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
-.sp1-title{font-size:13px;font-weight:700;color:var(--dark)}
-.sp1-badge{font-size:11px;font-weight:700;background:rgba(220,38,38,.1);color:var(--red);border-radius:20px;padding:3px 10px}
-.sp1-list{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
-.sp1-row{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f7f7f9;border-radius:10px;animation:sp1RowIn .4s ease both}
-.sp1-r1{animation-delay:.05s}.sp1-r2{animation-delay:.12s}.sp1-r3{animation-delay:.19s}.sp1-r4{animation-delay:.26s}.sp1-r5{animation-delay:.33s}
-@keyframes sp1RowIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
-.sp1-dot{width:32px;height:32px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800}
-.sp1-dot--visa{background:#1a1f71;color:#fff}.sp1-dot--mc{background:#eb001b;color:#fff}.sp1-dot--mp{background:#009ee3;color:#fff}.sp1-dot--bank{background:#f5f5f5;color:#555}
-.sp1-dot::after{content:attr(data-label)}
-.sp1-lines{flex:1;display:flex;flex-direction:column;gap:5px}
-.sp1-l{height:6px;border-radius:4px;background:#e2e2e6}.sp1-l1{width:70%}.sp1-l2{width:45%}
-.sp1-tag{font-size:10px;font-weight:700;border-radius:6px;padding:3px 8px}
-.sp1-tag--green{background:rgba(22,163,74,.12);color:#16a34a}.sp1-tag--yellow{background:rgba(234,179,8,.15);color:#ca8a04}.sp1-tag--red{background:rgba(220,38,38,.1);color:var(--red)}
-.sp1-footer{display:flex;gap:6px;flex-wrap:wrap}
-.sp1-filter{font-size:11px;font-weight:600;padding:5px 12px;border-radius:20px;background:#f0f0f2;color:#888;cursor:pointer;transition:background .15s,color .15s}
-.sp1-filter.sp1-f--active{background:var(--dark);color:#fff}
+/* Panel 1 — Ordenar (app promo list) */
+.sp1-phone{background:#f5f5f7;border:1px solid #e5e7eb;border-radius:20px;overflow:hidden;width:100%;max-width:380px;font-size:13px}
+.sp1-branch-row{display:flex;align-items:flex-start;gap:10px;padding:12px 14px 10px;background:#fff;border-bottom:1px solid #f0f0f2}
+.sp1-logo-sq{width:36px;height:36px;background:#f5f5f7;border:1px solid #e5e7eb;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:800;color:var(--dark)}
+.sp1-branch-info{flex:1;min-width:0}
+.sp1-branch-name{font-size:12px;font-weight:700;color:var(--dark)}
+.sp1-branch-addr{font-size:10px;color:#888;line-height:1.4;margin-top:1px}
+.sp1-branch-link{font-size:10px;color:var(--red);font-weight:600;margin-top:3px}
+.sp1-dist{font-size:10px;color:#aaa;white-space:nowrap;flex-shrink:0;padding-top:2px}
+.sp1-section-hd{display:flex;align-items:center;gap:6px;padding:8px 14px;background:#fef2f2;border-bottom:1px solid #fde8e8}
+.sp1-shd-label{font-size:10px;font-weight:800;color:#b91c1c;letter-spacing:.3px}
+.sp1-shd-sub{font-size:9px;color:#ef4444;margin-left:2px}
+.sp1-promo-item{display:flex;align-items:flex-start;justify-content:space-between;padding:10px 14px 6px;background:#fff;gap:8px}
+.sp1-pi1{animation:sp1FadeIn .3s ease .05s both}
+.sp1-pi2{animation:sp1FadeIn .3s ease .15s both}
+.sp1-pi3{animation:sp1FadeIn .3s ease .25s both}
+@keyframes sp1FadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sp1-pi-left{flex:1;min-width:0}
+.sp1-pi-title{font-size:12px;font-weight:600;color:var(--dark)}
+.sp1-pi-sub{font-size:10px;color:#888;margin-top:2px}
+.sp1-pi-tag{display:inline-block;font-size:9px;font-weight:700;border:1px solid var(--red);color:var(--red);border-radius:4px;padding:1px 5px;margin-top:5px;letter-spacing:.2px}
+.sp1-pi-cards{display:flex;gap:3px;margin-top:4px;flex-wrap:wrap}
+.sp1-card{font-size:8px;font-weight:800;padding:2px 5px;border-radius:3px;letter-spacing:.2px}
+.sp1-card--visa{background:#1a1f71;color:#fff}
+.sp1-card--x{background:#222;color:#fff;border:1px solid #555}
+.sp1-cv-ghost{opacity:.5}
+.sp1-pi-right{text-align:right;flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;gap:1px}
+.sp1-pct{font-size:22px;font-weight:900;color:var(--dark);line-height:1}
+.sp1-pct--sm{font-size:18px}
+.sp1-pct--dark{font-size:26px;font-weight:900;color:var(--dark);line-height:1}
+.sp1-de{font-size:10px;color:#555;line-height:1.3}
+.sp1-tope{font-size:9px;color:#aaa;margin-top:2px}
+.sp1-reactions{display:flex;gap:10px;padding:4px 14px 8px;background:#fff;border-bottom:1px solid #f0f0f2}
+.sp1-react{font-size:10px;color:#aaa;display:flex;align-items:center;gap:3px}
+.sp1-reach{margin-left:auto}
+.sp1-brand-hd{display:flex;align-items:center;gap:8px;padding:6px 14px;font-size:11px;font-weight:700}
+.sp1-bh--modo{background:#e0f7f5;border-top:1px solid #b2ebe0;border-bottom:1px solid #b2ebe0;color:#007a6e}
+.sp1-bh--bbva{background:#e8f1fb;border-top:1px solid #c5d8f5;border-bottom:1px solid #c5d8f5;color:#0047ba}
+.sp1-bh-chip{font-size:9px;font-weight:900;padding:2px 6px;border-radius:4px;letter-spacing:.3px}
+.sp1-chip--modo{background:#00b4a2;color:#fff}
+.sp1-chip--bbva{background:#0047ba;color:#fff}
+.sp1-bh-name{font-size:11px;font-weight:700}
 
 /* Panel 2 — Unificar */
 .sp2-wrap{position:relative;width:100%;max-width:380px;height:220px;display:flex;align-items:center;justify-content:center}
@@ -483,27 +506,35 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 @keyframes sp2NodePopC{from{opacity:0;transform:translateX(-50%) scale(.5)}50%{transform:translateX(-50%) scale(1.15)}to{opacity:1;transform:translateX(-50%) scale(1)}}
 .sol-panel.active .sp2-node{animation-play-state:running}
 
-/* Panel 3 — Actualización rápida */
-.sp3-wrap{width:100%;max-width:380px}
-.sp3-card{background:#fff;border:1px solid #ebebed;border-radius:20px;padding:20px 18px;box-shadow:0 6px 32px rgba(0,0,0,.07);margin-bottom:12px}
-.sp3-card-label{font-size:11px;font-weight:700;color:#aaa;letter-spacing:.5px;text-transform:uppercase;margin-bottom:14px}
-.sp3-field{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f3f3f5}
-.sp3-field:last-of-type{border-bottom:none}
-.sp3-field-lbl{font-size:12px;color:#999;font-weight:500}
-.sp3-field-val{font-size:14px;font-weight:700;color:var(--dark);display:flex;align-items:center;gap:2px}
-.sp3-cursor{animation:sp3Blink .8s steps(1) infinite;color:var(--red)}
-@keyframes sp3Blink{0%,100%{opacity:1}50%{opacity:0}}
-.sp3-actions{display:flex;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
-.sp3-btn.sp3-save{display:inline-flex;align-items:center;gap:6px;background:var(--dark);color:#fff;font-size:12px;font-weight:700;padding:8px 16px;border-radius:10px;animation:sp3SavePulse 3s ease-in-out infinite}
-@keyframes sp3SavePulse{0%,100%{box-shadow:0 2px 8px rgba(0,0,0,.15)}50%{box-shadow:0 4px 20px rgba(0,0,0,.25)}}
-.sp3-status{display:flex;align-items:center;gap:6px;font-size:11px;color:#16a34a;font-weight:600}
-.sp3-live-dot{width:7px;height:7px;background:#16a34a;border-radius:50%;animation:sp3LivePulse 1.5s ease-in-out infinite}
-@keyframes sp3LivePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.75)}}
-.sp3-channels{display:flex;gap:8px;justify-content:flex-end}
-.sp3-ch{width:36px;height:36px;background:#f7f7f9;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#888;animation:sp3ChIn .4s ease both}
-.sp3-ch1{animation-delay:.1s}.sp3-ch2{animation-delay:.18s}.sp3-ch3{animation-delay:.26s}.sp3-ch4{animation-delay:.34s}
-@keyframes sp3ChIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
-.sol-panel.active .sp3-ch{background:#f0fdf4;color:#16a34a}
+/* Panel 3 — Simplificar (promo detail view) */
+.sp3-phone{width:100%;max-width:380px;background:#f0faf9;border-radius:20px;overflow:hidden;border:1px solid #d1ede9}
+.sp3-top-bar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px 10px;background:#c8f0eb}
+.sp3-brand-row{display:flex;align-items:center;gap:8px}
+.sp3-brand-chip{font-size:9px;font-weight:900;background:#111;color:#fff;padding:3px 7px;border-radius:5px;letter-spacing:.5px}
+.sp3-brand-nm{font-size:13px;font-weight:700;color:var(--dark)}
+.sp3-hero-card{background:#fff;margin:12px;border-radius:16px;padding:16px 14px;box-shadow:0 2px 12px rgba(0,0,0,.07);display:flex;flex-direction:column;align-items:center;text-align:center;animation:sp3HeroIn .4s cubic-bezier(.34,1.3,.64,1) both}
+@keyframes sp3HeroIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+.sp3-store-ico{width:44px;height:44px;background:#f5f5f7;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--dark);margin-bottom:6px;border:1px solid #e5e7eb}
+.sp3-store-nm{font-size:12px;color:#888;margin-bottom:4px}
+.sp3-hero-t{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:6px}
+.sp3-hero-disc{margin-bottom:4px}
+.sp3-pct{font-size:26px;font-weight:900;color:var(--dark)}
+.sp3-de{font-size:14px;color:#555;font-weight:500}
+.sp3-hero-sub{font-size:13px;color:#555}
+.sp3-cond-card{background:#fff;margin:0 12px 12px;border-radius:16px;padding:14px;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.sp3-cond-title{font-size:13px;font-weight:800;color:var(--dark);margin-bottom:8px}
+.sp3-cond-row{display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0;border-bottom:1px solid #f3f3f5;animation:sp3RowIn .3s ease both}
+.sp3-cond-row:last-child{border-bottom:none}
+.sp3-cr1{animation-delay:.1s}.sp3-cr2{animation-delay:.17s}.sp3-cr3{animation-delay:.24s}.sp3-cr4{animation-delay:.31s}.sp3-cr5{animation-delay:.38s}
+@keyframes sp3RowIn{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:none}}
+.sp3-lbl{font-size:11px;color:var(--red);font-weight:500;flex-shrink:0;padding-top:1px}
+.sp3-val{font-size:12px;font-weight:700;color:var(--dark);text-align:right}
+.sp3-val-col{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.sp3-tiny{font-size:9px;color:#aaa;text-align:right}
+.sp3-days{display:flex;gap:4px}
+.sp3-day{width:20px;height:20px;border:1px solid #e5e7eb;border-radius:5px;font-size:9px;font-weight:700;color:#bbb;display:flex;align-items:center;justify-content:center}
+.sp3-day--on{background:var(--dark);color:#fff;border-color:var(--dark)}
+.sp3-disclaimer{padding:0 12px 12px;font-size:9px;color:var(--red);line-height:1.5}
 
 /* Panel 4 — QR */
 .sp4-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;max-width:380px}
@@ -524,23 +555,22 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .sp4-counter{font-size:12px;color:#555;font-weight:600}
 .sp4-num{color:var(--dark);font-weight:800;font-size:15px}
 
-/* Panel 5 — Escalar */
-.sp5-wrap{background:#fff;border:1px solid #ebebed;border-radius:20px;padding:20px 18px 16px;box-shadow:0 6px 32px rgba(0,0,0,.07);width:100%;max-width:380px}
-.sp5-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
-.sp5-metric{display:flex;flex-direction:column;gap:2px}
-.sp5-big{font-size:32px;font-weight:900;color:var(--dark);line-height:1}
-.sp5-sub{font-size:12px;color:#aaa;font-weight:500}
-.sp5-live{display:flex;align-items:center;gap:5px;font-size:11px;color:#16a34a;font-weight:600}
-.sp5-live-dot{width:7px;height:7px;background:#16a34a;border-radius:50%;animation:sp3LivePulse 1.5s ease-in-out infinite}
-.sp5-chart{display:flex;align-items:flex-end;gap:6px;height:80px;margin-bottom:14px}
-.sp5-bar{flex:1;background:#f0f0f2;border-radius:5px 5px 0 0;overflow:hidden;display:flex;align-items:flex-end}
-.sp5-fill{width:100%;background:var(--dark);border-radius:5px 5px 0 0;animation:sp5Grow .6s cubic-bezier(.4,0,.2,1) both}
-.sp5-fill--accent{background:var(--red)}
-.sp5-b1 .sp5-fill{height:45%;animation-delay:.05s}.sp5-b2 .sp5-fill{height:60%;animation-delay:.1s}.sp5-b3 .sp5-fill{height:40%;animation-delay:.15s}.sp5-b4 .sp5-fill{height:75%;animation-delay:.2s}.sp5-b5 .sp5-fill{height:55%;animation-delay:.25s}.sp5-b6 .sp5-fill{height:95%;animation-delay:.3s}
-@keyframes sp5Grow{from{height:0}to{}}
-.sp5-channels{display:flex;gap:8px;justify-content:center}
-.sp5-ch{width:36px;height:36px;background:#f7f7f9;border-radius:10px;display:flex;align-items:center;justify-content:center}
-.sp5-ch svg{width:16px;height:16px;color:#777}
+/* Panel 5 — Escalar (estado de operación dashboard) */
+.sp5-card{background:#fff;border:1px solid #e5e7eb;border-radius:20px;overflow:hidden;width:100%;max-width:380px;box-shadow:0 4px 24px rgba(0,0,0,.07)}
+.sp5-card-title{font-size:9px;font-weight:800;letter-spacing:.8px;color:#aaa;text-transform:uppercase;padding:12px 16px 8px}
+.sp5-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#f0f0f2;border-top:1px solid #f0f0f2;border-bottom:1px solid #f0f0f2}
+.sp5-tile{background:#fff;padding:12px 14px 10px;animation:sp5TileIn .35s ease both}
+.sp5-t1{animation-delay:.04s}.sp5-t2{animation-delay:.08s}.sp5-t3{animation-delay:.12s}.sp5-t4{animation-delay:.16s}.sp5-t5{animation-delay:.2s}.sp5-t6{animation-delay:.24s}
+@keyframes sp5TileIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.sp5-num{font-size:28px;font-weight:900;color:var(--dark);line-height:1;margin-bottom:4px}
+.sp5-num--red{color:var(--red)}
+.sp5-lbl{font-size:10px;color:#888;line-height:1.35}
+.sp5-bar{display:flex;background:var(--dark);padding:12px 14px;gap:0}
+.sp5-bar-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;border-right:1px solid rgba(255,255,255,.12)}
+.sp5-bar-item:last-child{border-right:none}
+.sp5-bar-num{font-size:16px;font-weight:900;color:#fff}
+.sp5-bar-lbl{font-size:9px;color:rgba(255,255,255,.6);text-align:center}
+@keyframes sp3LivePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.75)}}
 
 /* Legacy .sol-phone-side still referenced in responsive — keep rule */
 .sol-phone-side{display:flex;justify-content:center;align-items:flex-start;position:relative;z-index:1;overflow:visible}

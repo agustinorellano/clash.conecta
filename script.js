@@ -66,7 +66,12 @@ function setToggle(btn, mode) {
 })();
 
 
-// ── La Solución accordion ──
+// ── La Solución accordion + dynamic panel switching ──
+function solShowPanel(n) {
+  document.querySelectorAll('.sol-panel').forEach(function(p) { p.classList.remove('active'); });
+  var target = document.querySelector('.sol-panel[data-panel="' + n + '"]');
+  if (target) target.classList.add('active');
+}
 function toggleSolAcc(item) {
   var isOpen = item.classList.contains('open');
   document.querySelectorAll('.sol-acc-item').forEach(function(i) {
@@ -77,14 +82,33 @@ function toggleSolAcc(item) {
     item.classList.add('open');
     var b = item.querySelector('.sol-acc-body');
     b.style.maxHeight = b.scrollHeight + 'px';
+    var n = item.getAttribute('data-sol');
+    if (n) solShowPanel(n);
   }
 }
 (function() {
+  // Hover: preview panel without closing accordion
+  document.querySelectorAll('.sol-acc-item').forEach(function(item) {
+    item.addEventListener('mouseenter', function() {
+      var n = item.getAttribute('data-sol');
+      if (n) solShowPanel(n);
+    });
+    item.addEventListener('mouseleave', function() {
+      // Restore to whichever item is currently open
+      var openItem = document.querySelector('.sol-acc-item.open');
+      if (openItem) {
+        var n = openItem.getAttribute('data-sol');
+        if (n) solShowPanel(n);
+      }
+    });
+  });
+  // Init: open first, show panel 1
   var first = document.querySelector('.sol-acc-item');
   if (first) {
     first.classList.add('open');
     var b = first.querySelector('.sol-acc-body');
     b.style.maxHeight = b.scrollHeight + 'px';
+    solShowPanel('1');
   }
 })();
 // ── BK QR Code visual generator ──

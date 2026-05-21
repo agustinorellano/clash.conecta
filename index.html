@@ -1107,75 +1107,222 @@
 <!-- ═══ 10. PLANES ═══ -->
 <section id="planes">
   <div class="container">
-    <div class="planes-hdr">
+
+    <div class="pln-hdr rv d0">
       <div class="s-label rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Planes</div>
-      <h2 class="planes-h rv d1">Tres formas de usar Clash</h2>
-      <p class="planes-sub rv d2">Elegís cuánto operás vos y cuánto hace la plataforma. Empezá gratis y escalá cuando lo necesites.</p>
+      <h2 class="pln-h rv d1">Elegí tu forma de escalar.</h2>
+      <p class="pln-sub rv d2">Empezá gratis y avanzá cuando lo necesites. Cada plan está diseñado para un momento distinto de tu marca.</p>
     </div>
-    <div class="plans-grid">
 
-      <div class="plan rv d1">
-        <div class="plan-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
-        <div class="plan-name">Autogestión</div>
-        <div class="plan-desc">Para comenzar a digitalizar tu comunicación de beneficios sin inversión inicial.</div>
-        <div class="plan-price">
-          <div class="plan-price-main">Gratis</div>
-          <div class="plan-price-note">Sin costo de activación</div>
+    <div class="pln-grid">
+
+      <!-- ── CARD 1: Gratuito ── -->
+      <div class="pln-card pln-free rv d1" data-plan="free">
+        <div class="pln-top">
+          <div class="pln-tier-tag">Entrada</div>
+          <div class="pln-name">Gratuito</div>
+          <div class="pln-tagline">Para comenzar a digitalizar tu comunicación de beneficios sin inversión inicial.</div>
+          <div class="pln-price-row">
+            <span class="pln-price-main">Gratis</span>
+            <span class="pln-price-note">Sin costo de activación</span>
+          </div>
+          <ul class="pln-highlights">
+            <li><span class="pln-hk">→</span>Panel de gestión básico</li>
+            <li><span class="pln-hk">→</span>QR y links por sucursal</li>
+            <li><span class="pln-hk">→</span>Soporte por email</li>
+          </ul>
         </div>
-        <ul class="plan-feats">
-          <li class="pf"><span class="pck">✓</span>Panel de gestión básico</li>
-          <li class="pf"><span class="pck">✓</span>Hasta 3 sucursales</li>
-          <li class="pf"><span class="pck">✓</span>QR y links únicos por sucursal</li>
-          <li class="pf"><span class="pck">✓</span>Actualización de beneficios</li>
-          <li class="pf"><span class="pck">✓</span>Distribución digital básica</li>
-          <li class="pf"><span class="pck">✓</span>Soporte por email</li>
-          <li class="pf"><span class="pck">✓</span>Acceso a app Clash</li>
-        </ul>
-        <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="plan-cta cta-free">Comenzar gratuitamente →</a>
+        <div class="pln-details">
+          <div class="pln-details-inner">
+            <div class="pln-sep"></div>
+            <ul class="pln-full-list">
+              <li class="pln-fi">
+                <div class="pln-fi-title">Panel de gestión básico</div>
+                <div class="pln-fi-sub">Inicio para carga de promociones</div>
+              </li>
+              <li class="pln-fi">
+                <div class="pln-fi-title">Dashboard</div>
+                <ul class="pln-fi-items">
+                  <li>Publicaciones activas</li>
+                  <li>Activos por vencer</li>
+                  <li>Inactivos</li>
+                  <li>Sucursales y QR</li>
+                </ul>
+              </li>
+              <li class="pln-fi">
+                <div class="pln-fi-title">Distribución</div>
+                <div class="pln-fi-sub">Link y QR genérico sin diseño personalizado</div>
+              </li>
+              <li class="pln-fi">
+                <div class="pln-fi-title">Soporte por email</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pln-footer">
+          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-free">Empezar gratis</a>
+          <button class="pln-toggle">Ver todo lo incluido <svg class="pln-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
       </div>
 
-      <div class="plan featured rv d2">
-        <div class="plan-badge">Más elegido</div>
-        <div class="plan-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <div class="plan-name">Gestión asistida</div>
-        <div class="plan-desc">Para marcas que quieren operar sin fricción con soporte de nuestro equipo.</div>
-        <div class="plan-price">
-          <div class="plan-price-main" style="font-size:22px">Consultar por precio</div>
-          <div class="plan-price-note">Personalizado según operación</div>
+      <!-- ── CARD 2: Gestión Asistida (FEATURED) ── -->
+      <div class="pln-card pln-feat rv d2" data-plan="gestion">
+        <div class="pln-badge-wrap"><span class="pln-badge">Recomendado</span></div>
+        <div class="pln-top">
+          <div class="pln-tier-tag pln-tier-feat">Popular</div>
+          <div class="pln-name">Gestión Asistida</div>
+          <div class="pln-tagline">Para marcas que quieren operar sin fricción con el respaldo de nuestro equipo.</div>
+          <div class="pln-price-row">
+            <span class="pln-price-main pln-price-consult">Consultar</span>
+            <span class="pln-price-note">Personalizado según operación</span>
+          </div>
+          <ul class="pln-highlights">
+            <li><span class="pln-hk pln-hk-feat">→</span>Onboarding personalizado</li>
+            <li><span class="pln-hk pln-hk-feat">→</span>Gestión operativa Clash</li>
+            <li><span class="pln-hk pln-hk-feat">→</span>Analytics avanzado</li>
+          </ul>
         </div>
-        <ul class="plan-feats">
-          <li class="pf"><span class="pck">✓</span>Todo lo de Autogestión</li>
-          <li class="pf"><span class="pck">✓</span>Sucursales ilimitadas</li>
-          <li class="pf"><span class="pck">✓</span>Onboarding personalizado</li>
-          <li class="pf"><span class="pck">✓</span>Gestión por el equipo Clash</li>
-          <li class="pf"><span class="pck">✓</span>Distribución omnicanal completa</li>
-          <li class="pf"><span class="pck">✓</span>Analytics avanzado</li>
-          <li class="pf"><span class="pck">✓</span>Soporte prioritario</li>
-        </ul>
-        <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="plan-cta cta-feat">Consultar por precio →</a>
+        <div class="pln-details">
+          <div class="pln-details-inner">
+            <div class="pln-sep"></div>
+            <ul class="pln-full-list">
+              <li class="pln-fi"><div class="pln-fi-title pln-fi-incl">✦ Todo lo incluido en Gratuito</div></li>
+              <li class="pln-fi"><div class="pln-fi-title">Onboarding personalizado</div></li>
+              <li class="pln-fi">
+                <div class="pln-fi-title">Gestión de carga de promociones</div>
+                <div class="pln-fi-sub">Por el equipo de Clash</div>
+              </li>
+              <li class="pln-fi">
+                <div class="pln-fi-title">Analytics avanzado</div>
+                <ul class="pln-fi-items">
+                  <li>Audiencia</li>
+                  <li>Métricas de performance</li>
+                  <li>Dashboard completo</li>
+                </ul>
+              </li>
+              <li class="pln-fi">
+                <div class="pln-fi-title">Soporte prioritario</div>
+                <ul class="pln-fi-items">
+                  <li>WhatsApp directo</li>
+                  <li>Email prioritario</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pln-footer">
+          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-feat">Consultar propuesta</a>
+          <button class="pln-toggle pln-toggle-feat">Ver todo lo incluido <svg class="pln-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
       </div>
 
-      <div class="plan enterprise rv d3">
-        <div class="plan-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
-        <div class="plan-name">Propuesta a medida</div>
-        <div class="plan-desc">Para grandes marcas con operaciones complejas y múltiples canales.</div>
-        <div class="plan-price">
-          <div class="plan-price-main" style="font-size:22px">Personalizado</div>
-          <div class="plan-price-note">Según volumen y operación</div>
+      <!-- ── CARD 3: Scale ── -->
+      <div class="pln-card pln-scale rv d3" data-plan="scale">
+        <div class="pln-top">
+          <div class="pln-tier-tag pln-tier-dark">Empresas</div>
+          <div class="pln-name pln-name-dark">Scale</div>
+          <div class="pln-tagline pln-tagline-dark">Para grandes marcas con operaciones complejas y múltiples canales.</div>
+          <div class="pln-price-row">
+            <span class="pln-price-main pln-price-dark pln-price-consult">Personalizado</span>
+            <span class="pln-price-note pln-price-note-dark">Según volumen y operación</span>
+          </div>
+          <ul class="pln-highlights pln-highlights-dark">
+            <li><span class="pln-hk pln-hk-dark">→</span>Integraciones multi-canal</li>
+            <li><span class="pln-hk pln-hk-dark">→</span>Account Manager dedicado</li>
+            <li><span class="pln-hk pln-hk-dark">→</span>Reportes personalizados</li>
+          </ul>
         </div>
-        <ul class="plan-feats">
-          <li class="pf"><span class="pck">✓</span>Todo lo de Gestión asistida</li>
-          <li class="pf"><span class="pck">✓</span>Integración con sistemas propios</li>
-          <li class="pf"><span class="pck">✓</span>API dedicada</li>
-          <li class="pf"><span class="pck">✓</span>Materiales físicos incluidos</li>
-          <li class="pf"><span class="pck">✓</span>SLA garantizado</li>
-          <li class="pf"><span class="pck">✓</span>Account manager dedicado</li>
-          <li class="pf"><span class="pck">✓</span>Reportes personalizados</li>
-        </ul>
-        <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="plan-cta cta-ent">Solicitar propuesta →</a>
+        <div class="pln-details">
+          <div class="pln-details-inner">
+            <div class="pln-sep pln-sep-dark"></div>
+            <ul class="pln-full-list">
+              <li class="pln-fi pln-fi-dark"><div class="pln-fi-title pln-fi-incl-dark">✦ Todo lo incluido en Gestión Asistida</div></li>
+              <li class="pln-fi pln-fi-dark">
+                <div class="pln-fi-title">Integración con sistemas propios</div>
+                <ul class="pln-fi-items pln-fi-items-dark">
+                  <li>Widget estándar para web</li>
+                  <li>Integración en pantallas</li>
+                  <li>Tótems digitales</li>
+                  <li>Múltiples canales</li>
+                </ul>
+              </li>
+              <li class="pln-fi pln-fi-dark">
+                <div class="pln-fi-title">Account Manager dedicado</div>
+                <ul class="pln-fi-items pln-fi-items-dark">
+                  <li>Trabajo conjunto</li>
+                  <li>Seguimiento operativo</li>
+                  <li>Coordinación estratégica</li>
+                </ul>
+              </li>
+              <li class="pln-fi pln-fi-dark">
+                <div class="pln-fi-title">Reportes personalizados trimestrales</div>
+                <ul class="pln-fi-items pln-fi-items-dark">
+                  <li>Análisis de performance</li>
+                  <li>Recomendaciones</li>
+                  <li>Sugerencias de mejora</li>
+                </ul>
+              </li>
+              <li class="pln-fi pln-fi-dark">
+                <div class="pln-fi-title">Kit comercial</div>
+                <ul class="pln-fi-items pln-fi-items-dark">
+                  <li>QR personalizado para la marca</li>
+                  <li>Diseño personalizado</li>
+                </ul>
+              </li>
+              <li class="pln-fi pln-fi-dark">
+                <div class="pln-fi-title">Próximamente</div>
+                <div class="pln-fi-sub pln-fi-sub-dark">Envío automatizado de emails a managers de sucursales</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pln-footer">
+          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-scale">Coordinar demo</a>
+          <button class="pln-toggle pln-toggle-dark">Ver todo lo incluido <svg class="pln-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
       </div>
 
-    </div>
+      <!-- ── CARD 4: Propuesta a medida ── -->
+      <div class="pln-card pln-custom rv d4" data-plan="custom">
+        <div class="pln-top">
+          <div class="pln-tier-tag pln-tier-dark">Exclusivo</div>
+          <div class="pln-name pln-name-dark">Propuesta a medida</div>
+          <div class="pln-tagline pln-tagline-dark">Diseñado desde cero para marcas con necesidades únicas y operaciones de alta escala.</div>
+          <div class="pln-price-row">
+            <span class="pln-price-main pln-price-dark pln-price-consult">A medida</span>
+            <span class="pln-price-note pln-price-note-dark">Propuesta personalizada</span>
+          </div>
+          <ul class="pln-highlights pln-highlights-dark">
+            <li><span class="pln-hk pln-hk-dark">→</span>Materiales físicos incluidos</li>
+            <li><span class="pln-hk pln-hk-dark">→</span>Widgets personalizados</li>
+            <li><span class="pln-hk pln-hk-dark">→</span>Web propia de promociones</li>
+          </ul>
+        </div>
+        <div class="pln-details">
+          <div class="pln-details-inner">
+            <div class="pln-sep pln-sep-dark"></div>
+            <ul class="pln-full-list">
+              <li class="pln-fi pln-fi-dark"><div class="pln-fi-title pln-fi-incl-dark">✦ Todo lo incluido en Scale</div></li>
+              <li class="pln-fi pln-fi-dark">
+                <div class="pln-fi-title">Materiales físicos incluidos</div>
+                <ul class="pln-fi-items pln-fi-items-dark">
+                  <li>Coordinación de proveedores</li>
+                  <li>Impresión</li>
+                  <li>Distribución por sucursal</li>
+                </ul>
+              </li>
+              <li class="pln-fi pln-fi-dark"><div class="pln-fi-title">Vistas personalizadas de widgets</div></li>
+              <li class="pln-fi pln-fi-dark"><div class="pln-fi-title">Página web personalizada de promociones</div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pln-footer">
+          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-custom">Hablar con Clash</a>
+          <button class="pln-toggle pln-toggle-dark">Ver todo lo incluido <svg class="pln-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button>
+        </div>
+      </div>
+
+    </div><!-- /pln-grid -->
   </div>
 </section>
 <!-- ═══ 12. CTA FINAL ═══ -->
@@ -1273,6 +1420,38 @@ function startCountUp(){
   // Delay slightly so cards finish animating in first
   setTimeout(function(){ requestAnimationFrame(step); }, 600);
 }
+</script>
+
+<script>
+/* Plans — expandable cards */
+(function(){
+  var grid = document.querySelector('.pln-grid');
+  if (!grid) return;
+  document.querySelectorAll('.pln-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var card = btn.closest('.pln-card');
+      var wasActive = card.classList.contains('active');
+      grid.querySelectorAll('.pln-card').forEach(function(c){ c.classList.remove('active'); });
+      grid.classList.remove('has-active');
+      if (!wasActive) {
+        card.classList.add('active');
+        grid.classList.add('has-active');
+        // Scroll card into view on mobile
+        if (window.innerWidth < 640) {
+          setTimeout(function(){ card.scrollIntoView({behavior:'smooth',block:'nearest'}); }, 50);
+        }
+      }
+    });
+  });
+  // Click outside closes all
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.pln-card')) {
+      grid.querySelectorAll('.pln-card').forEach(function(c){ c.classList.remove('active'); });
+      grid.classList.remove('has-active');
+    }
+  });
+})();
 </script>
 </body>
 </html>

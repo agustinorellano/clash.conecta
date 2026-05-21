@@ -959,7 +959,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .cv2-footer{text-align:center;margin-top:56px;font-size:13px;color:rgba(255,255,255,.3);letter-spacing:.5px}
 
 /* ── Screenshot images inside cards ── */
-.cv2-card-img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;flex:1;min-height:360px}
+.cv2-card-img{width:100%;object-fit:cover;object-position:top center;display:block;height:300px}
 
 /* ══ Responsive ══ */
 @media(max-width:900px){

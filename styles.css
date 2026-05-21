@@ -842,11 +842,11 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .cv2-sub{font-size:15px;color:rgba(255,255,255,.5);line-height:1.6}
 
 /* ── Grid — stretch so both cols = same height ── */
-.cv2-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch}
+.cv2-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;max-width:520px;margin-left:auto;margin-right:auto}
 .cv2-col{display:flex;flex-direction:column;gap:20px}
 
 /* ── Base card — flex column so inner flex works ── */
-.cv2-card{background:#fff;border-radius:20px;border:1px solid rgba(255,255,255,.07);box-shadow:0 12px 40px rgba(0,0,0,.35),0 3px 10px rgba(0,0,0,.25);overflow:hidden;position:relative;flex:1;display:flex;flex-direction:column}
+.cv2-card{background:#fff;border-radius:20px;border:1px solid rgba(255,255,255,.07);box-shadow:0 12px 40px rgba(0,0,0,.35),0 3px 10px rgba(0,0,0,.25);overflow:hidden;position:relative;display:flex;flex-direction:column}
 @keyframes cv2Float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .cv2-float1{animation:cv2Float 6s ease-in-out infinite}
 .cv2-float2{animation:cv2Float 5.5s ease-in-out infinite .5s}
@@ -947,7 +947,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .cv2-sb-qr{color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.15)}
 
 /* Invisible spacer in left col = height of share buttons in right col */
-.cv2-share-pad{flex-shrink:0;height:64px;visibility:hidden}
+.cv2-share-pad{display:none}
 
 /* ══ Column label ══ */
 .cv2-col-label{display:flex;align-items:flex-start;gap:12px;padding:4px 4px 0;flex-shrink:0}
@@ -959,13 +959,11 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .cv2-footer{text-align:center;margin-top:56px;font-size:13px;color:rgba(255,255,255,.3);letter-spacing:.5px}
 
 /* ── Screenshot images inside cards ── */
-.cv2-card-img{width:100%;object-fit:cover;object-position:top center;display:block;height:300px}
+.cv2-card-img{width:100%;height:auto;display:block}
 
 /* ══ Responsive ══ */
-@media(max-width:900px){
-  .cv2-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto;align-items:start}
-  .cv2-card{flex:none}
-  .cv2-share-pad{display:none}
+@media(max-width:600px){
+  .cv2-grid{grid-template-columns:1fr;max-width:320px}
 }
 @media(max-width:640px){
   .cv2-section{padding:64px 0 48px}

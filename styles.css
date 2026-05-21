@@ -711,6 +711,133 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .sv-engage-bar{display:flex;background:var(--dark);border-radius:0 0 16px 16px;overflow:hidden}
 .sv-eb-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:11px 8px;border-right:1px solid rgba(255,255,255,.08)}
 .sv-eb-item:last-child{border-right:none}
+
+/* ── Panel 2: Compartir via link (sv-s2-) ── */
+.sv-s2-promo{display:flex;align-items:center;justify-content:space-between;padding:12px 14px 10px;border-bottom:1px solid rgba(0,0,0,.05)}
+.sv-s2-brand{display:flex;align-items:center;gap:9px}
+.sv-s2-logo{width:34px;height:34px;background:#f5f5f7;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--dark);border:1px solid #e5e7eb;flex-shrink:0}
+.sv-s2-bname{font-size:12px;font-weight:700;color:var(--dark)}
+.sv-s2-bdesc{font-size:10px;color:#888;margin-top:1px}
+.sv-s2-ready{display:flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:#16a34a}
+
+.sv-s2-action{padding:10px 14px 8px}
+.sv-s2-btn{display:flex;align-items:center;gap:7px;width:100%;padding:9px 12px;background:var(--dark);color:#fff;font-size:11px;font-weight:700;border:none;border-radius:10px;cursor:pointer;font-family:inherit;justify-content:center;animation:sv2BtnGlow 3s ease-in-out infinite}
+@keyframes sv2BtnGlow{0%,100%{box-shadow:0 2px 8px rgba(0,0,0,.15)}50%{box-shadow:0 4px 18px rgba(0,0,0,.3)}}
+
+.sv-s2-link-wrap{margin:0 14px 10px;display:flex;flex-direction:column;gap:6px}
+.sv-s2-link-bar{display:flex;align-items:center;gap:6px;padding:7px 10px;background:#f5f5f7;border-radius:8px;border:1px solid #e5e7eb}
+.sv-s2-url{flex:1;font-size:10px;color:#555;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.sv-s2-url strong{color:var(--dark)}
+.sv-s2-copy{font-size:9px;font-weight:700;color:var(--red);cursor:pointer;flex-shrink:0;padding:2px 6px;background:rgba(220,38,38,.08);border-radius:4px}
+.sv-s2-preview{display:flex;align-items:center;gap:8px;padding:8px 10px;background:#fff;border-radius:8px;border:1px solid #e5e7eb}
+.sv-s2-pv-logo{width:26px;height:26px;background:#f0f0f2;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:var(--dark);flex-shrink:0;border:1px solid #e5e7eb}
+.sv-s2-pv-info{flex:1;min-width:0}
+.sv-s2-pv-title{font-size:10px;font-weight:700;color:var(--dark)}
+.sv-s2-pv-url{font-size:9px;color:#aaa;margin-top:1px}
+
+.sv-s2-distribute{padding:6px 14px 14px;display:flex;flex-direction:column;gap:8px}
+.sv-s2-note{font-size:9px;font-weight:600;color:#aaa;letter-spacing:.3px;text-transform:uppercase}
+.sv-s2-icons{display:flex;gap:8px;align-items:center}
+.sv-si{width:34px;height:34px;border-radius:50%;background:#f5f5f7;border:1px solid #e5e7eb;display:flex;align-items:center;justify-content:center;color:#555;cursor:pointer;transition:transform .2s,box-shadow .2s;flex-shrink:0}
+.sv-si:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.sv-si1{animation:svSiIn .35s ease both .3s}
+.sv-si2{animation:svSiIn .35s ease both .45s}
+.sv-si3{animation:svSiIn .35s ease both .6s}
+.sv-si4{animation:svSiIn .35s ease both .75s}
+.sv-si5{animation:svSiIn .35s ease both .9s}
+@keyframes svSiIn{from{opacity:0;transform:translateY(6px) scale(.85)}to{opacity:1;transform:none}}
+
+/* ── Panel 3: Actualizacion de contenido (sv3-) ── */
+.sv3-cal-hdr{display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(0,0,0,.02);border-bottom:1px solid rgba(0,0,0,.05)}
+.sv3-cal-label{font-size:11px;font-weight:700;color:var(--dark);flex:1}
+.sv3-next-upd{font-size:9px;color:#aaa}
+
+.sv3-row{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid rgba(0,0,0,.05);gap:8px}
+.sv3-row-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.sv3-row-title{font-size:11px;font-weight:700;color:var(--dark)}
+.sv3-row-sub{font-size:9px;color:#aaa;margin-top:1px}
+
+/* Fila 2: badge animado */
+.sv3-row-updating{background:rgba(234,179,8,.03);animation:sv3RowPulse 7s ease-in-out infinite}
+@keyframes sv3RowPulse{0%,100%{background:rgba(234,179,8,.03)}40%,60%{background:rgba(220,38,38,.04)}}
+.sv3-badge-wrap{position:relative;height:22px;width:90px;flex-shrink:0}
+.sv3-badge{position:absolute;right:0;top:0;white-space:nowrap;font-size:9px}
+.sv3-b1{animation:sv3B1 7s ease-in-out infinite}
+.sv3-b2{animation:sv3B2 7s ease-in-out infinite}
+.sv3-b3{animation:sv3B3 7s ease-in-out infinite}
+@keyframes sv3B1{0%,15%{opacity:1}25%,85%{opacity:0}90%,100%{opacity:1}}
+@keyframes sv3B2{0%,20%,65%,100%{opacity:0}35%,50%{opacity:1}}
+@keyframes sv3B3{0%,45%,100%{opacity:0}58%,80%{opacity:1}}
+
+/* Fila 3: nueva promo (entrada animada) */
+.sv3-row-new{animation:sv3RowNew 7s ease-in-out infinite}
+@keyframes sv3RowNew{0%,55%{opacity:0;transform:translateX(-8px)}65%,95%{opacity:1;transform:none}100%{opacity:0;transform:translateX(-8px)}}
+
+.sv3-notif{display:flex;align-items:center;gap:6px;margin:8px 14px 0;padding:8px 10px;background:rgba(22,163,74,.06);border-radius:8px;border:1px solid rgba(22,163,74,.1);font-size:10px;font-weight:600;color:#16a34a;animation:sv3NotifIn 7s ease-in-out infinite}
+@keyframes sv3NotifIn{0%,55%{opacity:0}65%,95%{opacity:1}100%{opacity:0}}
+
+.sv3-schedule{padding:10px 14px 14px}
+.sv3-sch-lbl{font-size:9px;color:#aaa;margin-bottom:6px;font-weight:600}
+.sv3-sch-bar{height:4px;background:#f0f0f2;border-radius:4px;overflow:hidden}
+.sv3-sch-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--red),rgba(220,38,38,.5));border-radius:4px;animation:sv3SchFill 7s ease-in-out infinite}
+@keyframes sv3SchFill{0%,5%{width:0%}50%{width:75%}90%,100%{width:0%}}
+
+/* ── Panel 4: Link + QR dos momentos (sv4-) ── */
+.sv4-moments{position:relative;overflow:hidden}
+.sv4-half{width:100%}
+.sv4-body{padding:10px 14px 12px}
+
+.sv4-link-half{animation:sv4LinkPhase 12s ease-in-out infinite}
+.sv4-qr-half{position:absolute;top:0;left:0;right:0;animation:sv4QrPhase 12s ease-in-out infinite}
+@keyframes sv4LinkPhase{
+  0%,3%{opacity:0}
+  8%,42%{opacity:1}
+  50%,100%{opacity:0}
+}
+@keyframes sv4QrPhase{
+  0%,50%{opacity:0}
+  58%,92%{opacity:1}
+  100%{opacity:0}
+}
+
+.sv4-ok-pill{font-size:9px;font-weight:800;color:#16a34a;background:rgba(22,163,74,.1);border-radius:10px;padding:1px 7px;margin-left:auto}
+
+.sv4-promo-mini{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding:8px 10px;background:rgba(0,0,0,.02);border-radius:8px;border:1px solid rgba(0,0,0,.05)}
+.sv4-pm-logo{width:28px;height:28px;background:#f0f0f2;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:var(--dark);border:1px solid #e5e7eb;flex-shrink:0}
+.sv4-pm-name{font-size:11px;font-weight:700;color:var(--dark)}
+.sv4-pm-sub{font-size:9px;color:#aaa;margin-top:1px}
+
+/* Link half */
+.sv4-link-bar{display:flex;align-items:center;gap:5px;padding:6px 9px;background:#f5f5f7;border-radius:7px;border:1px solid #e5e7eb;margin-bottom:6px}
+.sv4-url{flex:1;font-size:9px;color:#555;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.sv4-url strong{color:var(--dark)}
+.sv4-copy{font-size:8px;font-weight:700;color:var(--red);padding:2px 5px;background:rgba(220,38,38,.08);border-radius:3px;flex-shrink:0;cursor:pointer}
+.sv4-link-preview{display:flex;align-items:center;gap:7px;padding:7px 9px;background:#fff;border-radius:7px;border:1px solid #e5e7eb;margin-bottom:8px}
+.sv4-lp-logo{width:24px;height:24px;background:#f0f0f2;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:800;color:var(--dark);flex-shrink:0;border:1px solid #e5e7eb}
+.sv4-lp-title{font-size:9px;font-weight:700;color:var(--dark)}
+.sv4-lp-url{font-size:8px;color:#aaa;margin-top:1px}
+.sv4-lp-info{flex:1;min-width:0}
+.sv4-share-hint{font-size:8px;font-weight:600;color:#bbb;letter-spacing:.3px;text-transform:uppercase;margin-bottom:6px}
+.sv4-si-row{display:flex;gap:6px}
+.sv4-si{width:30px;height:30px;border-radius:50%;background:#f5f5f7;border:1px solid #e5e7eb;display:flex;align-items:center;justify-content:center;color:#666;cursor:pointer;transition:transform .2s;flex-shrink:0}
+.sv4-si:hover{transform:translateY(-2px)}
+.sv4-s1{animation:svSiIn .3s ease both .1s}
+.sv4-s2{animation:svSiIn .3s ease both .2s}
+.sv4-s3{animation:svSiIn .3s ease both .3s}
+.sv4-s4{animation:svSiIn .3s ease both .4s}
+
+/* QR half */
+.sv4-qr-display{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px;background:#f9f9fb;border-radius:12px;border:1px solid #e5e7eb;margin-bottom:8px}
+.sv4-qr-svg{width:88px;height:88px;animation:sv4QrBuild 1s ease both}
+@keyframes sv4QrBuild{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+.sv4-qr-url{font-size:9px;font-weight:600;color:#777}
+.sv4-qr-url strong{color:var(--dark)}
+
+.sv4-qr-uses{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.sv4-use{font-size:8px;font-weight:700;padding:3px 7px;background:#f0f0f2;border-radius:5px;color:#666;border:1px solid #e5e7eb}
+.sv4-ready-pill{display:flex;align-items:center;justify-content:center;gap:5px;font-size:10px;font-weight:700;color:#16a34a;background:rgba(22,163,74,.08);border-radius:8px;padding:7px;border:1px solid rgba(22,163,74,.12)}
+
+
 .sv-eb-num{font-size:15px;font-weight:900;color:#fff}
 .sv-eb-lbl{font-size:8.5px;color:rgba(255,255,255,.55);text-align:center}
 

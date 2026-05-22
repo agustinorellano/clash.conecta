@@ -1230,10 +1230,43 @@
       <p class="pln-sub rv d2">Empezá gratis y avanzá cuando lo necesites. Cada plan está diseñado para un momento distinto de tu marca.</p>
     </div>
 
+    <!-- ── Scale Selector ── -->
+    <div class="pln-scaler rv d3" id="pln-scaler">
+      <p class="pln-scaler-label">¿Cuántas sucursales tiene tu operación?</p>
+      <div class="pln-scale-tabs" role="tablist" aria-label="Cantidad de sucursales">
+        <button class="pln-scale-tab active" data-scale="s1" role="tab" aria-selected="true">
+          <span class="pln-scale-num">1–15</span>
+          <span class="pln-scale-sub">sucursales</span>
+        </button>
+        <button class="pln-scale-tab" data-scale="s2" role="tab" aria-selected="false">
+          <span class="pln-scale-num">16–50</span>
+          <span class="pln-scale-sub">sucursales</span>
+        </button>
+        <button class="pln-scale-tab" data-scale="s3" role="tab" aria-selected="false">
+          <span class="pln-scale-num">51–100</span>
+          <span class="pln-scale-sub">sucursales</span>
+        </button>
+        <button class="pln-scale-tab" data-scale="s4" role="tab" aria-selected="false">
+          <span class="pln-scale-num">+100</span>
+          <span class="pln-scale-sub">sucursales</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── Enterprise Banner (visible only on s4) ── -->
+    <div class="pln-enterprise-banner" id="pln-enterprise-banner">
+      <div class="pln-enterprise-banner-top">
+        <span class="pln-enterprise-dot"></span>
+        <span class="pln-enterprise-tag">Operación Enterprise</span>
+      </div>
+      <div class="pln-enterprise-title">Infraestructura avanzada · Implementación dedicada</div>
+      <div class="pln-enterprise-sub">Cotización personalizada según volumen y arquitectura requerida</div>
+    </div>
+
     <div class="pln-grid" id="pln-grid">
 
       <!-- ── CARD 1: Gratuito ── -->
-      <div class="pln-card pln-free rv d1">
+      <div class="pln-card pln-free rv d1" data-plan="free">
         <div class="pln-tier-tag">Entrada</div>
         <div class="pln-name">Gratuito</div>
         <div class="pln-tagline">Para comenzar a digitalizar tu comunicación de beneficios sin inversión inicial.</div>
@@ -1262,17 +1295,17 @@
         </ul>
         <div class="pln-sep"></div>
         <div class="pln-price-row">
-          <span class="pln-price-main">Gratis</span>
-          <span class="pln-price-note">Sin costo de activación</span>
+          <span class="pln-price-main" data-price="free">Gratis</span>
+          <span class="pln-price-note" data-note="free">Sin costo de activación</span>
         </div>
         <div class="pln-footer">
-          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-free">Empezar gratis</a>
+          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-free" data-cta="free">Empezar gratis</a>
         </div>
       </div>
 
       <!-- ── CARD 2: Promos gestionadas (FEATURED) ── -->
-      <div class="pln-card pln-feat rv d2">
-        <div class="pln-badge-wrap"><span class="pln-badge">Recomendado</span></div>
+      <div class="pln-card pln-feat rv d2" data-plan="gestion">
+        <div class="pln-badge-wrap pln-badge-dyn active"><span class="pln-badge">Recomendado</span></div>
         <div class="pln-tier-tag pln-tier-feat">Popular</div>
         <div class="pln-name">Promos gestionadas</div>
         <div class="pln-tagline">Para marcas que quieren operar sin fricción con el respaldo de nuestro equipo.</div>
@@ -1299,16 +1332,17 @@
         </ul>
         <div class="pln-sep"></div>
         <div class="pln-price-row">
-          <span class="pln-price-main pln-price-consult">Consultar</span>
-          <span class="pln-price-note">Personalizado según operación</span>
+          <span class="pln-price-main pln-price-consult" data-price="gestion">Consultar</span>
+          <span class="pln-price-note" data-note="gestion">Personalizado según operación</span>
         </div>
         <div class="pln-footer">
-          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-feat">Consultar propuesta</a>
+          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-feat" data-cta="gestion">Consultar propuesta</a>
         </div>
       </div>
 
       <!-- ── CARD 3: Scale ── -->
-      <div class="pln-card pln-scale rv d3">
+      <div class="pln-card pln-scale rv d3" data-plan="scale">
+        <div class="pln-badge-wrap pln-badge-dyn"><span class="pln-badge">Recomendado</span></div>
         <div class="pln-tier-tag pln-tier-dark">Empresas</div>
         <div class="pln-name pln-name-dark">Scale</div>
         <div class="pln-tagline pln-tagline-dark">Para grandes marcas con operaciones complejas y múltiples canales.</div>
@@ -1353,16 +1387,17 @@
         </ul>
         <div class="pln-sep pln-sep-dark"></div>
         <div class="pln-price-row">
-          <span class="pln-price-main pln-price-dark pln-price-consult">Personalizado</span>
-          <span class="pln-price-note pln-price-note-dark">Según volumen y operación</span>
+          <span class="pln-price-main pln-price-dark pln-price-consult" data-price="scale">Personalizado</span>
+          <span class="pln-price-note pln-price-note-dark" data-note="scale">Según volumen y operación</span>
         </div>
         <div class="pln-footer">
-          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-scale">Coordinar demo</a>
+          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-scale" data-cta="scale">Coordinar demo</a>
         </div>
       </div>
 
       <!-- ── CARD 4: Propuesta a medida ── -->
-      <div class="pln-card pln-custom rv d4">
+      <div class="pln-card pln-custom rv d4" data-plan="custom">
+        <div class="pln-badge-wrap pln-badge-dyn"><span class="pln-badge">Recomendado</span></div>
         <div class="pln-tier-tag pln-tier-dark">Exclusivo</div>
         <div class="pln-name pln-name-dark">Propuesta a medida</div>
         <div class="pln-tagline pln-tagline-dark">Diseñado desde cero para marcas con necesidades únicas y operaciones de alta escala.</div>
@@ -1387,11 +1422,11 @@
         </ul>
         <div class="pln-sep pln-sep-dark"></div>
         <div class="pln-price-row">
-          <span class="pln-price-main pln-price-dark pln-price-consult">A medida</span>
-          <span class="pln-price-note pln-price-note-dark">Propuesta personalizada</span>
+          <span class="pln-price-main pln-price-dark pln-price-consult" data-price="custom">A medida</span>
+          <span class="pln-price-note pln-price-note-dark" data-note="custom">Propuesta personalizada</span>
         </div>
         <div class="pln-footer">
-          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-custom">Hablar con Clash</a>
+          <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-cta pln-cta-custom" data-cta="custom">Hablar con Clash</a>
         </div>
       </div>
 
@@ -1998,6 +2033,146 @@ function startCountUp(){
 </script>
 
 <!-- Plans are always open — no toggle logic needed -->
+
+<script>
+/* ─────────────────────────────────────────────────────────
+   DYNAMIC PRICING SCALER
+   ─────────────────────────────────────────────────────────
+   Edit PRICING below to update prices/copy at any time.
+   featured: which plan card gets the "Recomendado" highlight.
+   enterprise: true → shows enterprise banner + purple glow.
+   ───────────────────────────────────────────────────────── */
+(function(){
+
+  /* ── PRICING CONFIG (edit freely) ── */
+  var PRICING = {
+    plans: {
+      free: {
+        s1: { price: 'Gratis',      note: 'Sin costo de activación',          cta: 'Empezar gratis' },
+        s2: { price: 'Gratis',      note: 'Sin costo de activación',          cta: 'Empezar gratis' },
+        s3: { price: 'Gratis',      note: 'Sin costo de activación',          cta: 'Empezar gratis' },
+        s4: { price: 'Gratis',      note: 'Sin costo de activación',          cta: 'Empezar gratis' }
+      },
+      gestion: {
+        s1: { price: 'Desde $149',  note: 'USD / mes · hasta 15 sucursales',  cta: 'Consultar propuesta' },
+        s2: { price: 'Desde $299',  note: 'USD / mes · hasta 50 sucursales',  cta: 'Consultar propuesta' },
+        s3: { price: 'Desde $499',  note: 'USD / mes · hasta 100 sucursales', cta: 'Consultar propuesta' },
+        s4: { price: 'A cotizar',   note: 'Propuesta personalizada',           cta: 'Consultar propuesta' }
+      },
+      scale: {
+        s1: { price: 'Desde $299',  note: 'USD / mes · hasta 15 sucursales',  cta: 'Coordinar demo' },
+        s2: { price: 'Desde $599',  note: 'USD / mes · hasta 50 sucursales',  cta: 'Coordinar demo' },
+        s3: { price: 'Desde $999',  note: 'USD / mes · hasta 100 sucursales', cta: 'Coordinar demo' },
+        s4: { price: 'A cotizar',   note: 'Infraestructura enterprise',        cta: 'Coordinar demo' }
+      },
+      custom: {
+        s1: { price: 'A medida',    note: 'Propuesta personalizada',           cta: 'Hablar con Clash' },
+        s2: { price: 'A medida',    note: 'Propuesta personalizada',           cta: 'Hablar con Clash' },
+        s3: { price: 'A medida',    note: 'Propuesta personalizada',           cta: 'Hablar con Clash' },
+        s4: { price: 'A cotizar',   note: 'Implementación enterprise dedicada', cta: 'Hablar con Clash' }
+      }
+    },
+    /* which plan card gets the Recomendado badge + red glow per scale */
+    featured:   { s1: 'gestion', s2: 'scale', s3: 'scale', s4: 'custom' },
+    /* enterprise mode triggers purple banner + purple glow on featured */
+    enterprise: { s1: false,     s2: false,   s3: false,   s4: true }
+  };
+
+  /* ── DOM refs ── */
+  var scaleTabs     = document.querySelectorAll('.pln-scale-tab');
+  var cards         = document.querySelectorAll('.pln-card[data-plan]');
+  var banner        = document.getElementById('pln-enterprise-banner');
+  var currentScale  = 's1';
+
+  if(!scaleTabs.length || !cards.length) return;
+
+  /* ── Animate price/note/cta text with flip ── */
+  function flipText(el, newText) {
+    if(!el || el.textContent === newText) return;
+    el.classList.remove('pln-price-changing');
+    /* force reflow */
+    void el.offsetWidth;
+    el.classList.add('pln-price-changing');
+    el.textContent = newText;
+    el.addEventListener('animationend', function handler(){
+      el.classList.remove('pln-price-changing');
+      el.removeEventListener('animationend', handler);
+    });
+  }
+
+  /* ── Apply a scale ── */
+  function setScale(scale) {
+    if(scale === currentScale) return;
+    currentScale = scale;
+
+    var featuredPlan = PRICING.featured[scale];
+    var isEnterprise = PRICING.enterprise[scale];
+
+    /* 1. Update scale tab UI */
+    scaleTabs.forEach(function(t){
+      var active = t.dataset.scale === scale;
+      t.classList.toggle('active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+
+    /* 2. Enterprise banner */
+    if(banner) banner.classList.toggle('active', isEnterprise);
+
+    /* 3. Update each card */
+    cards.forEach(function(card){
+      var plan = card.dataset.plan;
+      var data = PRICING.plans[plan] && PRICING.plans[plan][scale];
+      if(!data) return;
+
+      var isFeatured = (plan === featuredPlan);
+
+      /* 3a. Price flip */
+      flipText(card.querySelector('[data-price="' + plan + '"]'), data.price);
+      flipText(card.querySelector('[data-note="'  + plan + '"]'), data.note);
+      flipText(card.querySelector('[data-cta="'   + plan + '"]'), data.cta);
+
+      /* 3b. Badge visibility */
+      var badge = card.querySelector('.pln-badge-dyn');
+      if(badge) badge.classList.toggle('active', isFeatured);
+
+      /* 3c. Card highlight classes */
+      card.classList.remove('pln-dyn-feat', 'pln-dyn-enterprise', 'pln-dyn-dim');
+      if(isFeatured) {
+        card.classList.add(isEnterprise ? 'pln-dyn-enterprise' : 'pln-dyn-feat');
+      } else {
+        card.classList.add('pln-dyn-dim');
+      }
+    });
+  }
+
+  /* ── Tab click handlers ── */
+  scaleTabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      setScale(this.dataset.scale);
+    });
+  });
+
+  /* ── Initialize s1 (Promos Gestionadas highlighted) ── */
+  /* Set initial card states without flip animation on load */
+  (function initScale(){
+    var scale = 's1';
+    var featuredPlan = PRICING.featured[scale];
+    cards.forEach(function(card){
+      var plan = card.dataset.plan;
+      var badge = card.querySelector('.pln-badge-dyn');
+      var isFeatured = (plan === featuredPlan);
+      if(badge) badge.classList.toggle('active', isFeatured);
+      card.classList.remove('pln-dyn-feat','pln-dyn-enterprise','pln-dyn-dim');
+      if(isFeatured){
+        card.classList.add('pln-dyn-feat');
+      } else {
+        card.classList.add('pln-dyn-dim');
+      }
+    });
+  })();
+
+})();
+</script>
 
 <script>
 /* Plan Explorer — tab switching */

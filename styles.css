@@ -1857,4 +1857,132 @@ body.nav-open .nav-mobile-menu{display:flex}
   93%{transform:rotate(-.8deg)}
   96%{transform:rotate(.5deg)}
 }
+
+/* ════════════════════════════════════════════════════════
+   DYNAMIC PRICING SCALER
+   ════════════════════════════════════════════════════════ */
+
+/* ── Wrapper & label ── */
+.pln-scaler{margin:0 0 44px;text-align:center}
+.pln-scaler-label{font-size:13px;font-weight:600;color:rgba(255,255,255,.38);margin-bottom:16px;letter-spacing:.1px}
+
+/* ── Tab strip ── */
+.pln-scale-tabs{
+  display:inline-flex;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:5px;
+  gap:3px
+}
+.pln-scale-tab{
+  background:transparent;border:none;border-radius:11px;
+  padding:11px 22px;cursor:pointer;
+  transition:background .25s cubic-bezier(.4,0,.2,1),
+             box-shadow .25s cubic-bezier(.4,0,.2,1);
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  min-width:84px;outline:none
+}
+.pln-scale-tab:hover .pln-scale-num{color:rgba(255,255,255,.65)}
+.pln-scale-tab:hover .pln-scale-sub{color:rgba(255,255,255,.3)}
+.pln-scale-tab.active{
+  background:rgba(255,255,255,.07);
+  box-shadow:0 2px 16px rgba(0,0,0,.28),0 1px 0 rgba(255,255,255,.06) inset
+}
+.pln-scale-num{
+  font-size:15px;font-weight:800;color:rgba(255,255,255,.22);
+  line-height:1;transition:color .25s
+}
+.pln-scale-sub{
+  font-size:10px;font-weight:500;color:rgba(255,255,255,.16);
+  letter-spacing:.2px;transition:color .25s
+}
+.pln-scale-tab.active .pln-scale-num{color:#fff}
+.pln-scale-tab.active .pln-scale-sub{color:rgba(255,255,255,.42)}
+
+/* active accent underline */
+.pln-scale-tab.active::after{
+  content:'';display:block;width:18px;height:2px;
+  background:var(--red);border-radius:2px;
+  margin-top:2px;animation:pln-scaler-line-in .25s ease both
+}
+@keyframes pln-scaler-line-in{
+  from{width:0;opacity:0}to{width:18px;opacity:1}
+}
+
+/* ── Enterprise banner ── */
+.pln-enterprise-banner{
+  display:none;
+  margin-bottom:32px;
+  background:linear-gradient(135deg,rgba(124,58,237,.1) 0%,rgba(168,85,247,.05) 100%);
+  border:1px solid rgba(168,85,247,.22);
+  border-radius:14px;padding:16px 24px;text-align:center;
+  animation:pln-fade .4s ease both
+}
+.pln-enterprise-banner.active{display:block}
+@keyframes pln-fade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.pln-enterprise-banner-top{
+  display:flex;align-items:center;justify-content:center;
+  gap:8px;margin-bottom:6px
+}
+.pln-enterprise-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#a855f7;
+  box-shadow:0 0 10px rgba(168,85,247,.85);
+  animation:pln-hero-pulse 2s ease-in-out infinite;flex-shrink:0
+}
+.pln-enterprise-tag{
+  font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:2px;color:rgba(168,85,247,.65)
+}
+.pln-enterprise-title{font-size:16px;font-weight:800;color:#fff;margin-bottom:4px}
+.pln-enterprise-sub{font-size:12px;color:rgba(255,255,255,.3)}
+
+/* ── Price flip animation ── */
+@keyframes pln-price-flip{
+  0%  {opacity:1;transform:translateY(0)}
+  35% {opacity:0;transform:translateY(-9px)}
+  65% {opacity:0;transform:translateY(9px)}
+  100%{opacity:1;transform:translateY(0)}
+}
+.pln-price-changing{animation:pln-price-flip .36s cubic-bezier(.4,0,.2,1) both!important}
+
+/* ── Dynamic card states ── */
+/* reset transition on all cards for smooth morphing */
+.pln-card{transition:
+  border-color .4s ease,
+  box-shadow .4s ease,
+  transform .4s ease,
+  opacity .4s ease,
+  filter .4s ease
+}
+
+.pln-card.pln-dyn-feat{
+  border-color:rgba(220,38,38,.38)!important;
+  box-shadow:0 8px 36px rgba(220,38,38,.22)!important;
+  transform:translateY(-6px)
+}
+.pln-card.pln-dyn-enterprise{
+  border-color:rgba(168,85,247,.42)!important;
+  box-shadow:0 8px 42px rgba(168,85,247,.26)!important;
+  transform:translateY(-6px)
+}
+.pln-card.pln-dyn-dim{
+  opacity:.38;
+  filter:saturate(.4) brightness(.8)
+}
+
+/* ── Hidden badge helper (Scale / Custom) ── */
+.pln-badge-dyn{display:none}
+.pln-badge-dyn.active{display:block}
+
+/* ── Responsive ── */
+@media(max-width:768px){
+  .pln-scale-tabs{flex-wrap:wrap;justify-content:center;max-width:340px}
+  .pln-scale-tab{min-width:calc(50% - 5px);flex:1 0 calc(50% - 5px)}
+}
+@media(max-width:420px){
+  .pln-scale-tab{padding:10px 14px;min-width:calc(50% - 5px)}
+  .pln-scale-num{font-size:14px}
+}
 .ai2-phone{animation:aiPhoneWiggle 7.2s ease-in-out infinite}

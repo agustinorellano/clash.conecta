@@ -1972,8 +1972,8 @@ body.nav-open .nav-mobile-menu{display:flex}
   transform:translateY(-6px)
 }
 .pln-card.pln-dyn-dim{
-  opacity:.42;
-  filter:saturate(.5)
+  opacity:1;
+  filter:none
 }
 
 /* ── Hidden badge helper (Scale / Custom) ── */

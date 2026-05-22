@@ -499,6 +499,28 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .pln-exp-cta-ghost{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.75);border:1px solid rgba(255,255,255,0.12)}
 .pln-exp-cta-ghost:hover{background:rgba(255,255,255,0.1)}
 
+/* ── Plan Explorer — premium feature cards ── */
+.pln-feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 20px;flex:1}
+.pln-feat-item{background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.07);border-radius:11px;padding:11px 13px;display:flex;align-items:flex-start;gap:9px;transition:border-color .2s}
+.pln-feat-item:hover{border-color:rgba(255,255,255,0.14)}
+.pln-feat-item-full{grid-column:1/-1}
+.pln-feat-icon{width:26px;height:26px;border-radius:7px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pln-feat-name{font-size:11px;font-weight:700;color:rgba(255,255,255,0.82);line-height:1.3;margin-bottom:2px}
+.pln-feat-desc{font-size:10px;color:rgba(255,255,255,0.32);line-height:1.4}
+/* Hero feature — diferencial principal */
+.pln-feat-hero{grid-column:1/-1;background:linear-gradient(135deg,rgba(220,38,38,0.1) 0%,rgba(239,68,68,0.04) 100%);border:1px solid rgba(239,68,68,0.22);border-radius:13px;padding:15px 16px;position:relative;overflow:hidden}
+.pln-feat-hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 10% 50%,rgba(239,68,68,0.08) 0%,transparent 60%);pointer-events:none}
+.pln-feat-hero-top{display:flex;align-items:center;gap:7px;margin-bottom:8px;position:relative;z-index:1}
+.pln-feat-hero-dot{width:6px;height:6px;border-radius:50%;background:#ef4444;box-shadow:0 0 7px rgba(239,68,68,0.8);animation:pln-hero-pulse 2s ease-in-out infinite;flex-shrink:0}
+@keyframes pln-hero-pulse{0%,100%{opacity:1;box-shadow:0 0 7px rgba(239,68,68,0.8)}50%{opacity:.6;box-shadow:0 0 14px rgba(239,68,68,0.35)}}
+.pln-feat-hero-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(239,68,68,0.65)}
+.pln-feat-hero-title{font-size:13px;font-weight:800;color:#fff;line-height:1.4;margin-bottom:4px;position:relative;z-index:1}
+.pln-feat-hero-sub{font-size:10.5px;color:rgba(255,255,255,0.37);line-height:1.5;position:relative;z-index:1}
+/* Hero item in main plan card */
+.pln-fi-hero{background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.18);border-radius:10px;padding:10px 12px}
+.pln-fi-hero .pln-fi-title{color:#f87171;font-weight:800;font-size:12.5px}
+.pln-fi-hero .pln-fi-sub{color:rgba(239,68,68,0.5)}
+
 /* Right column grid */
 .pln-exp-grid{display:grid;gap:10px;height:100%}
 
@@ -611,6 +633,8 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
   .pln-mc-wide{grid-column:span 1}
   .pln-mc-tall{grid-row:span 1}
   .pln-exp-left{padding:24px 20px}
+  .pln-feat-grid{grid-template-columns:1fr}
+  .pln-feat-hero,.pln-feat-item-full{grid-column:1}
 }
 
 /* ── MÉTRICAS ── */

@@ -1999,3 +1999,5 @@ body.nav-open .nav-mobile-menu{display:flex}
 @keyframes pln-mc-prog{
   0%{width:40%}50%{width:82%}100%{width:40%}
 }
+
+@keyframes scl-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(0.7)}}

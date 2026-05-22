@@ -1994,3 +1994,8 @@ body.nav-open .nav-mobile-menu{display:flex}
   .pln-scale-num{font-size:14px}
 }
 .ai2-phone{animation:aiPhoneWiggle 7.2s ease-in-out infinite}
+
+/* Progress bar animation for gestión panel */
+@keyframes pln-mc-prog{
+  0%{width:40%}50%{width:82%}100%{width:40%}
+}

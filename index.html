@@ -1474,20 +1474,45 @@
             <div class="pln-exp-right">
               <div class="pln-exp-grid" style="grid-template-columns:1fr 1fr;gap:10px">
 
-                <!-- Dashboard básico -->
+                <!-- Panel de gestión -->
                 <div class="pln-mc">
-                  <div class="pln-mc-topbar">
-                    <div class="pln-mc-dots">
-                      <div class="pln-mc-dot" style="background:#ff5f57"></div>
-                      <div class="pln-mc-dot" style="background:#febc2e"></div>
-                      <div class="pln-mc-dot" style="background:#28c840"></div>
+                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Panel de gestión</div>
+                  <div style="display:flex;flex-direction:column;gap:6px;flex:1">
+                    <div style="display:flex;align-items:center;gap:7px;padding:5px 7px;background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.18);border-radius:7px">
+                      <span style="width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px rgba(34,197,94,0.9);flex-shrink:0"></span>
+                      <div style="flex:1;min-width:0"><div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">30% OFF en ropa</div></div>
+                      <span style="font-size:7px;font-weight:700;color:#22c55e;background:rgba(34,197,94,0.12);padding:2px 5px;border-radius:4px;flex-shrink:0;white-space:nowrap">Activa</span>
                     </div>
-                    <div class="pln-mc-label">Dashboard</div>
+                    <div style="display:flex;align-items:center;gap:7px;padding:5px 7px;background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.16);border-radius:7px">
+                      <span style="width:6px;height:6px;border-radius:50%;background:#f59e0b;box-shadow:0 0 6px rgba(245,158,11,0.7);flex-shrink:0;animation:pln-hero-pulse 2s ease-in-out infinite"></span>
+                      <div style="flex:1;min-width:0"><div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.82);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">2×1 Electrónica</div></div>
+                      <span style="font-size:7px;font-weight:700;color:#f59e0b;background:rgba(245,158,11,0.12);padding:2px 5px;border-radius:4px;flex-shrink:0;white-space:nowrap">Por vencer</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:7px;padding:5px 7px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:7px;opacity:.45">
+                      <span style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.2);flex-shrink:0"></span>
+                      <div style="flex:1;min-width:0"><div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Cuotas BBVA</div></div>
+                      <span style="font-size:7px;font-weight:700;color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.05);padding:2px 5px;border-radius:4px;flex-shrink:0;white-space:nowrap">Inactiva</span>
+                    </div>
                   </div>
-                  <div class="pln-mc-stats">
-                    <div class="pln-mc-stat"><div class="pln-mc-stat-num">3</div><div class="pln-mc-stat-label">Beneficios</div></div>
-                    <div class="pln-mc-stat"><div class="pln-mc-stat-num">1</div><div class="pln-mc-stat-label">Sucursal</div></div>
-                    <div class="pln-mc-stat pln-mc-stat-red"><div class="pln-mc-stat-num">48</div><div class="pln-mc-stat-label">Visitas</div></div>
+                  <div style="margin-top:8px;padding:5px 8px;background:rgba(239,68,68,0.07);border:1px dashed rgba(239,68,68,0.22);border-radius:6px;font-size:9px;font-weight:700;color:rgba(239,68,68,0.55);text-align:center">+ Nueva promo</div>
+                </div>
+
+                <!-- Dashboard -->
+                <div class="pln-mc">
+                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Dashboard</div>
+                  <div style="display:flex;gap:4px;margin-bottom:10px">
+                    <div style="flex:1;background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.18);border-radius:7px;padding:5px 3px;text-align:center">
+                      <div style="font-size:15px;font-weight:900;color:#22c55e;line-height:1">3</div>
+                      <div style="font-size:7px;color:rgba(255,255,255,0.28);margin-top:2px">Activas</div>
+                    </div>
+                    <div style="flex:1;background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.16);border-radius:7px;padding:5px 3px;text-align:center">
+                      <div style="font-size:15px;font-weight:900;color:#f59e0b;line-height:1">1</div>
+                      <div style="font-size:7px;color:rgba(255,255,255,0.28);margin-top:2px">Por vencer</div>
+                    </div>
+                    <div style="flex:1;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:7px;padding:5px 3px;text-align:center">
+                      <div style="font-size:15px;font-weight:900;color:rgba(255,255,255,0.28);line-height:1">1</div>
+                      <div style="font-size:7px;color:rgba(255,255,255,0.2);margin-top:2px">Inactivas</div>
+                    </div>
                   </div>
                   <div class="pln-mc-bars">
                     <div class="pln-mc-bar-row"><span class="pln-mc-bar-label">Lun</span><div class="pln-mc-bar-track"><div class="pln-mc-bar-fill" style="width:42%"></div></div></div>
@@ -1495,56 +1520,39 @@
                     <div class="pln-mc-bar-row"><span class="pln-mc-bar-label">Mié</span><div class="pln-mc-bar-track"><div class="pln-mc-bar-fill pln-mc-bar-red" style="width:88%"></div></div></div>
                     <div class="pln-mc-bar-row"><span class="pln-mc-bar-label">Jue</span><div class="pln-mc-bar-track"><div class="pln-mc-bar-fill" style="width:38%"></div></div></div>
                   </div>
+                  <div style="margin-top:6px;font-size:8px;color:rgba(255,255,255,0.2);text-align:center">1 sucursal · 48 visitas hoy</div>
                 </div>
 
-                <!-- QR + Link -->
-                <div class="pln-mc" style="align-items:center;justify-content:center">
-                  <div class="pln-mc-qr-label">Link de sucursal</div>
-                  <div class="pln-mc-link">clash.com.ar/<span style="color:#ef4444">tu-marca</span></div>
-                  <div class="pln-mc-qr">
-                    <svg viewBox="0 0 80 80" width="72" height="72">
-                      <rect x="4" y="4" width="24" height="24" rx="3" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="2"/>
-                      <rect x="9" y="9" width="14" height="14" rx="1.5" fill="rgba(255,255,255,0.35)"/>
-                      <rect x="52" y="4" width="24" height="24" rx="3" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="2"/>
-                      <rect x="57" y="9" width="14" height="14" rx="1.5" fill="rgba(255,255,255,0.35)"/>
-                      <rect x="4" y="52" width="24" height="24" rx="3" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="2"/>
-                      <rect x="9" y="57" width="14" height="14" rx="1.5" fill="rgba(255,255,255,0.35)"/>
-                      <rect x="32" y="5" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="40" y="5" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="32" y="13" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="46" y="11" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="32" y="21" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="40" y="19" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="5" y="32" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="13" y="32" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="21" y="32" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="32" y="32" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="40" y="32" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="48" y="32" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="5" y="40" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="21" y="40" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="32" y="40" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="48" y="40" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="5" y="48" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="15" y="48" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="32" y="48" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="40" y="48" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="56" y="32" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="64" y="32" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="72" y="32" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="56" y="40" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="72" y="40" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="62" y="48" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="56" y="56" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="66" y="56" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="74" y="56" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="56" y="64" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="62" y="64" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="70" y="68" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
-                      <rect x="60" y="74" width="5" height="5" rx="1" fill="rgba(255,255,255,0.22)"/>
+                <!-- Distribución full-width -->
+                <div class="pln-mc" style="grid-column:1/-1;flex-direction:row;align-items:center;gap:14px;padding:12px 14px">
+                  <div style="flex:1">
+                    <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Distribución</div>
+                    <div style="font-size:10.5px;font-weight:600;color:rgba(255,255,255,0.45);margin-bottom:8px;background:rgba(255,255,255,0.04);padding:4px 8px;border-radius:6px;border:1px solid rgba(255,255,255,0.07)">clash.com.ar/<span style="color:#ef4444;font-weight:700">tu-marca</span></div>
+                    <div style="display:flex;gap:4px;flex-wrap:wrap">
+                      <span style="font-size:7.5px;font-weight:600;color:rgba(34,197,94,0.75);background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.18);padding:2px 8px;border-radius:20px">Suc. 1</span>
+                      <span style="font-size:7.5px;font-weight:600;color:rgba(34,197,94,0.75);background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.18);padding:2px 8px;border-radius:20px">Suc. 2</span>
+                      <span style="font-size:7.5px;font-weight:600;color:rgba(34,197,94,0.75);background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.18);padding:2px 8px;border-radius:20px">Suc. 3</span>
+                      <span style="font-size:7.5px;font-weight:600;color:rgba(255,255,255,0.18);background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);padding:2px 8px;border-radius:20px">Suc. 4</span>
+                    </div>
+                  </div>
+                  <div style="flex-shrink:0;padding:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px">
+                    <svg viewBox="0 0 64 64" width="54" height="54">
+                      <rect x="3" y="3" width="17" height="17" rx="3" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+                      <rect x="7" y="7" width="9" height="9" rx="1.5" fill="rgba(255,255,255,0.32)"/>
+                      <rect x="44" y="3" width="17" height="17" rx="3" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+                      <rect x="48" y="7" width="9" height="9" rx="1.5" fill="rgba(255,255,255,0.32)"/>
+                      <rect x="3" y="44" width="17" height="17" rx="3" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+                      <rect x="7" y="48" width="9" height="9" rx="1.5" fill="rgba(255,255,255,0.32)"/>
+                      <circle cx="27" cy="5" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="33" cy="5" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="39" cy="5" r="2" fill="rgba(255,255,255,0.2)"/>
+                      <circle cx="27" cy="11" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="33" cy="11" r="2" fill="rgba(255,255,255,0.2)"/>
+                      <circle cx="5" cy="27" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="11" cy="27" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="17" cy="27" r="2" fill="rgba(255,255,255,0.2)"/>
+                      <circle cx="5" cy="33" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="17" cy="33" r="2" fill="rgba(255,255,255,0.2)"/>
+                      <circle cx="47" cy="27" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="53" cy="27" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="59" cy="27" r="2" fill="rgba(255,255,255,0.2)"/>
+                      <circle cx="53" cy="33" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="59" cy="33" r="2" fill="rgba(255,255,255,0.2)"/>
+                      <circle cx="27" cy="47" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="33" cy="47" r="2" fill="rgba(255,255,255,0.2)"/>
+                      <circle cx="27" cy="59" r="2" fill="rgba(255,255,255,0.2)"/><circle cx="39" cy="59" r="2" fill="rgba(255,255,255,0.2)"/>
                     </svg>
                   </div>
-                  <div class="pln-mc-qr-note">Listo para imprimir y compartir</div>
                 </div>
 
               </div>
@@ -1587,37 +1595,45 @@
             <div class="pln-exp-right">
               <div class="pln-exp-grid" style="grid-template-columns:1fr 1fr;gap:10px">
 
-                <!-- Upload / gestión -->
-                <div class="pln-mc">
-                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px">Próxima promo</div>
-                  <div class="pln-mc-upload-row">
-                    <div class="pln-mc-upload-icon">
-                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <!-- Clash gestiona — hero full-width -->
+                <div class="pln-mc" style="grid-column:1/-1;background:linear-gradient(135deg,rgba(220,38,38,0.1) 0%,rgba(239,68,68,0.04) 100%);border-color:rgba(239,68,68,0.22)">
+                  <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px">
+                    <span style="width:6px;height:6px;border-radius:50%;background:#ef4444;box-shadow:0 0 8px rgba(239,68,68,0.9);animation:pln-hero-pulse 2s ease-in-out infinite;flex-shrink:0"></span>
+                    <span style="font-size:9px;font-weight:700;color:rgba(239,68,68,0.65);text-transform:uppercase;letter-spacing:1.5px">Clash está trabajando</span>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:5px">
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 9px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px">
+                      <div style="width:22px;height:22px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.28);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                        <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </div>
+                      <div style="flex:1"><div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.82)">30% OFF en zapatillas</div><div style="font-size:8.5px;color:rgba(255,255,255,0.28)">Publicado por Clash · hace 2 días</div></div>
+                      <span style="font-size:7.5px;font-weight:700;color:#22c55e;background:rgba(34,197,94,0.1);padding:2px 6px;border-radius:4px;flex-shrink:0">Activa</span>
                     </div>
-                    <div>
-                      <div class="pln-mc-upload-name">30% OFF en corte</div>
-                      <div class="pln-mc-upload-sub">Por equipo Clash</div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 9px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px">
+                      <div style="width:22px;height:22px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.28);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                        <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </div>
+                      <div style="flex:1"><div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.82)">2×1 en accesorios</div><div style="font-size:8.5px;color:rgba(255,255,255,0.28)">Publicado por Clash · hace 5 días</div></div>
+                      <span style="font-size:7.5px;font-weight:700;color:#22c55e;background:rgba(34,197,94,0.1);padding:2px 6px;border-radius:4px;flex-shrink:0">Activa</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 9px;background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.14);border-radius:8px">
+                      <div style="width:22px;height:22px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.22);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;animation:pln-hero-pulse 1.8s ease-in-out infinite">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/><path d="M3 15v4a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4"/></svg>
+                      </div>
+                      <div style="flex:1">
+                        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.82)">Cuotas Visa sin interés</div>
+                        <div style="display:flex;align-items:center;gap:4px;margin-top:2px">
+                          <div style="flex:1;height:3px;background:rgba(255,255,255,0.06);border-radius:2px"><div style="height:100%;width:68%;background:linear-gradient(90deg,#ef4444,#f87171);border-radius:2px;animation:pln-mc-prog 3s ease-in-out infinite"></div></div>
+                          <span style="font-size:7.5px;color:rgba(239,68,68,0.65);flex-shrink:0">68%</span>
+                        </div>
+                      </div>
+                      <span style="font-size:7.5px;font-weight:700;color:rgba(239,68,68,0.65);flex-shrink:0">Cargando…</span>
                     </div>
                   </div>
-                  <div class="pln-mc-progress-bar"><div class="pln-mc-progress-fill" style="width:72%"></div></div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.2)">Subiendo… 72%</div>
-                  <div class="pln-mc-check-list">
-                    <div class="pln-mc-check-item done">
-                      <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                      Imagen cargada
-                    </div>
-                    <div class="pln-mc-check-item done">
-                      <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                      Descripción lista
-                    </div>
-                    <div class="pln-mc-check-item">
-                      <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/></svg>
-                      Publicando…
-                    </div>
-                  </div>
+                  <div style="margin-top:8px;padding:4px 8px;background:rgba(255,255,255,0.03);border-radius:6px;font-size:8.5px;color:rgba(255,255,255,0.22);text-align:center">Clash carga y mantiene tu contenido · vos solo decidís</div>
                 </div>
 
-                <!-- Mix de Entidades — CSS replica -->
+                <!-- Mix de Entidades -->
                 <div class="pln-mc" style="padding:10px;background:#fff;border-color:rgba(0,0,0,0.1)">
                   <div style="margin-bottom:6px">
                     <div style="font-size:10px;font-weight:800;color:#111;line-height:1.2">Mix de Entidades</div>
@@ -1637,7 +1653,7 @@
                   </div>
                 </div>
 
-                <!-- QR personalizado — Caso BK (CSS replica) -->
+                <!-- BK QR sticker — CSS replica -->
                 <div class="pln-mc" style="padding:0;overflow:hidden;background:#f0e4c8;border-color:rgba(160,90,20,0.3);gap:0">
                   <div style="padding:8px 8px 0;text-align:center">
                     <div style="background:#f97316;height:20px;border-radius:50% 50% 0 0 / 100% 100% 0 0;margin:0 6px 5px"></div>
@@ -1673,16 +1689,6 @@
                       <span style="font-size:7px;font-weight:700;color:#fff;font-style:italic">clash.</span>
                     </div>
                   </div>
-                </div>
-
-                <!-- WhatsApp support -->
-                <div class="pln-mc">
-                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Soporte prioritario</div>
-                  <div class="pln-mc-chat-row">
-                    <div class="pln-mc-chat-avatar">C</div>
-                    <div class="pln-mc-chat-bubble">Tu próxima promo ya está cargada. ¿La activamos hoy?</div>
-                  </div>
-                  <div class="pln-mc-chat-status"><span class="pln-mc-online-dot"></span> Respuesta en menos de 2 horas</div>
                 </div>
 
               </div>
@@ -1728,48 +1734,79 @@
             <div class="pln-exp-right">
               <div class="pln-exp-grid" style="grid-template-columns:1fr 1fr;gap:10px">
 
-                <!-- Multi-sucursal -->
-                <div class="pln-mc">
-                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px">Red de sucursales</div>
-                  <div class="pln-mc-branch-grid">
-                    <div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div>
-                    <div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot dim"></div><div class="pln-mc-branch-dot active"></div>
-                    <div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot dim"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div><div class="pln-mc-branch-dot active"></div>
+                <!-- Red de sucursales — SVG network full-width -->
+                <div class="pln-mc" style="grid-column:1/-1;padding:14px;overflow:hidden;position:relative;min-height:120px">
+                  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(220,38,38,0.06) 0%,transparent 65%);pointer-events:none"></div>
+                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;position:relative;z-index:1">Red de sucursales</div>
+                  <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:1">
+                    <svg viewBox="0 0 220 110" width="100%" style="max-width:280px;flex-shrink:0" height="110">
+                      <!-- Connection lines -->
+                      <line x1="110" y1="55" x2="30" y2="20" stroke="rgba(239,68,68,0.22)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln1"/>
+                      <line x1="110" y1="55" x2="65" y2="95" stroke="rgba(239,68,68,0.22)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln2"/>
+                      <line x1="110" y1="55" x2="185" y2="20" stroke="rgba(239,68,68,0.22)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln3"/>
+                      <line x1="110" y1="55" x2="170" y2="95" stroke="rgba(239,68,68,0.22)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln4"/>
+                      <line x1="110" y1="55" x2="15" y2="60" stroke="rgba(239,68,68,0.18)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln5"/>
+                      <line x1="110" y1="55" x2="205" y2="60" stroke="rgba(239,68,68,0.18)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln6"/>
+                      <line x1="110" y1="55" x2="110" y2="10" stroke="rgba(239,68,68,0.18)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln1"/>
+                      <line x1="110" y1="55" x2="110" y2="100" stroke="rgba(239,68,68,0.18)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln2"/>
+                      <!-- Outer nodes -->
+                      <circle cx="30" cy="20" r="5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
+                      <circle cx="30" cy="20" r="5" fill="none" stroke="rgba(34,197,94,0.25)" stroke-width="4" class="ad2-center"/>
+                      <circle cx="65" cy="95" r="5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
+                      <circle cx="185" cy="20" r="5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
+                      <circle cx="170" cy="95" r="5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
+                      <circle cx="15" cy="60" r="4" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.4)" stroke-width="1.5"/>
+                      <circle cx="205" cy="60" r="4" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.4)" stroke-width="1.5"/>
+                      <circle cx="110" cy="10" r="4" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/>
+                      <circle cx="110" cy="100" r="4" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/>
+                      <!-- Central clash. hub -->
+                      <circle cx="110" cy="55" r="18" fill="rgba(220,38,38,0.12)" stroke="rgba(220,38,38,0.35)" stroke-width="1.5" class="ad2-center"/>
+                      <circle cx="110" cy="55" r="24" fill="none" stroke="rgba(220,38,38,0.08)" stroke-width="1" stroke-dasharray="3 4"/>
+                      <text x="110" y="59" font-family="-apple-system,sans-serif" font-size="8" font-weight="700" font-style="italic" fill="#ef4444" text-anchor="middle">clash.</text>
+                      <!-- Labels -->
+                      <text x="30" y="13" font-family="-apple-system,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 01</text>
+                      <text x="185" y="13" font-family="-apple-system,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 02</text>
+                      <text x="65" y="107" font-family="-apple-system,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 03</text>
+                      <text x="170" y="107" font-family="-apple-system,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 04</text>
+                    </svg>
+                    <div style="display:flex;flex-direction:column;gap:6px;flex-shrink:0">
+                      <div><div style="font-size:22px;font-weight:900;color:#fff;line-height:1">16</div><div style="font-size:8.5px;color:rgba(255,255,255,0.3)">sucursales activas</div></div>
+                      <div><div style="font-size:22px;font-weight:900;color:#ef4444;line-height:1">75</div><div style="font-size:8.5px;color:rgba(255,255,255,0.3)">QR habilitados</div></div>
+                      <div style="display:flex;align-items:center;gap:4px"><span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 5px rgba(34,197,94,0.8)"></span><span style="font-size:8px;color:rgba(255,255,255,0.35)">Sincronizado</span></div>
+                    </div>
                   </div>
-                  <div><div class="pln-mc-stat-num" style="font-size:20px">16</div><div class="pln-mc-stat-label">sucursales activas</div></div>
-                  <div><div style="font-size:18px;font-weight:900;color:#ef4444;line-height:1">75</div><div class="pln-mc-stat-label">QR habilitados</div></div>
                 </div>
 
-                <!-- Widget integrado — Arredo (CSS replica) -->
+                <!-- Widget Arredo — más grande -->
                 <div class="pln-mc" style="padding:6px;overflow:hidden;background:linear-gradient(145deg,#2c1a08 0%,#160e04 100%);border-color:rgba(255,180,80,0.12);position:relative">
                   <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 25% 65%,rgba(180,110,30,0.18) 0%,transparent 55%);pointer-events:none"></div>
                   <div style="position:relative;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 3px 18px rgba(0,0,0,0.65)">
-                    <div style="padding:6px 7px 3px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #f0f0f0">
+                    <div style="padding:7px 8px 4px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #f0f0f0">
                       <div>
-                        <div style="font-size:8px;font-weight:800;color:#111">Promociones de hoy</div>
-                        <div style="font-size:5.5px;color:#aaa">en Arredo – Junín 501, Rosario</div>
+                        <div style="font-size:9px;font-weight:800;color:#111">Promociones de hoy</div>
+                        <div style="font-size:6px;color:#aaa">en Arredo – Junín 501, Rosario</div>
                       </div>
-                      <div style="font-size:6.5px;font-weight:700;color:#555">08:52 p.m.</div>
+                      <div style="font-size:7px;font-weight:700;color:#555;flex-shrink:0">08:52 p.m.</div>
                     </div>
-                    <div style="margin:4px 5px 3px;background:linear-gradient(135deg,#fff8f8,#fff5f5);border:1px solid #fecaca;border-radius:5px;padding:4px 5px;display:flex;align-items:center;gap:5px">
-                      <div style="width:14px;height:14px;background:#fef2f2;border-radius:4px;border:1px solid #fecaca;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:8px">★</span></div>
-                      <div><div style="font-size:7.5px;font-weight:800;color:#111">6 Cuotas sin interés</div><div style="font-size:5.5px;color:#888">En productos seleccionados</div></div>
+                    <div style="margin:5px 6px 4px;background:linear-gradient(135deg,#fff8f8,#fff5f5);border:1px solid #fecaca;border-radius:5px;padding:5px 6px;display:flex;align-items:center;gap:5px">
+                      <div style="width:16px;height:16px;background:#fef2f2;border-radius:4px;border:1px solid #fecaca;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:9px">★</span></div>
+                      <div><div style="font-size:8.5px;font-weight:800;color:#111">6 Cuotas sin interés</div><div style="font-size:6px;color:#888">En productos seleccionados</div></div>
                     </div>
-                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5px;padding:0 5px 4px">
-                      <div style="background:#f9f9f9;border-radius:4px;padding:3.5px 3px"><div style="font-size:5px;font-weight:800;color:#004a97;margin-bottom:1px">BBVA</div><div style="font-size:5.5px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4px;color:#bbb">Todos los días</div></div>
-                      <div style="background:#f9f9f9;border-radius:4px;padding:3.5px 3px"><div style="font-size:5px;font-weight:800;color:#e60026;margin-bottom:1px">Macro</div><div style="font-size:5.5px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4px;color:#bbb">Todos los días</div></div>
-                      <div style="background:#f9f9f9;border-radius:4px;padding:3.5px 3px"><div style="font-size:5px;font-weight:800;color:#ec0000;margin-bottom:1px">Santander</div><div style="font-size:5.5px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4px;color:#bbb">Tarj. Crédito</div></div>
-                      <div style="background:#f9f9f9;border-radius:4px;padding:3.5px 3px"><div style="font-size:5px;font-weight:800;color:#006633;margin-bottom:1px">ICBC</div><div style="font-size:5.5px;font-weight:700;color:#111;line-height:1.3">3 Cuotas s/i</div><div style="font-size:4px;color:#bbb">Todos los días</div></div>
-                      <div style="background:#f9f9f9;border-radius:4px;padding:3.5px 3px"><div style="font-size:5px;font-weight:800;color:#ff6900;margin-bottom:1px">Naranja X</div><div style="font-size:5.5px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4px;color:#bbb">Tarj. Crédito</div></div>
-                      <div style="background:#f9f9f9;border-radius:4px;padding:3.5px 3px"><div style="font-size:5px;font-weight:800;color:#00a0e1;margin-bottom:1px">Bco. Nación</div><div style="font-size:5.5px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4px;color:#bbb">Tarj. Crédito</div></div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;padding:0 6px 5px">
+                      <div style="background:#f9f9f9;border-radius:4px;padding:4px 3px"><div style="font-size:5.5px;font-weight:800;color:#004a97;margin-bottom:1px">BBVA</div><div style="font-size:6px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4.5px;color:#bbb">Todos los días</div></div>
+                      <div style="background:#f9f9f9;border-radius:4px;padding:4px 3px"><div style="font-size:5.5px;font-weight:800;color:#e60026;margin-bottom:1px">Macro</div><div style="font-size:6px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4.5px;color:#bbb">Todos los días</div></div>
+                      <div style="background:#f9f9f9;border-radius:4px;padding:4px 3px"><div style="font-size:5.5px;font-weight:800;color:#ec0000;margin-bottom:1px">Santander</div><div style="font-size:6px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4.5px;color:#bbb">Tarj. Crédito</div></div>
+                      <div style="background:#f9f9f9;border-radius:4px;padding:4px 3px"><div style="font-size:5.5px;font-weight:800;color:#006633;margin-bottom:1px">ICBC</div><div style="font-size:6px;font-weight:700;color:#111;line-height:1.3">3 Cuotas s/i</div><div style="font-size:4.5px;color:#bbb">Todos los días</div></div>
+                      <div style="background:#f9f9f9;border-radius:4px;padding:4px 3px"><div style="font-size:5.5px;font-weight:800;color:#ff6900;margin-bottom:1px">Naranja X</div><div style="font-size:6px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4.5px;color:#bbb">Tarj. Crédito</div></div>
+                      <div style="background:#f9f9f9;border-radius:4px;padding:4px 3px"><div style="font-size:5.5px;font-weight:800;color:#00a0e1;margin-bottom:1px">Bco. Nación</div><div style="font-size:6px;font-weight:700;color:#111;line-height:1.3">6 Cuotas s/i</div><div style="font-size:4.5px;color:#bbb">Tarj. Crédito</div></div>
                     </div>
-                    <div style="padding:2px 7px 4px;text-align:right"><span style="font-size:4.5px;color:#bbb">powered by </span><span style="font-size:5px;font-weight:700;color:#ef4444;font-style:italic">clash.</span></div>
+                    <div style="padding:3px 8px 5px;text-align:right"><span style="font-size:5px;color:#bbb">powered by </span><span style="font-size:5.5px;font-weight:700;color:#ef4444;font-style:italic">clash.</span></div>
                   </div>
                 </div>
 
                 <!-- Account Manager -->
                 <div class="pln-mc">
-                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px">Tu Account Manager</div>
+                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Tu Account Manager</div>
                   <div class="pln-mc-am">
                     <div class="pln-mc-am-avatar">AM</div>
                     <div>
@@ -1778,22 +1815,7 @@
                     </div>
                   </div>
                   <div class="pln-mc-am-status"><span class="pln-mc-online-dot"></span> Disponible ahora</div>
-                  <div style="font-size:10px;color:rgba(255,255,255,0.28);line-height:1.5">Seguimiento semanal · Estrategia operativa · Coordinación</div>
-                </div>
-
-                <!-- Reporte Q -->
-                <div class="pln-mc">
-                  <div class="pln-mc-report-head">
-                    <div class="pln-mc-report-title">Reporte Q3</div>
-                    <div class="pln-mc-report-badge">↑ Crecimiento</div>
-                  </div>
-                  <div class="pln-mc-report-big">+340%</div>
-                  <div class="pln-mc-report-sub">en visualizaciones</div>
-                  <div class="pln-mc-bars" style="margin-top:6px">
-                    <div class="pln-mc-bar-row"><span class="pln-mc-bar-label">Ene</span><div class="pln-mc-bar-track"><div class="pln-mc-bar-fill" style="width:22%"></div></div></div>
-                    <div class="pln-mc-bar-row"><span class="pln-mc-bar-label">Feb</span><div class="pln-mc-bar-track"><div class="pln-mc-bar-fill pln-mc-bar-amber" style="width:52%"></div></div></div>
-                    <div class="pln-mc-bar-row"><span class="pln-mc-bar-label">Mar</span><div class="pln-mc-bar-track"><div class="pln-mc-bar-fill pln-mc-bar-red" style="width:90%"></div></div></div>
-                  </div>
+                  <div style="font-size:10px;color:rgba(255,255,255,0.28);line-height:1.6;margin-top:4px">Seguimiento semanal<br>Estrategia operativa<br>Coordinación</div>
                 </div>
 
               </div>
@@ -1833,90 +1855,111 @@
               <a href="https://clash.com.ar/inicio/comercio" target="_blank" class="pln-exp-cta pln-exp-cta-ghost">Hablar con Clash →</a>
             </div>
             <div class="pln-exp-right">
-              <div class="pln-exp-grid" style="grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:10px">
+              <div class="pln-exp-grid" style="grid-template-columns:1fr 1fr;gap:10px">
 
-                <!-- Custom QR (tall) -->
-                <div class="pln-mc pln-mc-tall" style="align-items:center;justify-content:center;background:linear-gradient(160deg,rgba(220,38,38,0.1) 0%,rgba(168,85,247,0.07) 100%);border-color:rgba(220,38,38,0.18)">
-                  <div style="font-size:9px;font-weight:700;color:rgba(239,68,68,0.65);text-transform:uppercase;letter-spacing:1.5px">QR Personalizado</div>
-                  <div style="padding:14px;background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.18);border-radius:14px">
-                    <svg viewBox="0 0 80 80" width="80" height="80">
-                      <rect x="4" y="4" width="24" height="24" rx="3" fill="none" stroke="rgba(239,68,68,0.55)" stroke-width="2"/>
-                      <rect x="9" y="9" width="14" height="14" rx="1.5" fill="rgba(239,68,68,0.48)"/>
-                      <rect x="52" y="4" width="24" height="24" rx="3" fill="none" stroke="rgba(239,68,68,0.55)" stroke-width="2"/>
-                      <rect x="57" y="9" width="14" height="14" rx="1.5" fill="rgba(239,68,68,0.48)"/>
-                      <rect x="4" y="52" width="24" height="24" rx="3" fill="none" stroke="rgba(239,68,68,0.55)" stroke-width="2"/>
-                      <rect x="9" y="57" width="14" height="14" rx="1.5" fill="rgba(239,68,68,0.48)"/>
-                      <rect x="32" y="5" width="5" height="5" rx="1" fill="rgba(239,68,68,0.35)"/>
-                      <rect x="40" y="5" width="5" height="5" rx="1" fill="rgba(239,68,68,0.35)"/>
-                      <rect x="32" y="13" width="5" height="5" rx="1" fill="rgba(239,68,68,0.35)"/>
-                      <rect x="46" y="11" width="5" height="5" rx="1" fill="rgba(239,68,68,0.35)"/>
-                      <rect x="32" y="21" width="5" height="5" rx="1" fill="rgba(239,68,68,0.35)"/>
-                      <rect x="40" y="19" width="5" height="5" rx="1" fill="rgba(239,68,68,0.35)"/>
-                      <rect x="5" y="32" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="13" y="32" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="21" y="32" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="32" y="32" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="40" y="32" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="48" y="32" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="5" y="40" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="21" y="40" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="32" y="40" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="48" y="40" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="5" y="48" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="15" y="48" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="32" y="48" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="40" y="48" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="56" y="32" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="64" y="32" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="72" y="32" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="56" y="40" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="72" y="40" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="62" y="48" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="56" y="56" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="66" y="56" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="74" y="56" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="56" y="64" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="62" y="64" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <rect x="70" y="68" width="5" height="5" rx="1" fill="rgba(239,68,68,0.3)"/>
-                      <!-- Brand center -->
-                      <rect x="30" y="30" width="20" height="20" rx="3" fill="rgba(8,8,10,0.9)"/>
-                      <text x="40" y="44" font-family="-apple-system,sans-serif" font-size="9" font-weight="900" fill="#ef4444" text-anchor="middle">cl.</text>
-                    </svg>
-                  </div>
-                  <div style="text-align:center;margin-top:4px">
-                    <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.55)">Diseñado para tu marca</div>
-                    <div style="font-size:9px;color:rgba(255,255,255,0.22);margin-top:2px">Colores · Logo · Identidad</div>
-                  </div>
-                </div>
-
-                <!-- Micrositio -->
-                <div class="pln-mc" style="align-items:center;gap:8px">
-                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px">Micrositio propio</div>
-                  <div class="pln-mc-phone">
-                    <div class="pln-mc-phone-notch"><div class="pln-mc-phone-notch-bar"></div></div>
-                    <div class="pln-mc-phone-screen">
-                      <div class="pln-mc-phone-header"><div class="pln-mc-phone-header-text">tumarco.clash.com.ar</div></div>
-                      <div class="pln-mc-phone-line" style="width:80%"></div>
-                      <div class="pln-mc-phone-line" style="width:60%"></div>
-                      <div class="pln-mc-phone-promo">
-                        <div class="pln-mc-phone-promo-txt">Descuento exclusivo</div>
-                        <div class="pln-mc-phone-promo-num">30%</div>
+                <!-- Materiales físicos -->
+                <div class="pln-mc" style="align-items:stretch;gap:8px">
+                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px">Materiales físicos</div>
+                  <div style="display:flex;flex-direction:column;gap:5px;flex:1">
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px">
+                      <div style="width:22px;height:22px;background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.22);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(192,132,252,0.7)" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                       </div>
-                      <div class="pln-mc-phone-line" style="width:90%"></div>
+                      <div><div style="font-size:9.5px;font-weight:700;color:rgba(255,255,255,0.75)">Diseño aprobado</div><div style="font-size:7.5px;color:rgba(255,255,255,0.28)">Arte final listo</div></div>
+                      <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="flex-shrink:0"><circle cx="8" cy="8" r="7" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:7px">
+                      <div style="width:22px;height:22px;background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.22);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(192,132,252,0.7)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                      </div>
+                      <div><div style="font-size:9.5px;font-weight:700;color:rgba(255,255,255,0.75)">Producción</div><div style="font-size:7.5px;color:rgba(255,255,255,0.28)">Carteles y stickers</div></div>
+                      <svg width="11" height="11" viewBox="0 0 16 16" fill="none" style="flex-shrink:0"><circle cx="8" cy="8" r="7" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:rgba(168,85,247,0.07);border:1px solid rgba(168,85,247,0.18);border-radius:7px;animation:pln-hero-pulse 2.5s ease-in-out infinite">
+                      <div style="width:22px;height:22px;background:rgba(168,85,247,0.12);border:1px solid rgba(168,85,247,0.3);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(192,132,252,0.8)" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                      </div>
+                      <div style="flex:1"><div style="font-size:9.5px;font-weight:700;color:rgba(192,132,252,0.9)">Envío en camino</div><div style="font-size:7.5px;color:rgba(168,85,247,0.5)">16 sucursales · ETD hoy</div></div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:7px;opacity:.5">
+                      <div style="width:22px;height:22px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
+                      </div>
+                      <div><div style="font-size:9.5px;font-weight:700;color:rgba(255,255,255,0.5)">Instalación</div><div style="font-size:7.5px;color:rgba(255,255,255,0.22)">Coordinación pendiente</div></div>
                     </div>
                   </div>
-                  <div style="font-size:9px;color:rgba(255,255,255,0.22);text-align:center">Web personalizada de beneficios</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.2);text-align:center">Clash coordina proveedores y entrega</div>
                 </div>
 
-                <!-- Kit físico -->
-                <div class="pln-mc">
-                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px">Kit comercial físico</div>
-                  <div class="pln-mc-kit">
-                    <div class="pln-mc-kit-card"><div style="font-size:15px">📄</div><div class="pln-mc-kit-label">Cartel</div></div>
-                    <div class="pln-mc-kit-card"><div style="font-size:15px">🏷</div><div class="pln-mc-kit-label">Sticker</div></div>
-                    <div class="pln-mc-kit-card"><div style="font-size:15px">🔲</div><div class="pln-mc-kit-label">QR</div></div>
+                <!-- Micrositio / Página web propia -->
+                <div class="pln-mc" style="padding:8px;overflow:hidden">
+                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Micrositio propio</div>
+                  <div style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 3px 16px rgba(0,0,0,0.5)">
+                    <!-- Browser bar -->
+                    <div style="padding:4px 6px;background:#f5f5f7;display:flex;align-items:center;gap:3px;border-bottom:1px solid #e8e8e8">
+                      <span style="width:5px;height:5px;border-radius:50%;background:#ff5f57;flex-shrink:0"></span>
+                      <span style="width:5px;height:5px;border-radius:50%;background:#febc2e;flex-shrink:0"></span>
+                      <span style="width:5px;height:5px;border-radius:50%;background:#28c840;flex-shrink:0"></span>
+                      <div style="flex:1;background:#fff;border-radius:3px;padding:1.5px 5px;font-size:5.5px;color:#999;margin:0 4px">tumarco.clash.com.ar</div>
+                    </div>
+                    <!-- Page content -->
+                    <div style="padding:7px 8px">
+                      <div style="height:10px;background:linear-gradient(135deg,#a855f7,#7c3aed);border-radius:4px;margin-bottom:5px;display:flex;align-items:center;padding:0 6px">
+                        <span style="font-size:4.5px;font-weight:800;color:#fff;font-style:italic">tu marca.</span>
+                      </div>
+                      <div style="font-size:5.5px;font-weight:700;color:#111;margin-bottom:3px">Beneficios exclusivos</div>
+                      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:4px">
+                        <div style="background:#fef2f2;border-radius:3px;padding:3px 4px"><div style="font-size:4.5px;font-weight:700;color:#ef4444">30% OFF</div><div style="font-size:3.5px;color:#aaa">Ropa</div></div>
+                        <div style="background:#fef2f2;border-radius:3px;padding:3px 4px"><div style="font-size:4.5px;font-weight:700;color:#ef4444">6 cuotas</div><div style="font-size:3.5px;color:#aaa">Electro</div></div>
+                        <div style="background:#f9f9f9;border-radius:3px;padding:3px 4px;opacity:.55"><div style="font-size:4.5px;font-weight:700;color:#888">2×1</div><div style="font-size:3.5px;color:#ccc">Gastronomía</div></div>
+                        <div style="background:#f9f9f9;border-radius:3px;padding:3px 4px;opacity:.55"><div style="font-size:4.5px;font-weight:700;color:#888">20%</div><div style="font-size:3.5px;color:#ccc">Viajes</div></div>
+                      </div>
+                      <div style="text-align:right"><span style="font-size:4px;color:#ccc">powered by </span><span style="font-size:4.5px;font-weight:700;color:#ef4444;font-style:italic">clash.</span></div>
+                    </div>
                   </div>
-                  <div style="font-size:10px;color:rgba(255,255,255,0.28);margin-top:2px">Producción + entrega incluida</div>
+                  <div style="font-size:8px;color:rgba(255,255,255,0.2);text-align:center;margin-top:6px">Web personalizada · sin marca de agua</div>
+                </div>
+
+                <!-- QR personalizado -->
+                <div class="pln-mc pln-mc-tall" style="align-items:center;justify-content:center;background:linear-gradient(160deg,rgba(168,85,247,0.08) 0%,rgba(124,58,237,0.04) 100%);border-color:rgba(168,85,247,0.18)">
+                  <div style="font-size:9px;font-weight:700;color:rgba(168,85,247,0.65);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px">QR Personalizado</div>
+                  <div style="padding:12px;background:rgba(168,85,247,0.07);border:1px solid rgba(168,85,247,0.16);border-radius:14px">
+                    <svg viewBox="0 0 80 80" width="76" height="76">
+                      <rect x="4" y="4" width="24" height="24" rx="3" fill="none" stroke="rgba(168,85,247,0.55)" stroke-width="2"/>
+                      <rect x="9" y="9" width="14" height="14" rx="1.5" fill="rgba(168,85,247,0.45)"/>
+                      <rect x="52" y="4" width="24" height="24" rx="3" fill="none" stroke="rgba(168,85,247,0.55)" stroke-width="2"/>
+                      <rect x="57" y="9" width="14" height="14" rx="1.5" fill="rgba(168,85,247,0.45)"/>
+                      <rect x="4" y="52" width="24" height="24" rx="3" fill="none" stroke="rgba(168,85,247,0.55)" stroke-width="2"/>
+                      <rect x="9" y="57" width="14" height="14" rx="1.5" fill="rgba(168,85,247,0.45)"/>
+                      <rect x="32" y="5" width="5" height="5" rx="1" fill="rgba(168,85,247,0.32)"/>
+                      <rect x="40" y="5" width="5" height="5" rx="1" fill="rgba(168,85,247,0.32)"/>
+                      <rect x="32" y="13" width="5" height="5" rx="1" fill="rgba(168,85,247,0.32)"/>
+                      <rect x="32" y="21" width="5" height="5" rx="1" fill="rgba(168,85,247,0.32)"/>
+                      <rect x="40" y="19" width="5" height="5" rx="1" fill="rgba(168,85,247,0.32)"/>
+                      <rect x="5" y="32" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="13" y="32" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="21" y="32" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="32" y="32" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="40" y="32" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="48" y="32" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="5" y="40" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="21" y="40" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="56" y="32" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="64" y="32" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="72" y="32" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="56" y="40" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="56" y="56" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="66" y="56" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <rect x="56" y="64" width="5" height="5" rx="1" fill="rgba(168,85,247,0.28)"/>
+                      <!-- Brand center -->
+                      <rect x="30" y="30" width="20" height="20" rx="3" fill="rgba(8,8,10,0.9)"/>
+                      <text x="40" y="44" font-family="-apple-system,sans-serif" font-size="9" font-weight="900" fill="#a855f7" text-anchor="middle">cl.</text>
+                    </svg>
+                  </div>
+                  <div style="text-align:center;margin-top:6px">
+                    <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.45)">Diseñado para tu marca</div>
+                    <div style="font-size:8px;color:rgba(255,255,255,0.2);margin-top:2px">Colores · Logo · Identidad</div>
+                  </div>
                 </div>
 
               </div>

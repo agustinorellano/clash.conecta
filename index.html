@@ -1734,45 +1734,50 @@
             <div class="pln-exp-right">
               <div class="pln-exp-grid" style="grid-template-columns:1fr 1fr;gap:10px">
 
-                <!-- Red de sucursales — SVG network full-width -->
-                <div class="pln-mc" style="grid-column:1/-1;padding:14px;overflow:hidden;position:relative;min-height:120px">
-                  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(220,38,38,0.06) 0%,transparent 65%);pointer-events:none"></div>
-                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;position:relative;z-index:1">Red de sucursales</div>
-                  <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:1">
-                    <svg viewBox="0 0 220 110" width="100%" style="max-width:280px;flex-shrink:0" height="110">
-                      <!-- Connection lines -->
-                      <line x1="110" y1="55" x2="30" y2="20" stroke="rgba(239,68,68,0.22)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln1"/>
-                      <line x1="110" y1="55" x2="65" y2="95" stroke="rgba(239,68,68,0.22)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln2"/>
-                      <line x1="110" y1="55" x2="185" y2="20" stroke="rgba(239,68,68,0.22)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln3"/>
-                      <line x1="110" y1="55" x2="170" y2="95" stroke="rgba(239,68,68,0.22)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln4"/>
-                      <line x1="110" y1="55" x2="15" y2="60" stroke="rgba(239,68,68,0.18)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln5"/>
-                      <line x1="110" y1="55" x2="205" y2="60" stroke="rgba(239,68,68,0.18)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln6"/>
-                      <line x1="110" y1="55" x2="110" y2="10" stroke="rgba(239,68,68,0.18)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln1"/>
-                      <line x1="110" y1="55" x2="110" y2="100" stroke="rgba(239,68,68,0.18)" stroke-width="1" stroke-dasharray="4 3" class="ad2-ln ad2-ln2"/>
-                      <!-- Outer nodes -->
-                      <circle cx="30" cy="20" r="5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
-                      <circle cx="30" cy="20" r="5" fill="none" stroke="rgba(34,197,94,0.25)" stroke-width="4" class="ad2-center"/>
-                      <circle cx="65" cy="95" r="5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
-                      <circle cx="185" cy="20" r="5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
-                      <circle cx="170" cy="95" r="5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1.5"/>
-                      <circle cx="15" cy="60" r="4" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.4)" stroke-width="1.5"/>
-                      <circle cx="205" cy="60" r="4" fill="rgba(239,68,68,0.15)" stroke="rgba(239,68,68,0.4)" stroke-width="1.5"/>
-                      <circle cx="110" cy="10" r="4" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/>
-                      <circle cx="110" cy="100" r="4" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.4)" stroke-width="1.5"/>
-                      <!-- Central clash. hub -->
-                      <circle cx="110" cy="55" r="18" fill="rgba(220,38,38,0.12)" stroke="rgba(220,38,38,0.35)" stroke-width="1.5" class="ad2-center"/>
-                      <circle cx="110" cy="55" r="24" fill="none" stroke="rgba(220,38,38,0.08)" stroke-width="1" stroke-dasharray="3 4"/>
-                      <text x="110" y="59" font-family="-apple-system,sans-serif" font-size="8" font-weight="700" font-style="italic" fill="#ef4444" text-anchor="middle">clash.</text>
-                      <!-- Labels -->
-                      <text x="30" y="13" font-family="-apple-system,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 01</text>
-                      <text x="185" y="13" font-family="-apple-system,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 02</text>
-                      <text x="65" y="107" font-family="-apple-system,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 03</text>
-                      <text x="170" y="107" font-family="-apple-system,sans-serif" font-size="5.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 04</text>
-                    </svg>
-                    <div style="display:flex;flex-direction:column;gap:6px;flex-shrink:0">
-                      <div><div style="font-size:22px;font-weight:900;color:#fff;line-height:1">16</div><div style="font-size:8.5px;color:rgba(255,255,255,0.3)">sucursales activas</div></div>
-                      <div><div style="font-size:22px;font-weight:900;color:#ef4444;line-height:1">75</div><div style="font-size:8.5px;color:rgba(255,255,255,0.3)">QR habilitados</div></div>
-                      <div style="display:flex;align-items:center;gap:4px"><span style="width:5px;height:5px;border-radius:50%;background:#22c55e;box-shadow:0 0 5px rgba(34,197,94,0.8)"></span><span style="font-size:8px;color:rgba(255,255,255,0.35)">Sincronizado</span></div>
+                                <!-- Red de sucursales — SVG network full-width -->
+                <div class="pln-mc" style="grid-column:1/-1;padding:16px 14px 12px;overflow:hidden;position:relative;align-items:center">
+                  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(220,38,38,0.07) 0%,transparent 65%);pointer-events:none"></div>
+                  <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;position:relative;z-index:1;width:100%;text-align:center">Red de sucursales</div>
+                  <svg viewBox="0 0 340 150" width="100%" style="display:block;position:relative;z-index:1">
+                    <line x1="170" y1="75" x2="40"  y2="25"  stroke="rgba(239,68,68,0.28)" stroke-width="1.2" stroke-dasharray="5 4" class="ad2-ln ad2-ln1"/>
+                    <line x1="170" y1="75" x2="90"  y2="135" stroke="rgba(239,68,68,0.28)" stroke-width="1.2" stroke-dasharray="5 4" class="ad2-ln ad2-ln2"/>
+                    <line x1="170" y1="75" x2="300" y2="25"  stroke="rgba(239,68,68,0.28)" stroke-width="1.2" stroke-dasharray="5 4" class="ad2-ln ad2-ln3"/>
+                    <line x1="170" y1="75" x2="255" y2="135" stroke="rgba(239,68,68,0.28)" stroke-width="1.2" stroke-dasharray="5 4" class="ad2-ln ad2-ln4"/>
+                    <line x1="170" y1="75" x2="15"  y2="80"  stroke="rgba(239,68,68,0.2)"  stroke-width="1"   stroke-dasharray="5 4" class="ad2-ln ad2-ln5"/>
+                    <line x1="170" y1="75" x2="325" y2="80"  stroke="rgba(239,68,68,0.2)"  stroke-width="1"   stroke-dasharray="5 4" class="ad2-ln ad2-ln6"/>
+                    <line x1="170" y1="75" x2="170" y2="12"  stroke="rgba(239,68,68,0.2)"  stroke-width="1"   stroke-dasharray="5 4" class="ad2-ln ad2-ln1"/>
+                    <line x1="170" y1="75" x2="170" y2="140" stroke="rgba(239,68,68,0.2)"  stroke-width="1"   stroke-dasharray="5 4" class="ad2-ln ad2-ln2"/>
+                    <circle cx="40"  cy="25"  r="7" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.55)" stroke-width="1.8"/>
+                    <circle cx="40"  cy="25"  r="7" fill="none" stroke="rgba(34,197,94,0.2)" stroke-width="5" class="ad2-center"/>
+                    <circle cx="90"  cy="135" r="7" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.55)" stroke-width="1.8"/>
+                    <circle cx="300" cy="25"  r="7" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.55)" stroke-width="1.8"/>
+                    <circle cx="255" cy="135" r="7" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.55)" stroke-width="1.8"/>
+                    <circle cx="170" cy="12"  r="6" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.45)" stroke-width="1.5"/>
+                    <circle cx="170" cy="140" r="6" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.45)" stroke-width="1.5"/>
+                    <circle cx="15"  cy="80"  r="5" fill="rgba(239,68,68,0.12)" stroke="rgba(239,68,68,0.45)" stroke-width="1.5"/>
+                    <circle cx="325" cy="80"  r="5" fill="rgba(239,68,68,0.12)" stroke="rgba(239,68,68,0.45)" stroke-width="1.5"/>
+                    <circle cx="170" cy="75" r="26" fill="rgba(220,38,38,0.1)"  stroke="rgba(220,38,38,0.32)" stroke-width="2" class="ad2-center"/>
+                    <circle cx="170" cy="75" r="34" fill="none" stroke="rgba(220,38,38,0.06)" stroke-width="1.5" stroke-dasharray="4 5"/>
+                    <text x="170" y="80" font-family="-apple-system,sans-serif" font-size="11" font-weight="700" font-style="italic" fill="#ef4444" text-anchor="middle">clash.</text>
+                    <text x="40"  y="14"  font-family="-apple-system,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 01</text>
+                    <text x="300" y="14"  font-family="-apple-system,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 02</text>
+                    <text x="90"  y="148" font-family="-apple-system,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 03</text>
+                    <text x="255" y="148" font-family="-apple-system,sans-serif" font-size="7.5" fill="rgba(255,255,255,0.35)" text-anchor="middle">Suc. 04</text>
+                  </svg>
+                  <div style="display:flex;justify-content:center;align-items:center;gap:24px;margin-top:12px;position:relative;z-index:1">
+                    <div style="text-align:center">
+                      <div style="font-size:22px;font-weight:900;color:#fff;line-height:1">16</div>
+                      <div style="font-size:8px;color:rgba(255,255,255,0.3);margin-top:2px">sucursales activas</div>
+                    </div>
+                    <div style="width:1px;height:28px;background:rgba(255,255,255,0.08)"></div>
+                    <div style="text-align:center">
+                      <div style="font-size:22px;font-weight:900;color:#ef4444;line-height:1">75</div>
+                      <div style="font-size:8px;color:rgba(255,255,255,0.3);margin-top:2px">QR habilitados</div>
+                    </div>
+                    <div style="width:1px;height:28px;background:rgba(255,255,255,0.08)"></div>
+                    <div style="display:flex;align-items:center;gap:5px">
+                      <span style="width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px rgba(34,197,94,0.9)"></span>
+                      <span style="font-size:8.5px;color:rgba(255,255,255,0.38)">Sincronizado</span>
                     </div>
                   </div>
                 </div>

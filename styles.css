@@ -328,7 +328,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .pln-sub{font-size:16px;color:var(--g500);max-width:540px;margin:0 auto;line-height:1.65}
 
 /* Grid */
-.pln-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+.pln-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
 
 /* Base card */
 .pln-card{border-radius:20px;padding:28px 24px;border:1.5px solid #e5e7eb;background:#fff;display:flex;flex-direction:column;position:relative;transition:opacity .3s ease,filter .3s ease,transform .3s ease,box-shadow .3s ease}
@@ -440,6 +440,19 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
   .pln-card{padding:22px 18px}
   .pln-grid.has-active .pln-card:not(.active){opacity:.6;filter:none;transform:none}
 }
+
+/* Plans — always-open overrides */
+.pln-toggle{display:none!important}
+.pln-highlights{display:none!important}
+.pln-details{display:block;grid-template-rows:unset;transition:none}
+.pln-details-inner{overflow:visible}
+.pln-grid.has-active .pln-card:not(.active){opacity:1;filter:none;transform:none}
+.pln-card.active{box-shadow:none;transform:none}
+.pln-card{display:flex;flex-direction:column}
+.pln-full-list{flex:1}
+.pln-footer{margin-top:auto}
+.pln-sep{margin-top:20px;margin-bottom:16px}
+.pln-feat{margin-top:13px}
 
 /* ── MÉTRICAS ── */
 #metricas{min-height:auto;background:#fff}

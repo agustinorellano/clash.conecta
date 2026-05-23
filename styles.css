@@ -321,6 +321,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
    PLANES — pln- expandable cards system
    ══════════════════════════════════════════════════════ */
 #planes{background:#f7f7f8}
+#planes .container{max-width:1440px;padding-left:40px;padding-right:40px}
 
 /* Header */
 .pln-hdr{text-align:center;margin-bottom:56px}

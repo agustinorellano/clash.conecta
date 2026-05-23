@@ -1253,7 +1253,14 @@
     </div>
 
     <!-- ── Enterprise Banner (visible only on s4) ── -->
-    <div class="pln-enterprise-banner" id="pln-enterprise-banner">
+    <div class="pln-billing-toggle rv d3" id="pln-billing-toggle">
+        <button class="pln-billing-btn active" data-billing="monthly">Mensual</button>
+        <button class="pln-billing-btn" data-billing="annual">
+          Anual
+          <span class="pln-billing-save">-30%</span>
+        </button>
+      </div>
+      <div class="pln-enterprise-banner" id="pln-enterprise-banner">
       <div class="pln-enterprise-banner-top">
         <span class="pln-enterprise-dot"></span>
         <span class="pln-enterprise-tag">Operación Enterprise</span>
@@ -2058,6 +2065,7 @@ function startCountUp(){
   var cards         = document.querySelectorAll('.pln-card[data-plan]');
   var banner        = document.getElementById('pln-enterprise-banner');
   var currentScale  = 's1';
+  var currentBilling = 'monthly';
 
   if(!scaleTabs.length || !cards.length) return;
 
@@ -2073,6 +2081,225 @@ function startCountUp(){
       el.classList.remove('pln-price-changing');
       el.removeEventListener('animationend', handler);
     });
+  }
+
+
+  /* ── Apply annual discount (30%) to numeric prices ── */
+  function applyBilling(data, billing) {
+    if (billing === 'monthly') return data;
+    var raw = data.price.replace(/\./g, '').replace('
+  function setScale(scale) {
+    if(scale === currentScale) return;
+    currentScale = scale;
+
+    var featuredPlan = PRICING.featured[scale];
+    var isEnterprise = PRICING.enterprise[scale];
+
+    /* 1. Update scale tab UI */
+    scaleTabs.forEach(function(t){
+      var active = t.dataset.scale === scale;
+      t.classList.toggle('active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+
+    /* 2. Enterprise banner */
+    if(banner) banner.classList.toggle('active', isEnterprise);
+
+    /* 3. Update each card */
+    cards.forEach(function(card){
+      var plan = card.dataset.plan;
+      var raw  = PRICING.plans[plan] && PRICING.plans[plan][scale];
+      var data = raw ? applyBilling(raw, currentBilling) : null;
+      if(!data) return;
+
+      var isFeatured = (plan === featuredPlan);
+
+      /* 3a. Price flip */
+      flipText(card.querySelector('[data-price="' + plan + '"]'), data.price);
+      flipText(card.querySelector('[data-note="'  + plan + '"]'), data.note);
+      flipText(card.querySelector('[data-cta="'   + plan + '"]'), data.cta);
+
+      /* 3b. Badge visibility */
+      var badge = card.querySelector('.pln-badge-dyn');
+      if(badge) badge.classList.toggle('active', isFeatured);
+
+      /* 3c. Card highlight classes */
+      card.classList.remove('pln-dyn-feat', 'pln-dyn-enterprise', 'pln-dyn-dim');
+      if(isFeatured) {
+        card.classList.add(isEnterprise ? 'pln-dyn-enterprise' : 'pln-dyn-feat');
+      } else {
+        card.classList.add('pln-dyn-dim');
+      }
+    });
+  }
+
+  /* ── Tab click handlers ── */
+  scaleTabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      setScale(this.dataset.scale);
+    });
+  });
+
+
+  /* ── Billing toggle ── */
+  var billingBtns = document.querySelectorAll('.pln-billing-btn');
+  billingBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var billing = this.dataset.billing;
+      if (billing === currentBilling) return;
+      currentBilling = billing;
+      billingBtns.forEach(function(b){ b.classList.toggle('active', b.dataset.billing === billing); });
+      // Re-apply current scale with new billing
+      var prev = currentScale;
+      currentScale = null;
+      setScale(prev);
+    });
+  });
+
+  /* ── Initialize s1 (Promos Gestionadas highlighted) ── */
+  /* Set initial card states without flip animation on load */
+  (function initScale(){
+    var scale = 's1';
+    var featuredPlan = PRICING.featured[scale];
+    cards.forEach(function(card){
+      var plan = card.dataset.plan;
+      var badge = card.querySelector('.pln-badge-dyn');
+      var isFeatured = (plan === featuredPlan);
+      if(badge) badge.classList.toggle('active', isFeatured);
+      card.classList.remove('pln-dyn-feat','pln-dyn-enterprise','pln-dyn-dim');
+      if(isFeatured){
+        card.classList.add('pln-dyn-feat');
+      } else {
+        card.classList.add('pln-dyn-dim');
+      }
+    });
+  })();
+
+})();
+</script>
+
+<script>
+/* Plan Explorer — tab switching */
+(function(){
+  var tabs   = document.querySelectorAll('.pln-tab');
+  var panels = document.querySelectorAll('.pln-panel');
+  if(!tabs.length) return;
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var id = this.dataset.tab;
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      var target = document.querySelector('.pln-panel[data-panel="' + id + '"]');
+      if(target) target.classList.add('active');
+    });
+  });
+})();
+</script>
+</body>
+</html>
+, '');
+    var num = parseInt(raw, 10);
+    if (isNaN(num)) return data; // 'A cotizar', 'Gratis', 'A medida' — sin cambio
+    var discounted = Math.round(num * 0.7);
+    // Format with thousands separator (dot)
+    var formatted = '
+  function setScale(scale) {
+    if(scale === currentScale) return;
+    currentScale = scale;
+
+    var featuredPlan = PRICING.featured[scale];
+    var isEnterprise = PRICING.enterprise[scale];
+
+    /* 1. Update scale tab UI */
+    scaleTabs.forEach(function(t){
+      var active = t.dataset.scale === scale;
+      t.classList.toggle('active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+    });
+
+    /* 2. Enterprise banner */
+    if(banner) banner.classList.toggle('active', isEnterprise);
+
+    /* 3. Update each card */
+    cards.forEach(function(card){
+      var plan = card.dataset.plan;
+      var data = PRICING.plans[plan] && PRICING.plans[plan][scale];
+      if(!data) return;
+
+      var isFeatured = (plan === featuredPlan);
+
+      /* 3a. Price flip */
+      flipText(card.querySelector('[data-price="' + plan + '"]'), data.price);
+      flipText(card.querySelector('[data-note="'  + plan + '"]'), data.note);
+      flipText(card.querySelector('[data-cta="'   + plan + '"]'), data.cta);
+
+      /* 3b. Badge visibility */
+      var badge = card.querySelector('.pln-badge-dyn');
+      if(badge) badge.classList.toggle('active', isFeatured);
+
+      /* 3c. Card highlight classes */
+      card.classList.remove('pln-dyn-feat', 'pln-dyn-enterprise', 'pln-dyn-dim');
+      if(isFeatured) {
+        card.classList.add(isEnterprise ? 'pln-dyn-enterprise' : 'pln-dyn-feat');
+      } else {
+        card.classList.add('pln-dyn-dim');
+      }
+    });
+  }
+
+  /* ── Tab click handlers ── */
+  scaleTabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      setScale(this.dataset.scale);
+    });
+  });
+
+  /* ── Initialize s1 (Promos Gestionadas highlighted) ── */
+  /* Set initial card states without flip animation on load */
+  (function initScale(){
+    var scale = 's1';
+    var featuredPlan = PRICING.featured[scale];
+    cards.forEach(function(card){
+      var plan = card.dataset.plan;
+      var badge = card.querySelector('.pln-badge-dyn');
+      var isFeatured = (plan === featuredPlan);
+      if(badge) badge.classList.toggle('active', isFeatured);
+      card.classList.remove('pln-dyn-feat','pln-dyn-enterprise','pln-dyn-dim');
+      if(isFeatured){
+        card.classList.add('pln-dyn-feat');
+      } else {
+        card.classList.add('pln-dyn-dim');
+      }
+    });
+  })();
+
+})();
+</script>
+
+<script>
+/* Plan Explorer — tab switching */
+(function(){
+  var tabs   = document.querySelectorAll('.pln-tab');
+  var panels = document.querySelectorAll('.pln-panel');
+  if(!tabs.length) return;
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var id = this.dataset.tab;
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      this.classList.add('active');
+      var target = document.querySelector('.pln-panel[data-panel="' + id + '"]');
+      if(target) target.classList.add('active');
+    });
+  });
+})();
+</script>
+</body>
+</html>
+ + discounted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    var noteAnnual = data.note.replace('/ mes', '/ mes · facturado anual');
+    return { price: formatted, note: noteAnnual, cta: data.cta };
   }
 
   /* ── Apply a scale ── */

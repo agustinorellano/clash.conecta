@@ -2087,8 +2087,16 @@ function startCountUp(){
   /* ── Apply annual discount (30%) to numeric prices ── */
   function applyBilling(data, billing) {
     if (billing === 'monthly') return data;
-    var raw = data.price.replace(/\./g, '').replace('
-  function setScale(scale) {
+    var raw = data.price.replace(/[$.]/g, '');
+    var num = parseInt(raw, 10);
+    if (isNaN(num)) return data;
+    var discounted = Math.round(num * 0.7);
+    var formatted = '$' + discounted.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    var noteAnnual = data.note.replace('/ mes', '/ mes · facturado anual');
+    return { price: formatted, note: noteAnnual, cta: data.cta };
+  }
+
+    function setScale(scale) {
     if(scale === currentScale) return;
     currentScale = scale;
 

@@ -1234,15 +1234,15 @@
       <p class="pln-scaler-label">¿Cuántas sucursales tiene tu operación?</p>
       <div class="pln-scale-tabs" role="tablist" aria-label="Cantidad de sucursales">
         <button class="pln-scale-tab active" data-scale="s1" role="tab" aria-selected="true">
-          <span class="pln-scale-num">1–15</span>
+          <span class="pln-scale-num">Hasta 15</span>
           <span class="pln-scale-sub">sucursales</span>
         </button>
         <button class="pln-scale-tab" data-scale="s2" role="tab" aria-selected="false">
-          <span class="pln-scale-num">16–50</span>
+          <span class="pln-scale-num">Hasta 50</span>
           <span class="pln-scale-sub">sucursales</span>
         </button>
         <button class="pln-scale-tab" data-scale="s3" role="tab" aria-selected="false">
-          <span class="pln-scale-num">51–100</span>
+          <span class="pln-scale-num">Hasta 100</span>
           <span class="pln-scale-sub">sucursales</span>
         </button>
         <button class="pln-scale-tab" data-scale="s4" role="tab" aria-selected="false">
@@ -1341,8 +1341,8 @@
         </ul>
         <div class="pln-sep"></div>
         <div class="pln-price-row">
-          <span class="pln-price-main pln-price-consult" data-price="gestion">Consultar</span>
-          <span class="pln-price-note" data-note="gestion">Personalizado según operación</span>
+          <span class="pln-price-main pln-price-consult" data-price="gestion">$380.000</span>
+          <span class="pln-price-note" data-note="gestion">/ mes + IVA · hasta 15 sucursales</span>
         </div>
       </div>
 
@@ -1381,8 +1381,8 @@
         </ul>
         <div class="pln-sep pln-sep-dark"></div>
         <div class="pln-price-row">
-          <span class="pln-price-main pln-price-dark pln-price-consult" data-price="scale">Personalizado</span>
-          <span class="pln-price-note pln-price-note-dark" data-note="scale">Según volumen y operación</span>
+          <span class="pln-price-main pln-price-dark pln-price-consult" data-price="scale">$590.000</span>
+          <span class="pln-price-note pln-price-note-dark" data-note="scale">/ mes + IVA · hasta 15 sucursales</span>
         </div>
       </div>
 
@@ -2166,6 +2166,15 @@ function startCountUp(){
         card.classList.add('pln-dyn-feat');
       } else {
         card.classList.add('pln-dyn-dim');
+      
+      /* Set s1 prices immediately on load */
+      var raw  = PRICING.plans[plan] && PRICING.plans[plan][scale];
+      var data = raw ? applyBilling(raw, currentBilling) : null;
+      if(data){
+        var elP = card.querySelector('[data-price="' + plan + '"]');
+        var elN = card.querySelector('[data-note="'  + plan + '"]');
+        if(elP) elP.textContent = data.price;
+        if(elN) elN.textContent = data.note;
       }
     });
   })();

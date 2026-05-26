@@ -1382,19 +1382,17 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 }
 
 /* ── CONCEPTO VIDEO — sin frame externo ── */
-.clash-phone-wrap{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100%;
-}
+.clash-phone-wrap{display:flex;justify-content:center;align-items:center;height:100%;background:transparent;overflow:hidden;transform:translateZ(0)}
 /* Video con mockup integrado — se funde con el fondo de la sección */
 .concepto-video{
-  height:100%;
+  display:block;
+  height:auto;
   max-height:640px;
   width:auto;
-  display:block;
-  object-fit:contain;
+  max-width:100%;
+  background:transparent;
+  border:none;
+  outline:none;
 }
 @keyframes phoneFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 

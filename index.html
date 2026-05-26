@@ -2166,7 +2166,7 @@ function startCountUp(){
         card.classList.add('pln-dyn-feat');
       } else {
         card.classList.add('pln-dyn-dim');
-      
+      }
       /* Set s1 prices immediately on load */
       var raw  = PRICING.plans[plan] && PRICING.plans[plan][scale];
       var data = raw ? applyBilling(raw, currentBilling) : null;

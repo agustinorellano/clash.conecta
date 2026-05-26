@@ -2051,3 +2051,5 @@ body.nav-open .nav-mobile-menu{display:flex}
 .pln-scale .pln-fi-items-dark li{color:var(--g500)}
 .pln-scale .pln-fi-incl-dark{color:var(--red)}
 .pln-scale.active{box-shadow:0 8px 32px rgba(0,0,0,.1)!important}
+
+.pln-h-sub{display:block;font-size:clamp(16px,2vw,26px);font-weight:400;letter-spacing:-.2px;color:var(--g500);font-style:italic;margin-top:4px}

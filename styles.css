@@ -2020,10 +2020,12 @@ body.nav-open .nav-mobile-menu{display:flex}
 /* ── Checkmark circles on feature items ── */
 .pln-fi-title:not(.pln-fi-incl):not(.pln-fi-incl-dark){display:flex;align-items:flex-start;gap:8px}
 .pln-fi-title:not(.pln-fi-incl):not(.pln-fi-incl-dark)::before{content:'✓';display:block;min-width:14px;color:#16a34a;font-size:11px;font-weight:800;line-height:1.5;flex-shrink:0}
+/* Promos Gestionadas — red checkmarks */
+.pln-card.pln-feat .pln-fi-title:not(.pln-fi-incl):not(.pln-fi-incl-dark)::before{color:var(--red)}
 /* Dark card (custom) — gold checkmarks */
 .pln-card.pln-custom .pln-fi-title:not(.pln-fi-incl):not(.pln-fi-incl-dark)::before{color:#d97706}
 /* Scale card (light override) — green checkmarks */
-.pln-card.pln-scale .pln-fi-title::before{color:#16a34a!important}
+.pln-card.pln-scale .pln-fi-title::before{color:#6366f1!important}
 
 /* ── Tier tag colors ── */
 .pln-card.pln-free .pln-tier-tag{color:#16a34a}

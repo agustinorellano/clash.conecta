@@ -383,7 +383,7 @@ section{position:relative;min-height:100vh;display:flex;align-items:center}
 .pln-fi{display:flex;flex-direction:column;gap:3px}
 .pln-fi-title{font-size:12px;font-weight:700;color:var(--dark);line-height:1.4}
 .pln-fi-dark .pln-fi-title{color:rgba(255,255,255,.8)}
-.pln-fi-sub{font-size:11px;color:var(--g400);line-height:1.4}
+.pln-fi-sub{font-size:11px;color:var(--g400);line-height:1.4;padding-left:22px}
 .pln-fi-sub-dark{color:rgba(255,255,255,.28)}
 .pln-fi-incl{color:var(--red);font-size:11px;font-weight:700}
 .pln-fi-incl-dark{color:rgba(220,38,38,.65);font-size:11px;font-weight:700}
